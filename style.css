@@ -1,88 +1,283 @@
-/******* Home Page *******/
+/*************************************************************
+**************************************************************
+START OF STYLE - Writen 2025 By Daniel Saunders
+**************************************************************
+*************************************************************/
 
-body {
-  height: 100%;
-  margin: 0px;
-}
-
+/********************************************************************************
+*********************************************************************************
+/*********************
+GENERAL STYLES BELOW 
+/*********************/
+/********************************************************************************
+*********************************************************************************/
 html {
   height: 100%;
+  font-size: 20px;
 }
 
-/*** Buttons  ***/
+body {
+  margin: 0px;
+  height: 100%;
+}
 
-/* nav buttons */
+header {
+  border-bottom-style: solid;
+}
+
+footer {
+  background-color: #2D662C;
+  height: 5.5rem;
+}
+
+a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  cursor: pointer;
+}
+
+
+button {
+  position: relative;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* underline */
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #FFFFFF, #005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+}
+
+button {
+  color: white;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
 
 .b_current {
   background-color: #FFFFFF;
   color: black;
-  font-size: 10px;
-  border-color: transparent;
+  text-decoration: underline;
 }
 
 .b_change {
   background-color: #005CA3;
-  color: white;
-  font-size: 10px;
-  border-color: transparent;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* no underline on current screen button */
+.b_current::after {
+  background: none;
 }
 
 
-/****************************************************************************************************/
-/****************************************************************************************************/
-/********** large screen size **********/
-@media (min-width:1024px) {
 
-  /*
-div{
-background-color:;
+
+/*** align items in a css gird div to centre ***/
+.d_itemsCentre {
+  text-align: center;
 }
 
+#d_grad {
+  background-image: linear-gradient(to right, #FFFFFF, #005CA3);
+}
 
-background-image: url("images/backgroundImage.png");
+.d_footerLink{
+  text-align: center;
+ 
+  
+}
+
+/********************************************************************************
+*********************************************************************************
+/*********************
+HOME PAGE STYLES BELOW 
+/*********************/
+/********************************************************************************
+*********************************************************************************/
 
 
+.d_backgroundImage {
+
+  background-image: url("images/backgroundImage.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
 
+}
 
+/*
+.i_homeBackground {
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    width: 100%;
+  height : 100vh ;
+
+}
 */
+#d_aboutUsTextCover {
+  margin: 4.5%;
+  background-color: #EFFBF2;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1%;
+  padding-top: 0%;
+}
+
+.b_explore::after {
+  bottom: -8px;
+  height: 4px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#b_exploreView {
+  background-color: #EFFBF2;
+  color: black;
+}
+
+#b_exploreView:hover {
+  background-color: #000000;
+  color: white;
+}
+
+#b_exploreGet {
+  background-color: #000000;
+}
+
+#b_exploreGet:hover {
+  background-color: #EFFBF2;
+  color: black;
+}
+
+
+
+
+/********** LARGE SCREEN SIZE CSS GRID BELOW **********/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/********** Large screen size **********/
+@media (min-width:1024px) {
+
+  /*** headers ***/
   h1 {
     margin: 0px;
     margin-bottom: 2.5%;
-    font-size: 110px;
+    font-size: 5.5rem;
     height: 30%;
     text-align: center;
   }
 
   h2 {
     margin: 0px;
-    margin-bottom: 1%;
-    font-size: 90px;
+    font-size: 4.5rem;
     text-align: center;
   }
 
+  h3 {
+    margin: 0px;
+    margin-bottom: 1%;
+    font-size: 2.25rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
 
-  .d_homeGrid {
+  #p_aboutUs {
+    font-size: 1rem;
+    text-align: center;
+
+  }
+
+  #i_map {
+    height: 60%;
+    width: 90%;
+  }
+
+  /*** buttons ***/
+  .b_current {
+    font-size: 1.75rem;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .b_change {
+    font-size: 1.75rem;
+  }
+
+
+  #b_exploreView {
+    margin-right: 3%;
+  }
+
+  #b_exploreGet {
+    margin-left: 3%;
+  }
+
+  .b_explore {
+    font-size: 2.5rem;
+    border-radius: 50px;
+    transition-duration: 0.8s;
+    padding: 2%;
+  }
+
+
+  /********** Main Css grid ********/
+  #d_homeGridMain {
     display: grid;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
     grid-template-rows: 2fr 1fr 5fr 2fr;
-
     height: 100%;
   }
 
+
+  /*** header div ***/
   #d_homeHeader {
     grid-area: 1/1/2/7;
+    padding-bottom: 1rem;
+
   }
 
-  #d_homeEdgeNav1 {
-    grid-area: 2/1/3/2;
-  }
-
+  /*** nav divs ***/
   #d_homeNav1 {
     grid-area: 2/2/3/3;
-    justify-content: center;
   }
 
   #d_homeNav2 {
@@ -97,11 +292,8 @@ background-image: url("images/backgroundImage.png");
     grid-area: 2/5/3/6;
   }
 
-  #d_homeEdgeNav2 {
-    grid-area: 2/6/3/7;
-  }
-
-  #d_gradside {
+  /*** gradient divs ***/
+  #d_gradSideLeft {
     grid-area: 3/1/4/2;
     height: 1%;
     margin: 0px;
@@ -114,12 +306,14 @@ background-image: url("images/backgroundImage.png");
     background-color: yellow;
   }
 
-  #d_gradside2 {
+  #d_gradSideRight {
     grid-area: 3/6/4/7;
     height: 1%;
     margin: 0px;
   }
 
+
+  /*** Main content divs ***/
   #d_aboutUs {
     margin-top: 0.55%;
     grid-area: 3/1/4/5;
@@ -131,10 +325,7 @@ background-image: url("images/backgroundImage.png");
     grid-area: 3/5/4/7;
   }
 
-  #d_homeExploreEdge1 {
-    grid-area: 4/1/5/2;
-  }
-
+  /*** Explore Buttons divs ***/
   #d_homeView {
     grid-area: 4/2/5/4;
   }
@@ -143,14 +334,14 @@ background-image: url("images/backgroundImage.png");
     grid-area: 4/4/5/6;
   }
 
-  #d_homeExploreEdge2 {
-    grid-area: 4/6/5/7;
-  }
+  /********************************/
 
-  #d_homeGrid2 {
+  /********** Top seller Css grid ********/
+  #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+    background-color: #DFEEF4;
   }
 
 
@@ -161,12 +352,52 @@ background-image: url("images/backgroundImage.png");
   #d_topSellerImg {
     grid-area: 2/1/3/7;
   }
+
+  /********************************/
+
+  /********** Footer Css grid ********/
+
+  .d_footerGrid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .d_footerLink1 {
+    grid-area: 1/1/2/2;
+  }
+
+  .d_footerLink2 {
+    grid-area: 1/2/2/3;
+  }
+
+  .d_footerLink3 {
+    grid-area: 1/3/2/4;
+  }
+
+  .d_contactUs {
+    grid-area: 1/4/2/9;
+  }
+
+
+  .d_backToTop {
+    grid-area: 1/9/2/10;
+  }
+
+  .a_footer {
+    font-size: 2rem;
+  }
+
+
+
 }
 
 
+
+/********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
 /****************************************************************************************************/
 /****************************************************************************************************/
-/********** medium screen size **********/
+/********** Medium screen size **********/
 @media (max-width:1024px) {
 
   div {
@@ -186,8 +417,8 @@ background-image: url("images/backgroundImage.png");
     text-align: center;
   }
 
-
-  .d_homeGrid {
+  /********** Main Css grid ********/
+  .d_homeGridMain {
     display: grid;
     background-color: skyblue;
     grid-template-columns: 1fr repeat(4, 2fr) 1fr;
@@ -196,11 +427,12 @@ background-image: url("images/backgroundImage.png");
 
   }
 
+  /*** header div ***/
   #d_homeHeader {
     grid-area: 1/1/2/7;
   }
 
-  /* nav bar grid divs */
+  /*** nav divs ***/
   #d_homeNav1 {
     grid-area: 2/2/3/3;
   }
@@ -217,8 +449,8 @@ background-image: url("images/backgroundImage.png");
     grid-area: 2/5/3/6;
   }
 
-  /*grad grid divs */
-  #d_gradside {
+  /*** gradient divs ***/
+  #d_gradSideLeft {
     grid-area: 3/1/4/2;
     height: 1%;
     margin: 0px;
@@ -232,14 +464,14 @@ background-image: url("images/backgroundImage.png");
     background-color: yellow;
   }
 
-  #d_gradside2 {
+  #d_gradSideRight {
     grid-area: 3/6/4/7;
     height: 1%;
     margin: 0px;
     background-color: skyblue;
   }
 
-  /* main content divs */
+  /*** Main content divs ***/
   #d_aboutUs {
     margin-top: 0.55%;
     grid-area: 3/1/4/5;
@@ -250,7 +482,7 @@ background-image: url("images/backgroundImage.png");
     grid-area: 3/5/4/7;
   }
 
-  /* explore buttons grid divs */
+  /*** Explore Buttons divs ***/
   #d_homeView {
     grid-area: 4/2/5/4;
   }
@@ -259,14 +491,15 @@ background-image: url("images/backgroundImage.png");
     grid-area: 4/4/5/6;
   }
 
+  /********************************/
 
-  #d_homeGrid2 {
+  /********** Top seller Css grid ********/
+  #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
     grid-template-rows: 1fr 5fr;
 
   }
-
 
   #d_topSeller {
     grid-area: 1/1/2/7;
@@ -276,19 +509,22 @@ background-image: url("images/backgroundImage.png");
     grid-area: 2/1/3/7;
   }
 
+
+
 }
 
 
-
+/********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
 /****************************************************************************************************/
 /****************************************************************************************************/
-/********** small screen size **********/
+/********** Small screen size **********/
 @media (max-width:425px) {
 
   div {
     background-color: yellow;
   }
 
+  /*** headers ***/
   h1 {
     margin: 0px;
     font-size: 75px;
@@ -302,15 +538,15 @@ background-image: url("images/backgroundImage.png");
     text-align: center;
   }
 
-
-  .d_homeGrid {
+  /********** Main Css grid ********/
+  .d_homeGridMain {
     display: grid;
     background-color: yellow;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr 5fr 5fr 3fr;
   }
 
-  /* side divs for nav and explore buttons */
+  /*** side divs for nav and explore buttons ***/
   .d_homeNavEdge {
     display: none;
   }
@@ -319,11 +555,13 @@ background-image: url("images/backgroundImage.png");
     display: none;
   }
 
+  /*** header div ***/
   #d_homeHeader {
     grid-area: 1/1/2/5;
   }
 
-  /* nav bar grid divs */
+
+  /*** nav divs ***/
   #d_homeNav1 {
     grid-area: 2/1/3/2;
   }
@@ -340,7 +578,9 @@ background-image: url("images/backgroundImage.png");
     grid-area: 2/4/3/5;
   }
 
-  #d_gradside {
+
+  /*** gradient divs ***/
+  #d_gradSideLeft {
     grid-area: 3/1/4/2;
     height: 1%;
     margin: 0px;
@@ -355,7 +595,7 @@ background-image: url("images/backgroundImage.png");
     background-color: green;
   }
 
-  #d_gradside2 {
+  #d_gradSideRight {
     grid-area: 3/4/4/5;
     height: 1%;
     margin: 0px;
@@ -363,6 +603,7 @@ background-image: url("images/backgroundImage.png");
     border-left: 65px solid green;
   }
 
+  /*** Main content divs ***/
   #d_aboutUs {
     grid-area: 3/1/4/7;
   }
@@ -371,6 +612,7 @@ background-image: url("images/backgroundImage.png");
     grid-area: 4/1/5/7;
   }
 
+  /*** Explore Buttons divs ***/
   #d_homeView {
     grid-area: 5/1/6/3;
   }
@@ -379,8 +621,10 @@ background-image: url("images/backgroundImage.png");
     grid-area: 5/3/6/5;
   }
 
+  /********************************/
 
-  #d_homeGrid2 {
+  /********** Top seller Css grid ********/
+  #d_homeGridTopSeller {
     display: grid;
     background-color: black;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
@@ -397,17 +641,8 @@ background-image: url("images/backgroundImage.png");
     grid-area: 2/1/3/7;
   }
 
-
-
-
 }
 
-.d_footer {
-  background-color: aqua;
-  height: 20%;
-}
-
-/*
-
-
-     */
+/*************************************************
+END OF CODE 
+*************************************************/

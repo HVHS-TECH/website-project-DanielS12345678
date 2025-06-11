@@ -2,51 +2,78 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>Daniel's swan plants - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-
+     <meta charset="UTF-8">
 </head>
+<!--
+for V2 add comments tidied up class/id names
+added grad for under nav bar 
+added about us text and map 
+
+-->
+
 
 <body>
 
     <div class="d_backgroundImage">
-
         <!-- Css grid -->
-        <div class="d_homeGrid">
+        <div id="d_homeGridMain">
             <div id="d_homeHeader">
-                <h2>Daniel's swan plants</h2>
+                <header><h2>Daniel's swan plants</h2></header>
             </div>
             <!-- nav bar -->
             <div class="d_homeNavEdge"></div>
-
-            <div id="d_homeNav1"><button class="b_current">Home</button></div>
-            <div id="d_homeNav2"><button class="b_change">View</button></div>
-            <div id="d_homeNav3"><button class="b_change">Care</button></div>
-            <div id="d_homeNav4"><button class="b_change">Order</button></div>
-
+            <div id="d_homeNav1" class="d_itemsCentre"><button class="b_current">Home</button></div>
+            <div id="d_homeNav2" class="d_itemsCentre"><button class="b_change">View</button></div>
+            <div id="d_homeNav3" class="d_itemsCentre"><button class="b_change">Care</button></div>
+            <div id="d_homeNav4" class="d_itemsCentre"><button class="b_change">Order</button></div>
             <div class="d_homeNavEdge"></div>
 
-            <div id="d_gradside"></div>
+            <div id="d_gradSideLeft"></div>
             <div id="d_grad"></div>
-            <div id="d_gradside2"></div>
-            <div id="d_aboutUs">about us</div>
-            <div id="d_map">map</div>
+            <div id="d_gradSideRight"></div>
 
-            <div class="d_homeExploreEdge"></div>
-            <div id="d_homeView">View the plants</div>
-            <div id="d_homeGet">Get yours here</div>
+            <div id="d_aboutUs">
+                <div id="d_aboutUsTextCover">
+                    <h3>About us</h3>
+                    <p id="p_aboutUs">
+                        Daniel’s swan plants was founded in September 2022, By Daniel Saunders, with a vision to provide
+                        people with swan plants to feed their hungry caterpillars. What first started with 15 plants has
+                        expanded to over 500 swan plants and spread across 3 greenhouses. We have helped many people
+                        feed their hungry caterpillars and provide plants to attract monarch butterflies to their
+                        garden.
+                    </p>
 
-            <div class="d_homeExploreEdge"></div>
-        </div>
+                </div>
 
-        <div id="d_homeGrid2">
-            <div id="d_topSeller">
-                <h1>Top Seller</h1>
+
             </div>
-            <div id="d_topSellerImg">top seller img</div>
+            <div id="d_map">
+            <!----   <img id="i_map" src="images/map.png"> -->
+            </div>
+            <div class="d_homeExploreEdge"></div>
+            <div id="d_homeView"><button id="b_exploreView" class="b_explore">View the plants</button></div>
+            <div id="d_homeGet"> <button id="b_exploreGet" class="b_explore">Get yours here</button></div>
+            <div class="d_homeExploreEdge"></div>
         </div>
     </div>
-    <div class="d_footer">footer</div>
+    
+    <div id="d_homeGridTopSeller">
+        <div id="d_topSeller">
+            <h1>Top Seller</h1>
+        </div>
+        <div id="d_topSellerImg">top seller img</div>
+    </div>
+  <footer>
+    <div class="d_footerGrid">
+        <div class="d_footerLink"> <a class="a_footer" href="test.html">View</a> </div>
+        <div class="d_footerLink"> <a class="a_footer" href="test.html">Care</a></div>
+        <div class="d_footerLink"> <a class="a_footer" href="test.html">Order</a></div>
+        <div class="d_contactUs"> contact us </div>
+        <div class="d_backToTop"> back to top </div> 
+    </div>
+  </footer>
 </body>
 
 </html>
