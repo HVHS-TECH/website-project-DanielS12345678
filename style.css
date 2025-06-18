@@ -67,9 +67,11 @@ button::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: 0px;
   height: 2px;
-  width: 100%;
+  width: 60%;
+  margin-left:20%;
+  margin-right:20%;
   background: linear-gradient(to right, #FFFFFF, #005CA3);
   transform: scaleX(0);
   transform-origin: left;
@@ -91,6 +93,8 @@ button {
   background-color: #FFFFFF;
   color: black;
   text-decoration: underline;
+      padding-left: 15%;
+    padding-right: 2%;
 }
 
 .b_change {
@@ -129,11 +133,11 @@ HOME PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-
+/*  background-image: url("images/backgroundImage.png");*/
 
 .d_backgroundImage {
 
-  background-image: url("images/backgroundImage.png");
+  background-image: url("test3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -234,8 +238,6 @@ background-position: center;
   /*** buttons ***/
   .b_current {
     font-size: 1.75rem;
-    padding-left: 15%;
-    padding-right: 15%;
   }
 
   .b_change {
@@ -252,7 +254,7 @@ background-position: center;
   }
 
   .b_explore {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     border-radius: 50px;
     transition-duration: 0.8s;
     padding: 2%;
