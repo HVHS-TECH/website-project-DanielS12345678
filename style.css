@@ -23,6 +23,7 @@ body {
 
 header {
   border-bottom-style: solid;
+  height:15%;
 }
 
 footer {
@@ -135,27 +136,6 @@ HOME PAGE STYLES BELOW
 *********************************************************************************/
 /*  background-image: url("images/backgroundImage.png");*/
 
-.d_backgroundImage {
-
-  background-image: url("test3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-
-}
-
-/*
-.i_homeBackground {
-background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-    width: 100%;
-  height : 100vh ;
-
-}
-*/
 #d_aboutUsTextCover {
   margin: 4.5%;
   background-color: #EFFBF2;
@@ -198,7 +178,7 @@ background-position: center;
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Large screen size **********/
-@media (min-width:1024px) {
+@media (min-width:1750px) {
 
   /*** headers ***/
   h1 {
@@ -264,77 +244,64 @@ background-position: center;
   /********** Main Css grid ********/
   #d_homeGridMain {
     display: grid;
-    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 2fr 1fr 5fr 2fr;
-    height: 100%;
+    grid-template-columns: 3fr repeat(3, 2fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height:85%;
+    
   }
 
-
-  /*** header div ***/
-  #d_homeHeader {
-    grid-area: 1/1/2/7;
-    padding-bottom: 1rem;
-
+  #d_homeMainImage{
+    grid-area: 1/1/6/2;
+    background-color:red;
   }
 
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/2/3/3;
+  #d_homeHeader{
+    grid-area: 1/2/2/6;
+    background-color:green;
   }
 
-  #d_homeNav2 {
-    grid-area: 2/3/3/4;
+  #d_homeSubHeader{
+    grid-area: 2/2/3/6;
+    background-color:blue;
   }
 
-  #d_homeNav3 {
-    grid-area: 2/4/3/5;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/5/3/6;
-  }
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-  }
-
-  #d_grad {
-    height: 1%;
+  #d_homeLookButton{
     grid-area: 3/2/4/6;
-    margin: 0px;
-    background-color: yellow;
-  }
-
-  #d_gradSideRight {
-    grid-area: 3/6/4/7;
-    height: 1%;
-    margin: 0px;
+    background-color:yellow;
   }
 
 
-  /*** Main content divs ***/
-  #d_aboutUs {
-    margin-top: 0.55%;
-    grid-area: 3/1/4/5;
+  /********************************/
 
+  /********** Story Css grid ********/
+
+  #d_homeGridStory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+height:60%;
   }
 
-  #d_map {
-    margin-top: 1%;
-    grid-area: 3/5/4/7;
+  #d_homeStoryHeader{
+    grid-area: 1/2/2/3;
+    background-color:red;
   }
 
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 4/2/5/4;
+  #d_homeStoryImage{
+    grid-area: 2/1/3/2;
+    background-color:green;
   }
 
-  #d_homeGet {
-    grid-area: 4/4/5/6;
+  #d_homeStoryAboutUs{
+    grid-area: 2/2/3/3;
+    background-color:blue;
   }
+
+  #d_homeStoryMap{
+    grid-area: 2/3/3/4;
+    background-color:yellow;
+  }
+
 
   /********************************/
 
@@ -397,10 +364,11 @@ background-position: center;
 
 
 /********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
+/*** Tablet like size ***/
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Medium screen size **********/
-@media (max-width:1024px) {
+@media (max-width:1750px) {
 
   div {
     background-color: skyblue;
@@ -420,78 +388,65 @@ background-position: center;
   }
 
   /********** Main Css grid ********/
-  .d_homeGridMain {
+  #d_homeGridMain {
     display: grid;
     background-color: skyblue;
-    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-    grid-template-rows: 2fr 1fr 6fr 2fr;
-    height: 100%;
-
+     grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 85%;
   }
 
-  /*** header div ***/
-  #d_homeHeader {
-    grid-area: 1/1/2/7;
+  #d_homeMainImage{
+    grid-area: 1/1/6/2;
+    background-color:red;
   }
 
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/2/3/3;
+  #d_homeHeader{
+    grid-area: 1/2/2/6;
+    background-color:green;
   }
 
-  #d_homeNav2 {
-    grid-area: 2/3/3/4;
+  #d_homeSubHeader{
+    grid-area: 2/2/3/6;
+    background-color:brown;
   }
 
-  #d_homeNav3 {
-    grid-area: 2/4/3/5;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/5/3/6;
-  }
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-    background-color: skyblue;
-  }
-
-  #d_grad {
-    height: 1%;
+  #d_homeLookButton{
     grid-area: 3/2/4/6;
-    margin: 0px;
-    background-color: yellow;
+    background-color:yellow;
   }
 
-  #d_gradSideRight {
-    grid-area: 3/6/4/7;
-    height: 1%;
-    margin: 0px;
-    background-color: skyblue;
+  /********************************/
+
+  /********** Story Css grid ********/
+
+  #d_homeGridStory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+height:60%;
   }
 
-  /*** Main content divs ***/
-  #d_aboutUs {
-    margin-top: 0.55%;
-    grid-area: 3/1/4/5;
+  #d_homeStoryHeader{
+    grid-area: 1/2/2/3;
+    background-color:red;
   }
 
-  #d_map {
-    margin-top: 1%;
-    grid-area: 3/5/4/7;
+  #d_homeStoryImage{
+    grid-area: 2/1/3/2;
+    background-color:green;
   }
 
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 4/2/5/4;
+  #d_homeStoryAboutUs{
+    grid-area: 2/2/3/3;
+    background-color:blue;
   }
 
-  #d_homeGet {
-    grid-area: 4/4/5/6;
+  #d_homeStoryMap{
+    grid-area: 2/3/3/4;
+    background-color:yellow;
   }
+
 
   /********************************/
 
@@ -517,10 +472,11 @@ background-position: center;
 
 
 /********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
+/** starts at a large phone (samsung flip) / very small tablet **/
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Small screen size **********/
-@media (max-width:425px) {
+@media (max-width:1440px) {
 
   div {
     background-color: yellow;
@@ -541,88 +497,67 @@ background-position: center;
   }
 
   /********** Main Css grid ********/
-  .d_homeGridMain {
+  #d_homeGridMain {
     display: grid;
     background-color: yellow;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 5fr 5fr 3fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 85%;
   }
 
-  /*** side divs for nav and explore buttons ***/
-  .d_homeNavEdge {
-    display: none;
+  /** image is hiden on a phone like screen **/
+  #d_homeMainImage{
+   display:none;
   }
 
-  .d_homeExploreEdge {
-    display: none;
+  #d_homeHeader{
+    grid-area: 1/1/2/6;
+    background-color:green;
   }
 
-  /*** header div ***/
-  #d_homeHeader {
-    grid-area: 1/1/2/5;
+  #d_homeSubHeader{
+    grid-area: 2/1/3/6;
+    background-color:brown;
+  }
+
+  #d_homeLookButton{
+    grid-area: 3/1/4/6;
+    background-color:yellow;
+  }
+
+  /********************************/
+
+  /********** Story Css grid ********/
+
+  #d_homeGridStory {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 3fr 3fr;
+height:100%;
+  }
+
+  #d_homeStoryHeader{
+    grid-area: 1/2/2/3;
+    background-color:red;
+  }
+
+  #d_homeStoryImage{
+    grid-area: 1/1/2/2;
+    background-color:green;
+  }
+
+  #d_homeStoryAboutUs{
+    grid-area: 2/1/3/3;
+    background-color:blue;
+  }
+
+  #d_homeStoryMap{
+    grid-area: 3/1/4/3;
+    background-color:palevioletred;
   }
 
 
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/1/3/2;
-  }
-
-  #d_homeNav2 {
-    grid-area: 2/2/3/3;
-  }
-
-  #d_homeNav3 {
-    grid-area: 2/3/3/4;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/4/3/5;
-  }
-
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-    background-color: yellow;
-    border-right: 65px solid green;
-  }
-
-  #d_grad {
-    height: 1%;
-    grid-area: 3/2/4/4;
-    margin: 0px;
-    background-color: green;
-  }
-
-  #d_gradSideRight {
-    grid-area: 3/4/4/5;
-    height: 1%;
-    margin: 0px;
-    background-color: yellow;
-    border-left: 65px solid green;
-  }
-
-  /*** Main content divs ***/
-  #d_aboutUs {
-    grid-area: 3/1/4/7;
-  }
-
-  #d_map {
-    grid-area: 4/1/5/7;
-  }
-
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 5/1/6/3;
-  }
-
-  #d_homeGet {
-    grid-area: 5/3/6/5;
-  }
-
+    
   /********************************/
 
   /********** Top seller Css grid ********/
