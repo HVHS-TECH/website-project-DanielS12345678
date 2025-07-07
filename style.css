@@ -16,14 +16,19 @@ html {
   font-size: 20px;
 }
 
+/*  */
+
 body {
   margin: 0px;
   height: 100%;
+  background-color:#dfeef4 ;
 }
 
+
 header {
-  border-bottom-style: solid;
-  height:15%;
+  height:10%;
+  width:100%;
+  background-color:#fffef4;
 }
 
 footer {
@@ -31,13 +36,79 @@ footer {
   height: 5.5rem;
 }
 
-a {
+.d_headerGrid{
+  display:grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    height:100%;
+    
+}
+
+.d_headerCompany{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d_headerLink {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#d_headerLink1{
+  grid-area:1/2/2/3;
+  
+}
+
+#d_headerLink2{
+  grid-area:1/3/2/4;
+}
+
+#d_headerLink3{
+  grid-area:1/4/2/5;
+}
+
+#d_headerLink4{
+  grid-area:1/5/2/6;
+}
+
+.a_header {
+  color: black;
+  text-decoration: none;
+  align-self: center;
+  position: relative;
+}
+
+.a_header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+background: linear-gradient(to right, #fffef4,#005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.a_header:hover::after {
+  transform: scaleX(1);
+  cursor: pointer;
+}
+
+.d_footerLink{
+  text-align: center;
+}
+
+.a_footer {
   color: white;
   position: relative;
   text-decoration: none;
 }
 
-a::after {
+.a_footer::after {
   content: "";
   position: absolute;
   left: 0;
@@ -50,81 +121,9 @@ a::after {
   transition: transform 0.3s ease;
 }
 
-a:hover::after {
+.a_footer:hover::after {
   transform: scaleX(1);
   cursor: pointer;
-}
-
-
-button {
-  position: relative;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* underline */
-button::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  height: 2px;
-  width: 60%;
-  margin-left:20%;
-  margin-right:20%;
-  background: linear-gradient(to right, #FFFFFF, #005CA3);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-button:hover::after {
-  transform: scaleX(1);
-}
-
-button {
-  color: white;
-  position: relative;
-  border: none;
-  cursor: pointer;
-}
-
-.b_current {
-  background-color: #FFFFFF;
-  color: black;
-  text-decoration: underline;
-      padding-left: 15%;
-    padding-right: 2%;
-}
-
-.b_change {
-  background-color: #005CA3;
-  padding-left: 15%;
-  padding-right: 15%;
-}
-
-/* no underline on current screen button */
-.b_current::after {
-  background: none;
-}
-
-
-
-
-/*** align items in a css gird div to centre ***/
-.d_itemsCentre {
-  text-align: center;
-}
-
-#d_grad {
-  background-image: linear-gradient(to right, #FFFFFF, #005CA3);
-}
-
-.d_footerLink{
-  text-align: center;
- 
-  
 }
 
 /********************************************************************************
@@ -134,58 +133,142 @@ HOME PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-/*  background-image: url("images/backgroundImage.png");*/
-
-#d_aboutUsTextCover {
-  margin: 4.5%;
-  background-color: #EFFBF2;
-  background: rgba(255, 255, 255, 0.65);
-  padding: 1%;
-  padding-top: 0%;
+#h3_navHeader{
+    font-size: 3vw;
+    margin:0%;
 }
 
-.b_explore::after {
-  bottom: -8px;
-  height: 4px;
-  width: 80%;
+#i_homeMain{
+width:95%;
+height:100%;
+align-self: center;
+}
+
+#d_homeGridMain{
+  background-color: #C4CBCA;
+  border-bottom-style: solid;
+border-width: 2px;
+}
+
+
+#h1_homeMainHeader{
+  float:left;
+  font-size:8vw;
+  margin:0%;
+}
+
+#h3_subHeader{
+  text-align: center;
+  font-weight: normal;
+  margin-left: 1%;
+  margin-right:1%;
+  font-size: 2.5vw;
+}
+
+#d_homeHeader{
+border-bottom-style: solid;
+ padding:0%;
+}
+
+#d_homeTakeLookButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+#b_takeLook{
+  color:white;
+  background-color: #3e8646;
+  border: none;
+  border-radius: 20px;
+  padding:1%;
+  font-size:3.25vw;
+  align-self: flex-start;
+  
+}
+
+.i_chrysalis{
+  height:20vh;
+  width:5vw;
   margin-left: 10%;
-  margin-right: 10%;
 }
 
-#b_exploreView {
-  background-color: #EFFBF2;
+#i_chrysalisLeft{
+  margin-left:15%;
+}
+
+
+#i_chrysalisRight{
+   margin-right:15%;
+}
+
+#d_homeStoryImage{
+ display:flex;
+  justify-content: center;
+  align-items:center;
+}
+ 
+#i_ownerImage{
+  display:block;
+   border-radius: 50%;
+   width:25vw;
+  height:40vh;
+
+}
+
+#d_homeStoryAboutUs{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+#p_aboutUs {
+    margin-left:5%;
+    margin-right:5%;
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  #a_location {
   color: black;
+  text-decoration: underline;
+  align-self: center;
+  position: relative;
 }
 
-#b_exploreView:hover {
-  background-color: #000000;
-  color: white;
+#a_location::after {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+background: linear-gradient(to right, #fffef4,#005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-#b_exploreGet {
-  background-color: #000000;
+#a_location:hover{
+  text-decoration: none;
 }
-
-#b_exploreGet:hover {
-  background-color: #EFFBF2;
-  color: black;
+#a_location:hover::after {
+  transform: scaleX(1);
+ 
+  cursor: pointer;
 }
-
-
-
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Large screen size **********/
-@media (min-width:1750px) {
+@media (min-width:825px) {
 
   /*** headers ***/
   h1 {
-    margin: 0px;
-    margin-bottom: 2.5%;
-    font-size: 5.5rem;
-    height: 30%;
+    margin:0%;
     text-align: center;
   }
 
@@ -195,122 +278,84 @@ HOME PAGE STYLES BELOW
     text-align: center;
   }
 
-  h3 {
-    margin: 0px;
-    margin-bottom: 1%;
-    font-size: 2.25rem;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: black;
-  }
-
-  #p_aboutUs {
-    font-size: 1rem;
-    text-align: center;
-
-  }
-
-  #i_map {
-    height: 60%;
-    width: 90%;
-  }
-
-  /*** buttons ***/
-  .b_current {
+  /*** header links ***/
+  .a_header {
     font-size: 1.75rem;
   }
-
-  .b_change {
-    font-size: 1.75rem;
-  }
-
-
-  #b_exploreView {
-    margin-right: 3%;
-  }
-
-  #b_exploreGet {
-    margin-left: 3%;
-  }
-
-  .b_explore {
-    font-size: 2.25rem;
-    border-radius: 50px;
-    transition-duration: 0.8s;
-    padding: 2%;
-  }
-
 
   /********** Main Css grid ********/
   #d_homeGridMain {
     display: grid;
     grid-template-columns: 3fr repeat(3, 2fr);
     grid-template-rows: 3fr 2fr 1fr;
-    height:85%;
-    
+    height:90%;
   }
 
   #d_homeMainImage{
     grid-area: 1/1/6/2;
-    background-color:red;
   }
 
   #d_homeHeader{
     grid-area: 1/2/2/6;
-    background-color:green;
   }
 
   #d_homeSubHeader{
-    grid-area: 2/2/3/6;
-    background-color:blue;
+  grid-area: 2/2/3/6;
   }
 
-  #d_homeLookButton{
+
+  #d_homeTakeLookButton{
     grid-area: 3/2/4/6;
-    background-color:yellow;
-  }
+    }
 
 
   /********************************/
 
-  /********** Story Css grid ********/
+  /********** Story flex boxes ********/
 
-  #d_homeGridStory {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr;
-height:60%;
-  }
+  /*** header ***/
 
-  #d_homeStoryHeader{
-    grid-area: 1/2/2/3;
-    background-color:red;
-  }
-
-  #d_homeStoryImage{
-    grid-area: 2/1/3/2;
-    background-color:green;
-  }
-
-  #d_homeStoryAboutUs{
-    grid-area: 2/2/3/3;
-    background-color:blue;
-  }
-
-  #d_homeStoryMap{
-    grid-area: 2/3/3/4;
-    background-color:yellow;
-  }
+#d_homeStoryHeaderFlex{
+  display:flex;
+  margin-bottom:2.5%;
+}
 
 
-  /********************************/
+#d_chrysalisShowLeft{
+  width:30%;
+}
+
+#d_homeStoryHeader{
+  width:40%;
+}
+
+#d_chrysalisShowRight{
+  width:30%;
+}
+
+/*** Main ***/
+
+#d_homeStoryMainFlex{
+  display: flex;
+}
+
+#d_homeStoryImage{
+  width:35%;
+}
+
+#d_homeStoryAboutUs{
+  width:65%;
+}
+
+
+/********************************/
 
   /********** Top seller Css grid ********/
   #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 1fr 3fr;
-    background-color: #DFEEF4;
+    grid-template-rows: 1fr 5fr;
+    border-bottom: black;
   }
 
 
@@ -368,7 +413,7 @@ height:60%;
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Medium screen size **********/
-@media (max-width:1750px) {
+@media (max-width:825px) {
 
   div {
     background-color: skyblue;
@@ -386,6 +431,13 @@ height:60%;
     font-size: 90px;
     text-align: center;
   }
+
+
+ /*** header links ***/
+  .a_header {
+    font-size: 1.5rem;
+  }
+
 
   /********** Main Css grid ********/
   #d_homeGridMain {
@@ -411,7 +463,7 @@ height:60%;
     background-color:brown;
   }
 
-  #d_homeLookButton{
+  #d_homeTakeLookButton{
     grid-area: 3/2/4/6;
     background-color:yellow;
   }
@@ -476,7 +528,7 @@ height:60%;
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Small screen size **********/
-@media (max-width:1440px) {
+@media (max-width:550px) {
 
   div {
     background-color: yellow;
@@ -496,6 +548,14 @@ height:60%;
     text-align: center;
   }
 
+
+
+ /*** header links ***/
+  .a_header {
+    font-size: 0.75rem;
+  }
+
+
   /********** Main Css grid ********/
   #d_homeGridMain {
     display: grid;
@@ -512,7 +572,7 @@ height:60%;
 
   #d_homeHeader{
     grid-area: 1/1/2/6;
-    background-color:green;
+    padding-top:5%;
   }
 
   #d_homeSubHeader{
@@ -520,7 +580,7 @@ height:60%;
     background-color:brown;
   }
 
-  #d_homeLookButton{
+  #d_homeTakeLookButton{
     grid-area: 3/1/4/6;
     background-color:yellow;
   }
