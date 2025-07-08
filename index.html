@@ -5,6 +5,7 @@
     <title>Daniel's swan plants - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8">
+    <script src="scripts/fbP_manager.js"></script>
 </head>
 
 <body>
@@ -14,19 +15,19 @@
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
             <div class="d_headerLink" id="d_headerLink1">
-                <a class="a_header" class="a_current" href="test.html">Home</a>
+                <a class="a_current">Home</a>
 
             </div>
             <div class="d_headerLink" id="d_headerLink2">
-                <a class="a_header" class="a_change" href="test.html">View</a>
+                <a class="a_change" href="htmlPages/view.html">View</a>
 
             </div>
             <div class="d_headerLink" id="d_headerLink3">
-                <a class="a_header" class="a_change" href="test.html">Care</a>
+                <a class="a_change" href="htmlPages/care.html">Care</a>
 
             </div>
             <div class="d_headerLink" id="d_headerLink4">
-                <a class="a_header" class="a_change" href="test.html">Order</a>
+                <a class="a_change" href="htmlPages/order.html">Order</a>
 
             </div>
         </div>
@@ -47,7 +48,7 @@
         </div>
         <div id="d_homeSubHeader">
             <h3 id="h3_subHeader"> Create a home for butterflies and bring life to your backyard, With these swan
-                plants. </h3>
+                plants.</h3>
         </div>
         <div id="d_homeTakeLookButton">
             <button id="b_takeLook">Take a look</button>
@@ -61,13 +62,10 @@
 
             <img class="i_chrysalis" id="i_chrysalisLeft" alt="Image of a chrysalis" src="images/chrysalisImage1.png">
             <img class="i_chrysalis" alt="Image of a chrysalis" src="images/chrysalisImage2.png">
-            <img class="i_chrysalis" alt="Image of a chrysalis" src="images/chrysalisImage3.png">
-
-
-       
+            <img class="i_chrysalis" alt="Image of a chrysalis" src="images/chrysalisImage3.png">       
         </div>
         <div id="d_homeStoryHeader">
-            <h2>Our story</h2>
+            <h2 id="h2_Story">Our story</h2>
         </div>
          <div id="d_chrysalisShowRight">
             <img class="i_chrysalis" alt="Image of a chrysalis" src="images/chrysalisImage4.png">
@@ -93,14 +91,13 @@
                 feed their hungry caterpillars and provide plants to attract monarch butterflies to their
                 garden. Being a pround Lower Hutt owned and operation business, our location can be found <a id="a_location" href="https://www.google.com/maps/place/19+Macdiarmid+Place,+Waiwhetu,+Lower+Hutt+5010/@-41.2213987,174.9114378,538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6d38aa448014c4f5:0x5c59dcfc46ae62fb!8m2!3d-41.2214028!4d174.9140127!16s%2Fg%2F11gfccd4qk?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">here</a>.
             </p>
-            
         </div>
     </div>
 
 
     <div id="d_homeGridTopSeller">
         <div id="d_topSeller">
-            <h1>Top Seller</h1>
+            <h1 id="h1_topSeller">Top Seller</h1>
         </div>
         <div id="d_topSellerImg">
 <img id="i_topSeller" src="images/topSellerImage.png">
@@ -108,14 +105,21 @@
         </div>
     </div>
 
-
+<!---- Footer ---->
     <footer>
         <div class="d_footerGrid">
-            <div class="d_footerLink"> <a class="a_footer" href="test.html">View</a> </div>
-            <div class="d_footerLink"> <a class="a_footer" href="test.html">Care</a></div>
-            <div class="d_footerLink"> <a class="a_footer" href="test.html">Order</a></div>
-            <div class="d_contactUs"> contact us </div>
-            <div class="d_backToTop"> back to top </div>
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">View</a> </div>
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Care</a></div>
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Order</a></div>
+            <div class="d_contactUsGrid">  
+
+                <div id="d_contactUsBackground">
+                    <h4 class="h4_contactUs">Contact us</h4>
+                    <h5 class="h5_contactEmail">Email - <a class="a_contact" target="_blank" href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a></h5>
+                    <h5 class="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046"> +64 027 254 6046</a></h5>
+                </div>
+            </div>
+            <div class="d_backToTopGrid"> <button class="b_backToTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});' > <img class="i_backToTop" alt="Back to top Arrow" src="images/backToTopImage.png"></button></div>
         </div>
     </footer>
 </body>

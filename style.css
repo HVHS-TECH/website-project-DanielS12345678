@@ -16,19 +16,17 @@ html {
   font-size: 20px;
 }
 
-/*  */
-
 body {
   margin: 0px;
   height: 100%;
-  background-color:#dfeef4 ;
+  background-color: #dfeef4;
 }
 
 
 header {
-  height:10%;
-  width:100%;
-  background-color:#fffef4;
+  height: 10%;
+  width: 100%;
+  background-color: #fffef4;
 }
 
 footer {
@@ -36,70 +34,84 @@ footer {
   height: 5.5rem;
 }
 
-.d_headerGrid{
-  display:grid;
-    grid-template-columns: 2fr repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    height:100%;
-    
+button:hover {
+  cursor: pointer;
 }
 
-.d_headerCompany{
-  display:flex;
+.d_headerGrid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.d_headerCompany {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .d_headerLink {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#d_headerLink1{
-  grid-area:1/2/2/3;
-  
+#d_headerLink1 {
+  grid-area: 1/2/2/3;
 }
 
-#d_headerLink2{
-  grid-area:1/3/2/4;
+#d_headerLink2 {
+  grid-area: 1/3/2/4;
 }
 
-#d_headerLink3{
-  grid-area:1/4/2/5;
+#d_headerLink3 {
+  grid-area: 1/4/2/5;
 }
 
-#d_headerLink4{
-  grid-area:1/5/2/6;
+#d_headerLink4 {
+  grid-area: 1/5/2/6;
 }
 
-.a_header {
+.a_current{
+  color: black;
+  align-self: center;
+  text-decoration: none;
+}
+
+.a_change {
   color: black;
   text-decoration: none;
   align-self: center;
   position: relative;
 }
 
-.a_header::after {
+.a_change::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-background: linear-gradient(to right, #fffef4,#005CA3);
+  background: linear-gradient(to right, #fffef4, #005CA3);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.a_header:hover::after {
+.a_change:hover::after {
   transform: scaleX(1);
-  cursor: pointer;
 }
 
-.d_footerLink{
-  text-align: center;
+
+/********************************/
+
+/********** Footer Css grid ********/
+
+.d_footerLinkGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .a_footer {
@@ -115,7 +127,8 @@ background: linear-gradient(to right, #fffef4,#005CA3);
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: white;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -123,8 +136,92 @@ background: linear-gradient(to right, #fffef4,#005CA3);
 
 .a_footer:hover::after {
   transform: scaleX(1);
-  cursor: pointer;
 }
+
+.d_footerGrid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.d_contactUsGrid {
+  grid-area: 1/4/2/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#d_contactUsBackground {
+  background-color: #EFFBF2;
+  height: 85%;
+  width: 85%;
+}
+
+.h4_contactUs {
+  margin: 0%;
+  text-align: center;
+  font-size: 1.75vw;
+}
+
+
+.h5_contactEmail {
+  margin: 0%;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.h5_contactPhone {
+  margin: 0%;
+  margin-top: 1%;
+  text-align: center;
+}
+
+
+.a_contact {
+  color: black;
+  position: relative;
+  text-decoration: none;
+}
+
+.a_contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.a_contact:hover::after {
+  transform: scaleX(1);
+}
+
+.d_backToTopGrid {
+  grid-area: 1/9/2/10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i_backToTop {
+  height: 70%;
+  width: 70%;
+}
+
+.b_backToTop {
+  background: none;
+  border: none;
+}
+
+.a_footer {
+  font-size: 2rem;
+}
+
 
 /********************************************************************************
 *********************************************************************************
@@ -133,104 +230,109 @@ HOME PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-#h3_navHeader{
-    font-size: 3vw;
-    margin:0%;
+#h3_navHeader {
+  font-size: 3vw;
+  margin: 0%;
 }
 
-#i_homeMain{
-width:95%;
-height:100%;
-align-self: center;
+#i_homeMain {
+  width: 95%;
+  height: 100%;
+  align-self: center;
 }
 
-#d_homeGridMain{
+#d_homeGridMain {
   background-color: #C4CBCA;
   border-bottom-style: solid;
-border-width: 2px;
+  border-width: 2px;
 }
 
 
-#h1_homeMainHeader{
-  float:left;
-  font-size:8vw;
-  margin:0%;
+#h1_homeMainHeader {
+  float: left;
+  font-size: 8vw;
+  margin: 0%;
 }
 
-#h3_subHeader{
+#h3_subHeader {
   text-align: center;
   font-weight: normal;
   margin-left: 1%;
-  margin-right:1%;
+  margin-right: 1%;
   font-size: 2.5vw;
 }
 
-#d_homeHeader{
-border-bottom-style: solid;
- padding:0%;
+#d_homeHeader {
+  border-bottom-style: solid;
+  padding: 0%;
 }
 
-#d_homeTakeLookButton{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    }
+#d_homeTakeLookButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
-#b_takeLook{
-  color:white;
+#b_takeLook {
+  color: white;
   background-color: #3e8646;
   border: none;
   border-radius: 20px;
-  padding:1%;
-  font-size:3.25vw;
+  padding: 1%;
+  font-size: 3.25vw;
   align-self: flex-start;
-  
+
 }
 
-.i_chrysalis{
-  height:20vh;
-  width:5vw;
+.i_chrysalis {
+  height: 20vh;
+  width: 5vw;
   margin-left: 10%;
 }
 
-#i_chrysalisLeft{
-  margin-left:15%;
+#i_chrysalisLeft {
+  margin-left: 15%;
 }
 
 
-#i_chrysalisRight{
-   margin-right:15%;
+#i_chrysalisRight {
+  margin-right: 15%;
 }
 
-#d_homeStoryImage{
- display:flex;
+#h2_Story {
+  font-size: 7vw;
+}
+
+
+#d_homeStoryImage {
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
- 
-#i_ownerImage{
-  display:block;
-   border-radius: 50%;
-   width:25vw;
-  height:40vh;
+
+#i_ownerImage {
+  display: block;
+  border-radius: 50%;
+  width: 65%;
+  height: 90%;
 
 }
 
-#d_homeStoryAboutUs{
-  display:flex;
+#d_homeStoryAboutUs {
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 #p_aboutUs {
-    margin-left:5%;
-    margin-right:5%;
-    font-size: 2vw;
-    text-align: center;
-  }
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 1.75vw;
+  text-align: center;
+}
 
-  #a_location {
+#a_location {
   color: black;
   text-decoration: underline;
   align-self: center;
@@ -240,25 +342,30 @@ border-bottom-style: solid;
 #a_location::after {
   content: "";
   position: absolute;
-  
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-background: linear-gradient(to right, #fffef4,#005CA3);
+  background: linear-gradient(to right, #fffef4, #005CA3);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-#a_location:hover{
+#a_location:hover {
   text-decoration: none;
 }
+
 #a_location:hover::after {
   transform: scaleX(1);
- 
-  cursor: pointer;
 }
+
+#h1_topSeller {
+  font-size: 12vw;
+}
+
+
+
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -268,18 +375,21 @@ background: linear-gradient(to right, #fffef4,#005CA3);
 
   /*** headers ***/
   h1 {
-    margin:0%;
+    margin: 0%;
     text-align: center;
   }
 
   h2 {
     margin: 0px;
-    font-size: 4.5rem;
     text-align: center;
   }
 
   /*** header links ***/
-  .a_header {
+  .a_change {
+    font-size: 1.75rem;
+  }
+
+   .a_current {
     font-size: 1.75rem;
   }
 
@@ -288,25 +398,25 @@ background: linear-gradient(to right, #fffef4,#005CA3);
     display: grid;
     grid-template-columns: 3fr repeat(3, 2fr);
     grid-template-rows: 3fr 2fr 1fr;
-    height:90%;
+    height: 90%;
   }
 
-  #d_homeMainImage{
+  #d_homeMainImage {
     grid-area: 1/1/6/2;
   }
 
-  #d_homeHeader{
+  #d_homeHeader {
     grid-area: 1/2/2/6;
   }
 
-  #d_homeSubHeader{
-  grid-area: 2/2/3/6;
+  #d_homeSubHeader {
+    grid-area: 2/2/3/6;
   }
 
 
-  #d_homeTakeLookButton{
+  #d_homeTakeLookButton {
     grid-area: 3/2/4/6;
-    }
+  }
 
 
   /********************************/
@@ -314,47 +424,48 @@ background: linear-gradient(to right, #fffef4,#005CA3);
   /********** Story flex boxes ********/
 
   /*** header ***/
-
-#d_homeStoryHeaderFlex{
-  display:flex;
-  margin-bottom:2.5%;
-}
-
-
-#d_chrysalisShowLeft{
-  width:30%;
-}
-
-#d_homeStoryHeader{
-  width:40%;
-}
-
-#d_chrysalisShowRight{
-  width:30%;
-}
-
-/*** Main ***/
-
-#d_homeStoryMainFlex{
-  display: flex;
-}
-
-#d_homeStoryImage{
-  width:35%;
-}
-
-#d_homeStoryAboutUs{
-  width:65%;
-}
+  #d_homeStoryHeaderFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-/********************************/
+  #d_chrysalisShowLeft {
+    width: 30%;
+  }
+
+  #d_homeStoryHeader {
+    width: 40%;
+  }
+
+  #d_chrysalisShowRight {
+    width: 30%;
+  }
+
+  /*** Main ***/
+
+  #d_homeStoryMainFlex {
+    display: flex;
+    margin-top: 3%;
+  }
+
+  #d_homeStoryImage {
+    width: 35%;
+  }
+
+  #d_homeStoryAboutUs {
+    width: 65%;
+  }
+
+
+  /********************************/
 
   /********** Top seller Css grid ********/
   #d_homeGridTopSeller {
     display: grid;
-    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+    grid-template-rows: 1fr 3fr;
     border-bottom: black;
   }
 
@@ -367,40 +478,6 @@ background: linear-gradient(to right, #fffef4,#005CA3);
     grid-area: 2/1/3/7;
   }
 
-  /********************************/
-
-  /********** Footer Css grid ********/
-
-  .d_footerGrid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  .d_footerLink1 {
-    grid-area: 1/1/2/2;
-  }
-
-  .d_footerLink2 {
-    grid-area: 1/2/2/3;
-  }
-
-  .d_footerLink3 {
-    grid-area: 1/3/2/4;
-  }
-
-  .d_contactUs {
-    grid-area: 1/4/2/9;
-  }
-
-
-  .d_backToTop {
-    grid-area: 1/9/2/10;
-  }
-
-  .a_footer {
-    font-size: 2rem;
-  }
 
 
 
@@ -421,20 +498,19 @@ background: linear-gradient(to right, #fffef4,#005CA3);
 
   h1 {
     margin: 0px;
-    font-size: 75px;
     text-align: center;
   }
 
   h2 {
     margin: 0px;
     margin-bottom: 1%;
-    font-size: 90px;
+
     text-align: center;
   }
 
 
- /*** header links ***/
-  .a_header {
+  /*** header links ***/
+  .a_change {
     font-size: 1.5rem;
   }
 
@@ -443,29 +519,29 @@ background: linear-gradient(to right, #fffef4,#005CA3);
   #d_homeGridMain {
     display: grid;
     background-color: skyblue;
-     grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-columns: 3fr repeat(3, 1fr);
     grid-template-rows: 3fr 2fr 1fr;
     height: 85%;
   }
 
-  #d_homeMainImage{
+  #d_homeMainImage {
     grid-area: 1/1/6/2;
-    background-color:red;
+    background-color: red;
   }
 
-  #d_homeHeader{
+  #d_homeHeader {
     grid-area: 1/2/2/6;
-    background-color:green;
+    background-color: green;
   }
 
-  #d_homeSubHeader{
+  #d_homeSubHeader {
     grid-area: 2/2/3/6;
-    background-color:brown;
+    background-color: brown;
   }
 
-  #d_homeTakeLookButton{
+  #d_homeTakeLookButton {
     grid-area: 3/2/4/6;
-    background-color:yellow;
+    background-color: yellow;
   }
 
   /********************************/
@@ -476,27 +552,27 @@ background: linear-gradient(to right, #fffef4,#005CA3);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr;
-height:60%;
+    height: 60%;
   }
 
-  #d_homeStoryHeader{
+  #d_homeStoryHeader {
     grid-area: 1/2/2/3;
-    background-color:red;
+    background-color: red;
   }
 
-  #d_homeStoryImage{
+  #d_homeStoryImage {
     grid-area: 2/1/3/2;
-    background-color:green;
+    background-color: green;
   }
 
-  #d_homeStoryAboutUs{
+  #d_homeStoryAboutUs {
     grid-area: 2/2/3/3;
-    background-color:blue;
+    background-color: blue;
   }
 
-  #d_homeStoryMap{
+  #d_homeStoryMap {
     grid-area: 2/3/3/4;
-    background-color:yellow;
+    background-color: yellow;
   }
 
 
@@ -537,7 +613,6 @@ height:60%;
   /*** headers ***/
   h1 {
     margin: 0px;
-    font-size: 75px;
     text-align: center;
   }
 
@@ -550,8 +625,8 @@ height:60%;
 
 
 
- /*** header links ***/
-  .a_header {
+  /*** header links ***/
+  .a_change {
     font-size: 0.75rem;
   }
 
@@ -566,23 +641,23 @@ height:60%;
   }
 
   /** image is hiden on a phone like screen **/
-  #d_homeMainImage{
-   display:none;
+  #d_homeMainImage {
+    display: none;
   }
 
-  #d_homeHeader{
+  #d_homeHeader {
     grid-area: 1/1/2/6;
-    padding-top:5%;
+    padding-top: 5%;
   }
 
-  #d_homeSubHeader{
+  #d_homeSubHeader {
     grid-area: 2/1/3/6;
-    background-color:brown;
+    background-color: brown;
   }
 
-  #d_homeTakeLookButton{
+  #d_homeTakeLookButton {
     grid-area: 3/1/4/6;
-    background-color:yellow;
+    background-color: yellow;
   }
 
   /********************************/
@@ -593,31 +668,31 @@ height:60%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 2fr 3fr 3fr;
-height:100%;
+    height: 100%;
   }
 
-  #d_homeStoryHeader{
+  #d_homeStoryHeader {
     grid-area: 1/2/2/3;
-    background-color:red;
+    background-color: red;
   }
 
-  #d_homeStoryImage{
+  #d_homeStoryImage {
     grid-area: 1/1/2/2;
-    background-color:green;
+    background-color: green;
   }
 
-  #d_homeStoryAboutUs{
+  #d_homeStoryAboutUs {
     grid-area: 2/1/3/3;
-    background-color:blue;
+    background-color: blue;
   }
 
-  #d_homeStoryMap{
+  #d_homeStoryMap {
     grid-area: 3/1/4/3;
-    background-color:palevioletred;
+    background-color: palevioletred;
   }
 
 
-    
+
   /********************************/
 
   /********** Top seller Css grid ********/
