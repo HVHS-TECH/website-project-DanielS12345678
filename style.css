@@ -19,111 +19,240 @@ html {
 body {
   margin: 0px;
   height: 100%;
+  background-color: #dfeef4;
 }
 
+
 header {
-  border-bottom-style: solid;
+  height: 10%;
+  width: 100%;
+  background-color: #fffef4;
 }
 
 footer {
   background-color: #2D662C;
-  height: 5.5rem;
+
 }
 
-a {
-  color: white;
-  position: relative;
+h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+
+button:hover {
+  cursor: pointer;
+}
+
+/*used when an element has an onclick
+- Top seller 
+- Back to top 
+*/
+.hoverOverElement:hover{
+  cursor: pointer;
+}
+
+
+.d_headerGrid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.d_headerCompany {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d_headerLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#d_headerLink1 {
+  grid-area: 1/2/2/3;
+}
+
+#d_headerLink2 {
+  grid-area: 1/3/2/4;
+}
+
+#d_headerLink3 {
+  grid-area: 1/4/2/5;
+}
+
+#d_headerLink4 {
+  grid-area: 1/5/2/6;
+}
+
+.a_current {
+  color: black;
+  align-self: center;
   text-decoration: none;
+  position: relative;
 }
 
-a::after {
+
+.a_current::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: white;
-  transform: scaleX(0);
+  background: linear-gradient(to right, #fffef4, #005CA3);
+  transform: scaleX(1);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-a:hover::after {
-  transform: scaleX(1);
-  cursor: pointer;
-}
-
-
-button {
+.a_change {
+  color: black;
+  text-decoration: none;
+  align-self: center;
   position: relative;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
-/* underline */
-button::after {
+.a_change::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
+  width: 100%;
   height: 2px;
-  width: 60%;
-  margin-left:20%;
-  margin-right:20%;
-  background: linear-gradient(to right, #FFFFFF, #005CA3);
+  background: linear-gradient(to right, #fffef4, #005CA3);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-button:hover::after {
+.a_change:hover::after {
   transform: scaleX(1);
 }
 
-button {
+/********************************/
+
+/********** Footer Css grid ********/
+
+.d_footerGrid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.d_footerLinkGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.a_footer {
   color: white;
   position: relative;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.b_current {
-  background-color: #FFFFFF;
+.a_footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.a_footer:hover::after {
+  transform: scaleX(1);
+}
+
+.d_contactUsGrid {
+  grid-area: 1/4/2/8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#d_contactUsBackground {
+  background-color: #EFFBF2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 90%;
+  width: 85%;
+}
+
+#d_contactUs {
+  grid-area: 1/1/2/2;
+}
+
+#d_contactEmail {
+  grid-area: 2/1/3/2;
+  display: flex;
+  justify-content: center;
+}
+
+
+#d_contactPhone {
+  grid-area: 3/1/4/2;
+  display: flex;
+  justify-content: center;
+}
+
+.h4_contactUs {
+  margin: 0%;
+  margin-top: 1%;
+  text-align: center;
+}
+
+.h5_contactEmail,
+.h5_contactPhone {
+  margin: 0%;
+  text-align: center;
+}
+
+.a_contact {
   color: black;
-  text-decoration: underline;
-      padding-left: 15%;
-    padding-right: 2%;
+  position: relative;
+  text-decoration: none;
 }
 
-.b_change {
-  background-color: #005CA3;
-  padding-left: 15%;
-  padding-right: 15%;
+.a_contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
 }
 
-/* no underline on current screen button */
-.b_current::after {
-  background: none;
+.a_contact:hover::after {
+  transform: scaleX(1);
 }
 
-
-
-
-/*** align items in a css gird div to centre ***/
-.d_itemsCentre {
-  text-align: center;
+.d_backToTopGrid {
+  grid-area: 1/8/2/10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#d_grad {
-  background-image: linear-gradient(to right, #FFFFFF, #005CA3);
-}
-
-.d_footerLink{
-  text-align: center;
- 
-  
+.i_backToTop {
+  height: 80%;
+  width: 60%
 }
 
 /********************************************************************************
@@ -133,64 +262,170 @@ HOME PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-/*  background-image: url("images/backgroundImage.png");*/
-
-.d_backgroundImage {
-
-  background-image: url("test3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-
+#h3_navHeader {
+  margin: 0%;
 }
 
-/*
-.i_homeBackground {
-background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-    width: 100%;
-  height : 100vh ;
-
-}
-*/
-#d_aboutUsTextCover {
-  margin: 4.5%;
-  background-color: #EFFBF2;
-  background: rgba(255, 255, 255, 0.65);
-  padding: 1%;
-  padding-top: 0%;
+#d_homeMainImage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.b_explore::after {
-  bottom: -8px;
-  height: 4px;
+#i_homeMain {
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  height: 99%;
+
 }
 
-#b_exploreView {
-  background-color: #EFFBF2;
-  color: black;
+#d_homeGridMain {
+  background-color: #C4CBCA;
+  border-bottom-style: solid;
+  border-width: 2px;
 }
 
-#b_exploreView:hover {
-  background-color: #000000;
+#h1_homeMainHeader {
+  border-bottom-style: solid;
+}
+
+
+#h3_subHeader {
+  text-align: center;
+  font-weight: normal;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+#d_homeHeader {
+  display: flex;
+  align-items: center;
+}
+
+#d_homeTakeLookButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#b_takeLook {
   color: white;
+  background-color: #3e8646;
+  border: none;
+  border-radius: 20px;
+  padding: 1%;
+  align-self: flex-start;
 }
 
-#b_exploreGet {
-  background-color: #000000;
+#d_homeStoryImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#b_exploreGet:hover {
-  background-color: #EFFBF2;
+#i_ownerImage {
+  display: block;
+  border-radius: 50%;
+  width: 65%;
+  height: 90%;
+}
+
+
+/****** Our story ******/
+#d_homeStoryHeaderFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#d_chrysalisShowRight,
+#d_chrysalisShowLeft {
+  display: flex;
+
+}
+
+#d_homeStoryMainFlex {
+  display: flex;
+  margin-top: 3%;
+}
+
+
+#d_homeStoryAboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#p_aboutUs {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
+
+#a_location {
   color: black;
+  text-decoration: underline;
+  align-self: center;
+  position: relative;
 }
 
+#a_location::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+#a_location:hover {
+  text-decoration: none;
+}
+
+#a_location:hover::after {
+  transform: scaleX(1);
+}
+
+
+/***** Top Seller *****/
+#d_topSellerImg {
+  text-align: center;
+  height: 75%;
+}
+
+#i_topSeller {
+  height: 100%;
+  width: 55%;
+}
+
+#h3_topSeller {
+  border-bottom: solid;
+}
+
+#h3_topSeller {
+  margin-top: 1%;
+  margin-left: 24%;
+  margin-right: 24%;
+  padding-bottom: 1%;
+}
+
+#d_topSellerHead {
+  grid-area: 1/1/2/7;
+}
+
+
+#d_topSellerImg {
+  grid-area: 2/1/3/7;
+  padding-top: 1%;
+}
+
+#h3_topSeller {
+  font-size: 4vw;
+}
 
 
 
@@ -198,142 +433,446 @@ background-position: center;
 /****************************************************************************************************/
 /****************************************************************************************************/
 /********** Large screen size **********/
-@media (min-width:1024px) {
+@media (min-width:825px) {
 
   /*** headers ***/
   h1 {
-    margin: 0px;
-    margin-bottom: 2.5%;
-    font-size: 5.5rem;
-    height: 30%;
+    margin: 0%;
     text-align: center;
   }
 
   h2 {
     margin: 0px;
-    font-size: 4.5rem;
     text-align: center;
   }
 
-  h3 {
-    margin: 0px;
-    margin-bottom: 1%;
-    font-size: 2.25rem;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: black;
+  /*** header ***/
+
+  #h3_navHeader {
+    font-size: 3vw;
   }
+
+  .a_change {
+    font-size: 1.75rem;
+  }
+
+  .a_current {
+    font-size: 1.75rem;
+  }
+
+  /********** Main Css grid ********/
+  #d_homeGridMain {
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 2fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 90%;
+  }
+
+  #d_homeMainImage {
+    grid-area: 1/1/6/2;
+  }
+
+  #d_homeHeader {
+    grid-area: 1/2/2/6;
+  }
+
+
+  #h1_homeMainHeader {
+    font-size: 8vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 2.5%;
+  }
+
+
+  #d_homeSubHeader {
+    grid-area: 2/2/3/6;
+  }
+
+  #h3_subHeader {
+    font-size: 2.5vw;
+  }
+
+
+  #d_homeTakeLookButton {
+    grid-area: 3/2/4/6;
+  }
+
+  #b_takeLook {
+    font-size: 3.25vw;
+  }
+
+  /********************************/
+
+  /********** Story flex boxes ********/
+
+
+  #d_chrysalisShowRight,
+  #d_chrysalisShowLeft {
+    width: 35%;
+  }
+
+  #d_homeStoryHeader {
+    width: 30%;
+  }
+
+  .d_chrysalis {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .i_chrysalis {
+    height: 22vh;
+    width: 55%;
+
+  }
+
+  #h2_Story {
+    font-size: 7vw;
+  }
+
+  /*** Main ***/
+
+  #d_homeStoryImage {
+    width: 35%;
+  }
+
+  #d_homeStoryAboutUs {
+    width: 65%;
+  }
+
 
   #p_aboutUs {
-    font-size: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.75vw;
     text-align: center;
-
-  }
-
-  #i_map {
-    height: 60%;
-    width: 90%;
-  }
-
-  /*** buttons ***/
-  .b_current {
-    font-size: 1.75rem;
-  }
-
-  .b_change {
-    font-size: 1.75rem;
   }
 
 
-  #b_exploreView {
-    margin-right: 3%;
+  /********************************/
+
+  /********** Top seller Css grid ********/
+  #d_homeGridTopSeller {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+    grid-template-rows: 1fr 4fr;
+    border-bottom: black;
   }
 
-  #b_exploreGet {
-    margin-left: 3%;
+  #h1_topSeller {
+    font-size: 12vw;
   }
 
-  .b_explore {
-    font-size: 2.25rem;
-    border-radius: 50px;
-    transition-duration: 0.8s;
-    padding: 2%;
+  /**** footer ****/
+  .a_footer {
+    font-size: 3vw;
+  }
+
+  .h4_contactUs {
+    font-size: 3vw;
+  }
+
+
+  .h5_contactEmail {
+    margin-top: 0.5%;
+  }
+
+}
+
+
+
+/********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
+/*** Tablet like size ***/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/********** Medium screen size **********/
+@media (max-width:825px) {
+
+  h2 {
+    margin: 0px;
+    margin-bottom: 1%;
+    text-align: center;
+  }
+
+  /*** header ***/
+  #h3_navHeader {
+    font-size: 3.5vw;
+  }
+
+  .a_change,
+  .a_current {
+    font-size: 4vw;
+  }
+
+  /********** Main Css grid ********/
+  #d_homeGridMain {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 90%;
+  }
+
+  #d_homeMainImage {
+    grid-area: 1/1/6/2;
+  }
+
+  #d_homeHeader {
+    grid-area: 1/2/2/6;
+  }
+
+  #h1_homeMainHeader {
+    font-size: 8.25vw;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 7.5%;
+  }
+
+
+  #d_homeSubHeader {
+    grid-area: 2/2/3/6;
+  }
+
+  #h3_subHeader {
+    font-size: 4vw;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  #d_homeTakeLookButton {
+    grid-area: 3/2/4/6;
+  }
+
+  #b_takeLook {
+    font-size: 6vw;
+  }
+
+  /********************************/
+
+  /********** Story Css grid ********/
+
+  #d_chrysalisShowRight,
+  #d_chrysalisShowLeft {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #d_homeStoryHeader {
+    width: 60%;
+  }
+
+  #i_chrysalisMiddle1,
+  #i_chrysalisRight1,
+  #i_chrysalisMiddle2,
+  #i_chrysalisRight2 {
+    display: none;
+  }
+
+  .i_chrysalis {
+    width: 10vw;
+    height: 20vh;
+  }
+
+  #h2_Story {
+    font-size: 12vw;
+  }
+
+
+  #d_homeStoryImage {
+    width: 40%;
+  }
+
+  #d_homeStoryAboutUs {
+    width: 60%;
+  }
+
+
+  #p_aboutUs {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 2.25vw;
+    text-align: center;
+  }
+
+
+
+  /********************************/
+
+  /********** Top seller Css grid ********/
+  #d_homeGridTopSeller {
+    display: grid;
+    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
+    grid-template-rows: 1fr 3fr;
+  }
+
+
+
+  #h1_topSeller {
+    font-size: 15vw;
+  }
+
+
+  /**** footer ****/
+ 
+  .d_footerLinkGrid {
+    display: none;
+  }
+
+  .d_contactUsGrid {
+    grid-area: 1/1/2/8;
+  }
+
+
+   #d_contactUsBackground {
+    background-color: #EFFBF2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    height: 85%;
+    width: 95%;
+  }
+
+
+  #d_contactUs {
+    grid-area: 1/1/2/3;
+  }
+
+  #d_contactEmail {
+    grid-area: 2/1/3/3;
+    display: flex;
+    justify-content: center;
+    margin-bottom:2%;
+  }
+
+
+  #d_contactPhone {
+    grid-area: 3/1/4/3;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .h4_contactUs {
+    font-size: 3.5vw;
+  }
+
+  .h5_contactEmail,
+  .h5_contactPhone {
+    font-size: 2.25vw;
+  }
+
+
+  
+ 
+
+
+}
+
+
+/********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
+/** starts at a large phone (samsung flip) / very small tablet **/
+/****************************************************************************************************/
+/****************************************************************************************************/
+/********** Small screen size **********/
+@media (max-width:575px) {
+
+  /*** headers ***/
+  h2 {
+    margin: 0px;
+    margin-bottom: 1.5%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  /*** header ***/
+
+  #h3_navHeader {
+    font-size: 3.5vw;
+  }
+
+  .a_change,
+  .a_current {
+    font-size: 3.5vw;
   }
 
 
   /********** Main Css grid ********/
   #d_homeGridMain {
     display: grid;
-    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 2fr 1fr 5fr 2fr;
-    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 90%;
   }
 
+  /** image is hiden on a phone like screen **/
+  #d_homeMainImage {
+    display: none;
+  }
 
-  /*** header div ***/
   #d_homeHeader {
-    grid-area: 1/1/2/7;
-    padding-bottom: 1rem;
+    grid-area: 1/1/2/6;
+    display: flex;
+    align-items: center;
+  }
+
+  #h1_homeMainHeader {
+    font-size: 16vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 2.5%;
+  }
+
+  #d_homeSubHeader {
+    grid-area: 2/1/3/6;
+  }
+
+  #h3_subHeader {
+    font-size: 6vw;
+    margin-top: 5%;
+  }
+
+  #d_homeTakeLookButton {
+    grid-area: 3/1/4/6;
+  }
+
+  /********************************/
+
+  /********** Story Css grid ********/
+
+
+  #d_chrysalisShowRight,
+  #d_chrysalisShowLeft {
+    display: none;
+  }
+
+  #h2_Story {
+    font-size: 14vw;
+  }
+
+  #d_homeStoryImage {
+    width: 40%;
+  }
+
+  #i_ownerImage {
+    width: 75%;
 
   }
 
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/2/3/3;
-  }
-
-  #d_homeNav2 {
-    grid-area: 2/3/3/4;
-  }
-
-  #d_homeNav3 {
-    grid-area: 2/4/3/5;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/5/3/6;
-  }
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-  }
-
-  #d_grad {
-    height: 1%;
-    grid-area: 3/2/4/6;
-    margin: 0px;
-    background-color: yellow;
-  }
-
-  #d_gradSideRight {
-    grid-area: 3/6/4/7;
-    height: 1%;
-    margin: 0px;
+  #d_homeStoryAboutUs {
+    width: 60%;
   }
 
 
-  /*** Main content divs ***/
-  #d_aboutUs {
-    margin-top: 0.55%;
-    grid-area: 3/1/4/5;
-
-  }
-
-  #d_map {
-    margin-top: 1%;
-    grid-area: 3/5/4/7;
-  }
-
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 4/2/5/4;
-  }
-
-  #d_homeGet {
-    grid-area: 4/4/5/6;
+  #p_aboutUs {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    font-size: 2.5vw;
+    text-align: center;
   }
 
   /********************************/
@@ -343,304 +882,10 @@ background-position: center;
     display: grid;
     grid-template-columns: 3fr repeat(4, 2fr) 3fr;
     grid-template-rows: 1fr 3fr;
-    background-color: #DFEEF4;
   }
 
-
-  #d_topSeller {
-    grid-area: 1/1/2/7;
-  }
-
-  #d_topSellerImg {
-    grid-area: 2/1/3/7;
-  }
-
-  /********************************/
-
-  /********** Footer Css grid ********/
-
-  .d_footerGrid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  .d_footerLink1 {
-    grid-area: 1/1/2/2;
-  }
-
-  .d_footerLink2 {
-    grid-area: 1/2/2/3;
-  }
-
-  .d_footerLink3 {
-    grid-area: 1/3/2/4;
-  }
-
-  .d_contactUs {
-    grid-area: 1/4/2/9;
-  }
-
-
-  .d_backToTop {
-    grid-area: 1/9/2/10;
-  }
-
-  .a_footer {
-    font-size: 2rem;
-  }
-
-
-
-}
-
-
-
-/********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
-/****************************************************************************************************/
-/****************************************************************************************************/
-/********** Medium screen size **********/
-@media (max-width:1024px) {
-
-  div {
-    background-color: skyblue;
-  }
-
-  h1 {
-    margin: 0px;
-    font-size: 75px;
-    text-align: center;
-  }
-
-  h2 {
-    margin: 0px;
-    margin-bottom: 1%;
-    font-size: 90px;
-    text-align: center;
-  }
-
-  /********** Main Css grid ********/
-  .d_homeGridMain {
-    display: grid;
-    background-color: skyblue;
-    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-    grid-template-rows: 2fr 1fr 6fr 2fr;
-    height: 100%;
-
-  }
-
-  /*** header div ***/
-  #d_homeHeader {
-    grid-area: 1/1/2/7;
-  }
-
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/2/3/3;
-  }
-
-  #d_homeNav2 {
-    grid-area: 2/3/3/4;
-  }
-
-  #d_homeNav3 {
-    grid-area: 2/4/3/5;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/5/3/6;
-  }
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-    background-color: skyblue;
-  }
-
-  #d_grad {
-    height: 1%;
-    grid-area: 3/2/4/6;
-    margin: 0px;
-    background-color: yellow;
-  }
-
-  #d_gradSideRight {
-    grid-area: 3/6/4/7;
-    height: 1%;
-    margin: 0px;
-    background-color: skyblue;
-  }
-
-  /*** Main content divs ***/
-  #d_aboutUs {
-    margin-top: 0.55%;
-    grid-area: 3/1/4/5;
-  }
-
-  #d_map {
-    margin-top: 1%;
-    grid-area: 3/5/4/7;
-  }
-
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 4/2/5/4;
-  }
-
-  #d_homeGet {
-    grid-area: 4/4/5/6;
-  }
-
-  /********************************/
-
-  /********** Top seller Css grid ********/
-  #d_homeGridTopSeller {
-    display: grid;
-    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 1fr 5fr;
-
-  }
-
-  #d_topSeller {
-    grid-area: 1/1/2/7;
-  }
-
-  #d_topSellerImg {
-    grid-area: 2/1/3/7;
-  }
-
-
-
-}
-
-
-/********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
-/****************************************************************************************************/
-/****************************************************************************************************/
-/********** Small screen size **********/
-@media (max-width:425px) {
-
-  div {
-    background-color: yellow;
-  }
-
-  /*** headers ***/
-  h1 {
-    margin: 0px;
-    font-size: 75px;
-    text-align: center;
-  }
-
-  h2 {
-    margin: 0px;
-    margin-bottom: 1.5%;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  /********** Main Css grid ********/
-  .d_homeGridMain {
-    display: grid;
-    background-color: yellow;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 5fr 5fr 3fr;
-  }
-
-  /*** side divs for nav and explore buttons ***/
-  .d_homeNavEdge {
-    display: none;
-  }
-
-  .d_homeExploreEdge {
-    display: none;
-  }
-
-  /*** header div ***/
-  #d_homeHeader {
-    grid-area: 1/1/2/5;
-  }
-
-
-  /*** nav divs ***/
-  #d_homeNav1 {
-    grid-area: 2/1/3/2;
-  }
-
-  #d_homeNav2 {
-    grid-area: 2/2/3/3;
-  }
-
-  #d_homeNav3 {
-    grid-area: 2/3/3/4;
-  }
-
-  #d_homeNav4 {
-    grid-area: 2/4/3/5;
-  }
-
-
-  /*** gradient divs ***/
-  #d_gradSideLeft {
-    grid-area: 3/1/4/2;
-    height: 1%;
-    margin: 0px;
-    background-color: yellow;
-    border-right: 65px solid green;
-  }
-
-  #d_grad {
-    height: 1%;
-    grid-area: 3/2/4/4;
-    margin: 0px;
-    background-color: green;
-  }
-
-  #d_gradSideRight {
-    grid-area: 3/4/4/5;
-    height: 1%;
-    margin: 0px;
-    background-color: yellow;
-    border-left: 65px solid green;
-  }
-
-  /*** Main content divs ***/
-  #d_aboutUs {
-    grid-area: 3/1/4/7;
-  }
-
-  #d_map {
-    grid-area: 4/1/5/7;
-  }
-
-  /*** Explore Buttons divs ***/
-  #d_homeView {
-    grid-area: 5/1/6/3;
-  }
-
-  #d_homeGet {
-    grid-area: 5/3/6/5;
-  }
-
-  /********************************/
-
-  /********** Top seller Css grid ********/
-  #d_homeGridTopSeller {
-    display: grid;
-    background-color: black;
-    grid-template-columns: 3fr repeat(4, 2fr) 3fr;
-    grid-template-rows: 1fr 4fr;
-    height: 100%;
-  }
-
-
-  #d_topSeller {
-    grid-area: 1/1/2/7;
-  }
-
-  #d_topSellerImg {
-    grid-area: 2/1/3/7;
+  #h1_topSeller {
+    font-size: 17vw;
   }
 
 }
