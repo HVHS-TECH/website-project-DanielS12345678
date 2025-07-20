@@ -44,11 +44,23 @@ button:hover {
   cursor: pointer;
 }
 
+/* aligning contents of a div to the center vert and hori */
+.d_alignCenterVertHori{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /*used when an element has an onclick
 - Top seller 
-- Back to top 
+ 
 */
 .hoverOverElement:hover{
+  cursor: pointer;
+}
+
+#i_backToTop:hover{
   cursor: pointer;
 }
 
@@ -137,7 +149,7 @@ button:hover {
 
 /********** Footer Css grid ********/
 
-.d_footerGrid {
+#d_footerGrid {
   display: grid;
   height: 100%;
   grid-template-columns: repeat(9, 1fr);
@@ -186,7 +198,7 @@ button:hover {
   background-color: #EFFBF2;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
   height: 90%;
   width: 85%;
 }
@@ -208,14 +220,14 @@ button:hover {
   justify-content: center;
 }
 
-.h4_contactUs {
+#h4_contactUs {
   margin: 0%;
   margin-top: 1%;
   text-align: center;
 }
 
-.h5_contactEmail,
-.h5_contactPhone {
+#h5_contactEmail,
+#h5_contactPhone {
   margin: 0%;
   text-align: center;
 }
@@ -243,17 +255,13 @@ button:hover {
   transform: scaleX(1);
 }
 
-.d_backToTopGrid {
+#d_backToTopGrid {
   grid-area: 1/8/2/10;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.i_backToTop {
-  height: 80%;
-  width: 60%
-}
 
 /********************************************************************************
 *********************************************************************************
@@ -346,7 +354,6 @@ HOME PAGE STYLES BELOW
 
 #d_homeStoryMainFlex {
   display: flex;
-  margin-top: 3%;
 }
 
 
@@ -398,8 +405,8 @@ HOME PAGE STYLES BELOW
 }
 
 #i_topSeller {
-  height: 100%;
-  width: 55%;
+  height: 80%;
+  width: 40%;
 }
 
 #h3_topSeller {
@@ -428,6 +435,109 @@ HOME PAGE STYLES BELOW
 }
 
 
+/********************************************************************************
+*********************************************************************************
+/*********************
+CARE PAGE STYLES BELOW 
+/*********************/
+/********************************************************************************
+*********************************************************************************/
+
+/* Main headers */
+.h1_care{
+  margin-bottom:2%;
+}
+
+#h1_careGrow{
+  margin-top:4%;
+}
+
+#h1_careProb{
+  margin-top:2%;
+}
+
+
+.h2_careDes{
+  font-weight: lighter;
+  margin-top:5%;
+}
+
+.p_careDes{
+  text-align:center;
+}
+
+.d_bugsImage{
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#d_toxicPlantDesFlex{
+  display:flex;
+}
+#d_toxicPlantDesFlexLeft{
+  width:50%;
+}
+
+#d_toxicPlantDesFlexRight{
+  width:50%;
+}
+
+/*overlaping style with hori align */
+#p_toxicPlantExplain{
+  text-align: center;
+  margin:0 5% 0 5%;
+}
+
+#d_effectOfPlantsGrid{
+ display:grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 1fr 3fr;
+}
+
+
+#d_effectOfPlantsHumanHeader{
+grid-area: 1/1/2/2;
+}
+
+#d_effectOfPlantsHumanList{
+grid-area: 2/1/3/2;
+}
+
+#d_effectOfPlantsAnimalHeader{
+grid-area: 1/2/2/3;
+}
+
+#d_effectOfPlantsAnimalList{
+grid-area: 2/2/3/3;
+}
+
+.h3_effectOfPlants{
+  font-weight: normal;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.li_effectOfPlantsHumans{
+  list-style-type: square;
+}
+
+.d_effectsOfSapFlex{
+  display:flex;
+}
+
+.d_effectsOfSapHeader{
+  width:30%;
+}
+
+.d_effectsOfSapDes{
+  width:60%;
+}
+
+.h3_effetsOfSap{
+  text-align: center;
+}
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -445,6 +555,11 @@ HOME PAGE STYLES BELOW
     margin: 0px;
     text-align: center;
   }
+
+#i_backToTop {
+  height: 80%;
+  width: 40%
+}
 
 /***********************************************************/
 /*********************
@@ -518,25 +633,29 @@ HOME PAGE STYLES BELOW
     width: 35%;
   }
 
-  #d_homeStoryHeader {
-    width: 30%;
+    #d_homeStoryHeader {
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .d_chrysalis {
-    width: 33%;
+    width: 50%;
     display: flex;
     justify-content: center;
 
   }
 
   .i_chrysalis {
-    height: 22vh;
-    width: 55%;
 
+    width: 7.5vw;
+    height: 20vh;
+  
   }
 
   #h2_Story {
     font-size: 7vw;
+    
   }
 
   /*** Main ***/
@@ -564,12 +683,12 @@ HOME PAGE STYLES BELOW
   #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
     border-bottom: black;
   }
 
   #h1_topSeller {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   /**** footer ****/
@@ -577,12 +696,12 @@ HOME PAGE STYLES BELOW
     font-size: 3vw;
   }
 
-  .h4_contactUs {
+  #h4_contactUs {
     font-size: 3vw;
   }
 
 
-  .h5_contactEmail {
+  #h5_contactEmail {
     margin-top: 0.5%;
   }
 
@@ -595,78 +714,113 @@ Care PAGE STYLES BELOW
 
 .h1_care{
   font-size: 5vw;
-  margin-top:4%;
-  margin-bottom:2%;
+}
+.h2_careDes{
+  font-size:4vw;
 }
 
+.p_careDes{
+  font-size:1.5vw;
+  margin:5% 5% 0 5%;
+}
 
+/** care for grid **/
 #d_carePlantsGrowGrid{
   display:grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows:repeat(3, 1fr);
-  height:1000px;
 }
 
 #d_greenhouseImage{
   grid-area:1/1/2/5;
-  background-color: red;
 }
+
 
 #d_greenhouseDes{
   grid-area:1/5/2/11;
-  background-color: green;
 }
 
 #d_soilDes{
   grid-area:2/1/3/7;
-  background-color: brown;
 }
+
 #d_soilImage{
   grid-area:2/7/3/11;
-  background-color:blue;
 }
 
 #d_topCutImage{
   grid-area:3/1/4/5;
-  background-color:antiquewhite;
 }
 
 #d_topCutDes{
   grid-area:3/5/4/11;
-  background-color:yellow;
 }
 
+#i_greenhouseMade{
+  width:80%;
+  height:70%;
+}
+
+#i_soil{
+  width:70%;
+  height:80%;
+}
+
+#i_topCut{
+  width:65%;
+  height:65%;
+}
+
+.i_bugs{
+  width:90%;
+  height:60%;
+}
+
+
+
+/** problem grid **/
 #d_carePlantsProblemGrid{
   display:grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows:repeat(2, 1fr);
-  height:750px;
+  grid-template-rows:1fr 1fr;
   margin-bottom:7%;
 }
 
 #d_bugsDes{
-  grid-area:1/1/2/7;
-  background-color:yellow;
+  grid-area:1/1/2/6;
 }
 
-#d_bugsImage{
-  grid-area:1/7/2/11;
-  background-color:palegoldenrod;
-}
-
-#d_toxicPlantImage{
-  grid-area:2/1/3/5;
-  background-color:peru;
+#d_bugsImageFlex{
+  display:flex;
+  grid-area:1/6/2/11;
 }
 
 #d_toxicPlantDes{
-  grid-area:2/5/3/11;
-  background-color:royalblue;
+  grid-area:2/1/3/11;
+}
+
+#h2_toxicPlant{
+  margin-top:0%;
+}
+
+.h3_effectOfPlants{
+  font-size:2.5vw;
+}
+
+.li_effectOfPlantsHumans{
+  font-size:1.5vw;
+}
+
+.d_effectsOfSapFlex{
+  margin-top:0%;
+}
+
+.h3_effetsOfSap{
+  font-size:1.75vw;
 }
 
 
 }
-
 
 
 /********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
@@ -691,6 +845,18 @@ Care PAGE STYLES BELOW
   .a_current {
     font-size: 4vw;
   }
+
+#i_backToTop {
+  height: 80%;
+  width: 60%
+}
+
+
+/***********************************************************/
+/*********************
+HOME PAGE STYLES BELOW 
+/*********************/
+/***********************************************************/
 
   /********** Main Css grid ********/
   #d_homeGridMain {
@@ -746,7 +912,9 @@ Care PAGE STYLES BELOW
   }
 
   #d_homeStoryHeader {
-    width: 60%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #i_chrysalisMiddle1,
@@ -799,6 +967,117 @@ Care PAGE STYLES BELOW
     font-size: 15vw;
   }
 
+/***********************************************************/
+/*********************
+CARE PAGE STYLES BELOW 
+/*********************/
+/***********************************************************/
+
+.h1_care{
+  font-size: 6vw;
+}
+
+.h2_careDes{
+  font-size:6vw;
+}
+
+.p_careDes{
+  font-size:2vw;
+  margin:3% 5% 0 5%;
+}
+
+#d_carePlantsGrowGrid{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.25fr 1.75fr 1.5fr 1.75fr 1.25fr 1.75fr; 
+}
+
+#d_greenhouseDes{
+  grid-area:1/1/2/2;
+}
+
+#d_greenhouseImage{
+  grid-area:2/1/3/2;
+}
+
+#d_soilDes{
+  grid-area:3/1/4/2;
+}
+
+#d_soilImage{
+  grid-area:4/1/5/2;
+}
+
+#d_topCutDes{
+  grid-area:5/1/6/2;
+}
+
+#d_topCutImage{
+  grid-area:6/1/7/2;
+}
+
+#i_greenhouseMade{
+  width:50%;
+  height:85%;
+}
+
+#i_soil{
+  width:40%;
+  height:85%;
+}
+
+#i_topCut{
+  width:40%;
+  height:65%;
+}
+
+#d_carePlantsProblemGrid{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 2fr 2fr;
+  margin-bottom:7%;
+}
+
+#d_bugsDes{
+  grid-area:1/1/2/2;
+}
+
+#d_bugsImageFlex{
+  display:flex;
+  grid-area:2/1/3/2;
+}
+
+#d_toxicPlantDes{
+  grid-area:3/1/4/2;
+}
+
+
+.i_bugs{
+  width:85%;
+  height:75%;
+}
+
+#h2_toxicPlant{
+  margin-top:5%;
+}
+
+.h3_effectOfPlants{
+  font-size:2.5vw;
+}
+
+.li_effectOfPlantsHumans{
+  font-size:2vw;
+}
+
+.d_effectsOfSapFlex{
+  margin-top:0%;
+}
+
+.h3_effetsOfSap{
+  font-size:2.25vw;
+}
+
+
 
   /**** footer ****/
  
@@ -812,10 +1091,8 @@ Care PAGE STYLES BELOW
 
 
    #d_contactUsBackground {
-    background-color: #EFFBF2;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     height: 85%;
     width: 95%;
   }
@@ -840,12 +1117,12 @@ Care PAGE STYLES BELOW
   }
 
 
-  .h4_contactUs {
+  #h4_contactUs {
     font-size: 3.5vw;
   }
 
-  .h5_contactEmail,
-  .h5_contactPhone {
+  #h5_contactEmail,
+  #h5_contactPhone {
     font-size: 2.25vw;
   }
 
@@ -863,6 +1140,12 @@ Care PAGE STYLES BELOW
 /****************************************************************************************************/
 /********** Small screen size **********/
 @media (max-width:575px) {
+
+/***********************************************************/
+/*********************
+MULTIPLE PAGE STYLES BELOW 
+/*********************/
+/***********************************************************/
 
   /*** headers ***/
   h2 {
@@ -882,6 +1165,17 @@ Care PAGE STYLES BELOW
   .a_current {
     font-size: 3.5vw;
   }
+
+  /** Footer **/
+#d_contactUsBackground{
+ padding-bottom:1%;
+}
+
+/***********************************************************/
+/*********************
+HOME PAGE STYLES BELOW 
+/*********************/
+/***********************************************************/
 
 
   /********** Main Css grid ********/
@@ -973,7 +1267,80 @@ Care PAGE STYLES BELOW
     font-size: 17vw;
   }
 
+/***********************************************************/
+/*********************
+CARE PAGE STYLES BELOW 
+/*********************/
+/***********************************************************/
+
+.p_careDes{
+  font-size:3vw;
 }
+
+.h3_effectOfPlants{
+  font-size:4.5vw;
+}
+
+.li_effectOfPlantsHumans{
+  font-size:3vw;
+}
+
+.d_effectOfPlantsList{
+  margin-right:5%;
+}
+
+.h3_effetsOfSap{
+  font-size:3.25vw;
+}
+
+#i_greenhouseMade{
+  width:80%;
+  height:85%;
+}
+
+#i_soil,#i_topCut {
+  width:70%;
+  height:75%;
+}
+
+
+/** was a flex box in bigger screen sizes **/
+#d_bugsImageFlex{
+display:grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+}
+
+/** was a flex box in bigger screen sizes **/
+#d_toxicPlantDesFlex{
+ display:grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 2fr;
+}
+
+/** d_aphidsImage held the image on the left and now is on top **/
+/** d_toxicPlantDesFlexLeft was left side of flex box in bigger screen sizes now is top **/
+#d_aphidsImage, #d_toxicPlantDesFlexLeft{
+   grid-area:1/1/2/3;
+  width:100%;
+}
+
+/** d_whiteBugsImage held the image on the right and now is on the bottom **/
+/** was right side of flex box in bigger screen sizes now is bottom **/
+#d_whiteBugsImage, #d_toxicPlantDesFlexRight {
+  grid-area:2/1/3/3;
+  width:100%;
+}
+
+.i_bugs{
+  width:60%;
+  height:80%;
+}
+
+}
+
+
+
 
 /*************************************************
 END OF CODE 
