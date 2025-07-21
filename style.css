@@ -288,9 +288,12 @@ HOME PAGE STYLES BELOW
 
 #d_homeGridMain {
   background-color: #C4CBCA;
+  
   border-bottom-style: solid;
-  border-width: 2px;
-}
+  border-width: 1px;
+  border-color: #1B2019;
+
+  }
 
 #h1_homeMainHeader {
   border-bottom-style: solid;
@@ -318,7 +321,7 @@ HOME PAGE STYLES BELOW
 
 #b_takeLook {
   color: white;
-  background-color: #3e8646;
+  background-color: #2D662C;
   border: none;
   border-radius: 20px;
   padding: 1%;
@@ -399,41 +402,54 @@ HOME PAGE STYLES BELOW
 
 
 /***** Top Seller *****/
-#d_topSellerImg {
-  text-align: center;
-  height: 75%;
-}
 
 #i_topSeller {
   height: 80%;
-  width: 40%;
+  width: 70%;
+/*  border: 1.75px solid black; */
 }
 
+#d_topSellerImg{
+  text-align: center;
+}
+
+/* header */
 #h3_topSeller {
+  font-size: 5vw;
+  text-align:center;
+  margin-top: 3%;
+  margin-left: 5%; /*was 24 */
+  margin-right: 5%;
   border-bottom: solid;
 }
 
-#h3_topSeller {
-  margin-top: 1%;
-  margin-left: 24%;
-  margin-right: 24%;
-  padding-bottom: 1%;
+/* price */
+#h4_topSeller{
+  font-size: 4vw;
+  text-align: center;
+  margin-top:5%;
 }
 
+#b_topSeller {
+  color: white;
+  background-color: #162521;
+  border: none;
+  border-radius: 50px;
+  padding: 3%;
+  font-size:3.5vw;
+  align-items: center;
+}
+
+/*** old grid
 #d_topSellerHead {
-  grid-area: 1/1/2/7;
+  grid-area: 1/1/2/9;
 }
 
 
 #d_topSellerImg {
   grid-area: 2/1/3/7;
-  padding-top: 1%;
 }
-
-#h3_topSeller {
-  font-size: 4vw;
-}
-
+**/
 
 /********************************************************************************
 *********************************************************************************
@@ -597,7 +613,6 @@ HOME PAGE STYLES BELOW
     grid-area: 1/2/2/6;
   }
 
-
   #h1_homeMainHeader {
     font-size: 8vw;
     margin-left: 5%;
@@ -654,8 +669,8 @@ HOME PAGE STYLES BELOW
   }
 
   #h2_Story {
-    font-size: 7vw;
-    
+    font-size: 9vw;
+    margin-top: 3%;
   }
 
   /*** Main ***/
@@ -680,16 +695,37 @@ HOME PAGE STYLES BELOW
   /********************************/
 
   /********** Top seller Css grid ********/
+  /* og grid **
   #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 1fr repeat(4, 2fr) 1fr;
     grid-template-rows: 1fr 3fr;
     border-bottom: black;
   }
-
-  #h1_topSeller {
-    font-size: 10vw;
+*/
+   #h1_topSeller {
+    font-size: 9vw;
+    margin-top: 3%;
   }
+  
+ #d_homeGridTopSeller{
+    display: grid;
+    grid-template-columns: 1fr repeat(6,2fr) 1fr;
+    grid-template-rows: 1fr 3fr;
+ }
+
+#d_topSellerHead {
+  grid-area: 1/1/2/9;
+}
+
+#d_topSellerImg {
+  grid-area: 2/1/3/5;
+}
+
+#d_topSellerDes{
+  grid-area: 2/5/3/9;
+}
+
 
   /**** footer ****/
   .a_footer {
