@@ -4,8 +4,9 @@
 <head>
     <title>Daniel's swan plants - View</title>
     <link href="../style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">   
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/fb_io.js"></script>
     <script src="scripts/fbP_manager.js"></script>
 </head>
@@ -18,7 +19,7 @@
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
-                 <div class="d_headerLink" id="d_headerLink1">
+            <div class="d_headerLink" id="d_headerLink1">
                 <a class="a_change" href="../index.html">Home</a>
 
             </div>
@@ -26,7 +27,6 @@
                 <a class="a_current">View</a>
 
             </div>
-       
 
             <div class="d_headerLink" id="d_headerLink3">
                 <a class="a_change" href="care.html">Care</a>
@@ -39,26 +39,81 @@
         </div>
     </header>
 
+<!---->
+    <div id="d_viewPlantsGrid">
+
+        <div id="d_smallSwanPlant" class="d_viewSwanPlants">
+             <!-- <div class="d_swanPlantsImage d_alignCenterVertHori">       </div> -->
+            <img class="i_swanPlant" src="images/swanPlants/smallSwanPlants.JPG">
+      
+          <!--    <div class="d_swanPlantsHeader d_alignCenterVertHori">   </div> -->
+            <h3 class="h3_swanPlant">Small swan plant: $4 each</h3>
+            
+       </div>
+
+<!----
+           <div class="d_swanPlantsGrid"> </div>
+            <div class="d_swanPlantsImage d_alignCenterVertHori">    </div>
+            
+--->
+        <div id="d_mediumSwanPlant" class="d_viewSwanPlants">
+         <!--   <div class="d_swanPlantsImage d_alignCenterVertHori">    </div> -->
+            <img class="i_swanPlant" src="images/swanPlants/mediumSwanPlants.JPG">
+            
+            <!---  <div class="d_swanPlantsHeader d_alignCenterVertHori"></div> --> 
+            <h3 class="h3_swanPlant">Medium swan plant: $5 each</h3>
+
+        </div>
+
+    
+
+        <div id="d_largeSwanPlant" class="d_viewSwanPlants">
+            <img class="i_swanPlant" src="images/swanPlants/largeSwanPlants.JPG">
+            <h3 class="h3_swanPlant">Large swan plant: $7 each</h3>
+
+        </div>
+
+
+        <div id="d_extraLargeSwanPlant" class="d_viewSwanPlants">
+            <img class="i_swanPlant" src="images/swanPlants/extraLargeSwanPlants.JPG">
+            <h3 class="h3_swanPlant">Extra large swan plant: $9 each</h3>
+
+        </div>
+
+    </div>
+
+
     <!---- Footer ---->
     <footer>
-        <div class="d_footerGrid">
-            <div class="d_footerLinkGrid"> <a class="a_footer" href="../index.html">Home</a> </div>
-            <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
-            <div class="d_footerLinkGrid"> <a class="a_footer" href="order.html">Order</a></div>
+        <div id="d_footerGrid">
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">View</a> </div>
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Care</a></div>
+            <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Order</a></div>
             <div class="d_contactUsGrid">
 
                 <div id="d_contactUsBackground">
-                    <h4 class="h4_contactUs">Contact us</h4>
-                    <h5 class="h5_contactEmail">Email - <a class="a_contact" target="_blank"
-                            href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a></h5>
-                    <h5 class="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046">
-                            +64 027 254 6046</a></h5>
+                    <div id="d_contactUs">
+                        <h4 id="h4_contactUs">Contact us</h4>
+                    </div>
+                    <div id="d_contactEmail">
+                        <h5 id="h5_contactEmail">Email - <a class="a_contact" target="_blank"
+                                href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a></h5>
+                    </div>
+                    <div id="d_contactPhone">
+                        <h5 id="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046">
+                                +64 027 254 6046</a></h5>
+                    </div>
                 </div>
             </div>
-            <div class="d_backToTopGrid"> <button class="b_backToTop"
-                    onclick='window.scrollTo({top: 0, behavior: "smooth"});'> <img class="i_backToTop"
-                        alt="Back to top Arrow" src="../images/backToTopImage.png"></button></div>
-        </div>
+            <div id="d_backToTopGrid">
+                <img id="i_backToTop" class="hoverOverElement
+                        alt=" Back to top Arrow" src="images/backToTopImage.png"
+                    onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+                <!---- <button class="b_backToTop"
+                    onclick='window.scrollTo({top: 0, behavior: "smooth"});' > <img class="i_backToTop"
+                        alt="Back to top Arrow" src="images/backToTopImage.png" ></button></div>
+      ---->
+            </div>
     </footer>
 </body>
 
