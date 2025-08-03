@@ -1648,17 +1648,17 @@ CARE PAGE STYLES BELOW
     grid-template-rows: 1fr 2fr;
   }
 
-  /** d_aphidsImage held the image on the left and now is on top **/
+  /** d_yellowAphidsImage held the image on the left and now is on top **/
   /** d_toxicPlantDesFlexLeft was left side of flex box in bigger screen sizes now is top **/
-  #d_aphidsImage,
+  #d_yellowAphidsImage,
   #d_toxicPlantDesFlexLeft {
     grid-area: 1/1/2/3;
     width: 100%;
   }
 
-  /** d_whiteBugsImage held the image on the right and now is on the bottom **/
+  /** d_whiteAphidsImage held the image on the right and now is on the bottom **/
   /** was right side of flex box in bigger screen sizes now is bottom **/
-  #d_whiteBugsImage,
+  #d_whiteAphidsImage,
   #d_toxicPlantDesFlexRight {
     grid-area: 2/1/3/3;
     width: 100%;
