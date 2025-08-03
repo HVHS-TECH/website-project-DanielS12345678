@@ -43,13 +43,23 @@ h1 {
   text-align: center;
 }
 
+  h2 {
+    margin: 0px;
+    text-align: center;
+  }
+
+
 h3 {
   margin: 0px;
 }
 
+p{
+  text-align:center;
+}
+
 button:hover {
   cursor: pointer;
-   opacity:90%;
+  opacity: 90%;
 }
 
 /* aligning contents of a div to the center vert and hori */
@@ -60,11 +70,8 @@ button:hover {
 }
 
 
-/*used when an element has an onclick
-- Top seller 
- 
-*/
-.hoverOverElement:hover {
+
+#i_backToTop:hover {
   cursor: pointer;
 }
 
@@ -162,6 +169,7 @@ button:hover {
   height: 100%;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
+
 }
 
 .d_footerLinkGrid {
@@ -184,8 +192,7 @@ button:hover {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #fffef4, #005CA3);
-
+  background: white;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -200,7 +207,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:2% 0% 2% 0%;
+  padding: 2% 0% 2% 0%;
 }
 
 #d_contactUsBackground {
@@ -210,7 +217,7 @@ button:hover {
   grid-template-rows: 2fr 1fr;
   height: 90%;
   width: 85%;
-  padding-bottom:1%;
+  padding-bottom: 1%;
 }
 
 #d_contactUs {
@@ -241,7 +248,7 @@ button:hover {
 #h5_contactPhone {
   margin: 0%;
   text-align: center;
-  font-size:1.5vw;
+  font-size: 1.5vw;
 }
 
 .a_contact {
@@ -257,7 +264,7 @@ button:hover {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #fffef4, #005CA3);
+ background:black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -282,8 +289,8 @@ HOME PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-#d_firstView{
-  height:100%;
+#d_firstView {
+  height: 100%;
 }
 
 #h3_navHeader {
@@ -303,12 +310,12 @@ HOME PAGE STYLES BELOW
 }
 
 #d_homeGridMain {
-  display:grid;
+  display: grid;
   background-color: #C4CBCA;
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #1B2019;
-  height:90vh;
+  height: 90vh;
 
 }
 
@@ -343,9 +350,9 @@ HOME PAGE STYLES BELOW
   padding: 1.5%;
   align-self: flex-start;
 }
-#b_takeLook:hover{
-  padding:10px 10px;
 
+#b_takeLook:hover {
+  padding: 10px 10px;
 }
 
 #d_homeStoryImage {
@@ -383,7 +390,6 @@ HOME PAGE STYLES BELOW
 #p_aboutUs {
   margin-left: 5%;
   margin-right: 5%;
-  text-align: center;
 }
 
 #a_location {
@@ -464,7 +470,7 @@ HOME PAGE STYLES BELOW
 
 #b_topSeller {
   color: white;
-  background-color:#26530C ;
+  background-color: #26530C;
   /*
   26530C green good
 2D662C green
@@ -478,8 +484,8 @@ HOME PAGE STYLES BELOW
   align-items: center;
 }
 
-#b_topSeller:hover{
- padding: 15px 15px;
+#b_topSeller:hover {
+  padding: 15px 15px;
 
 }
 
@@ -521,12 +527,9 @@ CARE PAGE STYLES BELOW
   text-decoration: underline;
 }
 
-.p_careDes {
-  text-align: center;
-}
 
-.i_care{
-    border: 1.25px solid black;
+.i_care {
+  border: 1.25px solid black;
 }
 
 .d_bugsImage {
@@ -549,7 +552,6 @@ CARE PAGE STYLES BELOW
 }
 
 #p_toxicPlantExplain {
-  text-align: center;
   margin: 0 5% 0 5%;
 }
 
@@ -610,36 +612,42 @@ VIEW PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-#d_viewPlantsGrid{
-  display:grid;
-margin-bottom:10%;
+
+#d_viewPlantsGrid {
+  display: grid;
+  margin-top: 1%;
+  margin-bottom: 5%;
 }
 
-.d_viewSwanPlants{
-  margin: 7.5% 20% 5% 20%;
-  border:2px solid black;
-    text-align:center;
+.d_viewSwanPlants {
+    margin: 7.5% 20% 5% 20%;
+    border: 2px solid black;
+  }
+
+  .d_swanPlantsImage {
+    height: 87.5%;
+  }
+
+  .d_swanPlantsHeader,
+  .d_swanPlantsPrice {
+    height: 6.25%;
+  }
+
+.i_swanPlant {
+  height: 95%;
+  width: 95%;
+  margin: 2.5% 2.5% 1% 2.5%;
 }
 
-.d_swanPlantsImage{
-  height:90%;
-}
-
-.d_swanPlantsHeader{
-  height:10%;
-}
-
-.i_swanPlant{
-  height:95%;
-  width:95%;
-  margin:2.5% 2.5% 1% 2.5%;
-}
-
-.h3_swanPlant{
+.h3_swanPlant {
   text-align: center;
 
 }
 
+.d_viewSwanPlants:hover{
+  border:none;
+  cursor:pointer;
+}
 
 
 /********************************************************************************
@@ -650,27 +658,71 @@ CLOSE VIEW PAGE STYLES BELOW
 /********************************************************************************
 *********************************************************************************/
 
-/*********************
- SMALL SWAN PLANT CLOSE VIEW PAGE STYLES BELOW 
-/*********************/
-#d_image{
-  width:30%;
-  height:80%;
-  border:2px solid black;
-  margin-left:20%;
-    overflow: auto;
+#d_closeViewGrid{
+  display:grid;
+  grid-template-rows: 1fr 0.5fr repeat(2, 2fr);
+  margin:5% 0% 2% 0%;
+}
+
+
+#d_closeViewImage {
+  grid-area: 1/1/5/2;
+  border: 2px solid black;
+  overflow: auto;
   white-space: nowrap;
-  display:flex;
-  justify-content:center;
+   
+  display: flex;
+  justify-content: center;
+
 }
 
-#i_closeSmallSwanPlant{
-   width:100%;
-  height:100%;
-   transform-origin: top left;
+#i_closeViewSwanPlant {
+  width: 100%;
+  height: 100%;
+  transform-origin: top left;
 }
 
+#d_closeViewHeader{
+  grid-area:1/2/2/3;
+}
 
+#d_closeViewPrice{
+  grid-area:2/2/3/3;
+}
+
+#d_closeViewDes{
+  grid-area:3/2/4/3;
+  margin:0% 5% 0% 5%;
+}
+
+#d_closeViewButton{
+  grid-area:4/2/5/3;
+}
+
+#b_closeViewOrder{
+  color: white;
+  background-color: #26530C;
+  border: none;
+  border-radius: 50px;
+  padding: 3%;
+}
+
+#b_closeViewOrder:hover,
+#b_closeViewBack:hover{
+  padding:17.5px 17.5px;
+}
+
+#d_closeViewBack{
+  margin-bottom:10%;
+}
+
+#b_closeViewBack{
+  color:black;
+  background-color:white;
+  border: none;
+  border-radius: 60px;
+  padding: 1.5%;
+}
 
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
@@ -678,17 +730,6 @@ CLOSE VIEW PAGE STYLES BELOW
 /****************************************************************************************************/
 /********** Large screen size **********/
 @media (min-width:850px) {
-
-  /*** headers ***/
-  h1 {
-    margin: 0%;
-    text-align: center;
-  }
-
-  h2 {
-    margin: 0px;
-    text-align: center;
-  }
 
   #i_backToTop {
     height: 80%;
@@ -707,8 +748,8 @@ HOME PAGE STYLES BELOW
     font-size: 3vw;
   }
 
-  .a_change, 
-  .a_current  {
+  .a_change,
+  .a_current {
     font-size: 2.5vw;
   }
 
@@ -782,7 +823,6 @@ HOME PAGE STYLES BELOW
     margin-left: 5%;
     margin-right: 5%;
     font-size: 1.75vw;
-    text-align: center;
   }
 
 
@@ -933,53 +973,76 @@ Care PAGE STYLES BELOW
     font-size: 1.75vw;
   }
 
-/***********************************************************/
-/*********************
+  /***********************************************************/
+  /*********************
 View PAGE STYLES BELOW 
 /*********************/
-/***********************************************************/
-#d_viewPlantsGrid{
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /***********************************************************/
+  #h1_ourProducts{
+     margin-top:2%;
+    font-size: 6vw;
+  }
+  
+  #d_viewPlantsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #d_smallSwanPlant {
+    grid-area: 1/1/2/2;
+  }
+
+  #d_mediumSwanPlant {
+    grid-area: 1/2/2/3;
+  }
+
+  #d_largeSwanPlant {
+    grid-area: 1/3/2/4;
+  }
+
+  #d_extraLargeSwanPlant {
+    grid-area: 2/2/3/3;
+  }
+ 
+  .h3_swanPlant {
+    font-size: 1.5vw;
+  }
+  /***********************************************************/
+  /*********************
+CLOSE VIEW PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+#d_closeViewGrid{
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.d_viewSwanPlants{
-  margin: 7.5% 20% 5% 20%;
-  border:2px solid black;
-  text-align:center;
-  /*
-    height:75%;  /* 60 *//*
-    width:50%;
-    */
+#d_closeViewImage{
+    width: 70%;
+  height: 80%;
+  margin-left: 15%;
 }
 
-.d_swanPlantsImage{
-/*  padding:10% 5% 10% 5%; */
-
-  height:90%;
+#h1_closeViewHeader{
+  font-size:4.75vw;
 }
 
-.d_swanPlantsHeader{
-  height:10%;
+#h2_closeViewPrice{
+  font-size:2.75vw;
 }
 
-
-
-.h3_swanPlant{
-  font-size:1.75vw;
+#p_closeViewDes,
+#p_closeViewDesHeight{
+  font-size:1.9vw;
 }
 
-/**
-.i_swanPlant:hover {
-  width:100%;
-  height:100%;
+#b_closeViewOrder{
+  font-size: 3.5vw;
 }
 
-**/
-
-
-
-
+#b_closeViewBack{
+  font-size:3vw;
+}
 
 }
 
@@ -1099,7 +1162,6 @@ HOME PAGE STYLES BELOW
     margin-left: 5%;
     margin-right: 5%;
     font-size: 2.25vw;
-    text-align: center;
   }
 
 
@@ -1132,8 +1194,8 @@ HOME PAGE STYLES BELOW
 
   /***********************************************************/
   /*********************
-CARE PAGE STYLES BELOW 
-/*********************/
+  CARE PAGE STYLES BELOW 
+  /*********************/
   /***********************************************************/
 
   .h1_care {
@@ -1214,7 +1276,6 @@ CARE PAGE STYLES BELOW
     grid-area: 3/1/4/2;
   }
 
-
   .i_bugs {
     width: 85%;
     height: 75%;
@@ -1240,6 +1301,79 @@ CARE PAGE STYLES BELOW
     font-size: 2.25vw;
   }
 
+
+  /***********************************************************/
+  /*********************
+  VIEW PAGE STYLES BELOW 
+  /*********************/
+  /***********************************************************/
+   #h1_ourProducts{
+    margin-top:2.5%;
+    font-size: 8vw;
+  }
+  
+  #d_viewPlantsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #d_smallSwanPlant {
+    grid-area: 1/1/2/2;
+  }
+
+  #d_mediumSwanPlant {
+    grid-area: 1/2/2/3;
+  }
+
+  #d_largeSwanPlant {
+    grid-area: 2/1/3/2;
+  }
+
+  #d_extraLargeSwanPlant {
+    grid-area: 2/2/3/3;
+  }
+
+ .h3_swanPlant {
+    font-size: 2.25vw;
+  }
+
+
+
+  /***********************************************************/
+  /*********************
+  CLOSE VIEW PAGE STYLES BELOW 
+  /*********************/
+  /***********************************************************/
+#d_closeViewGrid{ 
+  grid-template-columns: 0.75fr  1fr; 
+}
+
+#d_closeViewImage {
+  width: 80%; 
+  height: 65%;
+  margin: 20% 0% 0% 7.5%; 
+}
+
+#h1_closeViewHeader{
+  font-size:5.5vw; 
+}
+
+#h2_closeViewPrice{
+  font-size:3.5vw; 
+}
+
+#p_closeViewDes,
+#p_closeViewDesHeight{
+  font-size:2.5vw; 
+}
+
+#b_closeViewOrder{
+  font-size: 4.25vw; 
+}
+
+#b_closeViewBack{
+  font-size:3.5vw;
+}
 
 
   /**** footer ****/
@@ -1327,11 +1461,12 @@ MULTIPLE PAGE STYLES BELOW
     font-size: 3.5vw;
   }
 
-/*** footer ***/
+  /*** footer ***/
   #i_backToTop {
     height: 80%;
     width: 80%
   }
+
   /***********************************************************/
   /*********************
 HOME PAGE STYLES BELOW 
@@ -1343,7 +1478,7 @@ HOME PAGE STYLES BELOW
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3fr 2fr 1fr;
-    height:80vh;
+    height: 80vh;
   }
 
   /** image is hiden on a phone like screen **/
@@ -1359,7 +1494,7 @@ HOME PAGE STYLES BELOW
 
   #h1_homeMainHeader {
     font-size: 17vw;
-    margin:0% 2.5% 2.5% 2.5%;
+    margin: 0% 2.5% 2.5% 2.5%;
   }
 
   #d_homeSubHeader {
@@ -1409,7 +1544,6 @@ HOME PAGE STYLES BELOW
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     font-size: 2.5vw;
-    text-align: center;
   }
 
   /********************************/
@@ -1423,7 +1557,7 @@ HOME PAGE STYLES BELOW
   }
 
   #d_topSellerHead {
-    margin-top:5%;
+    margin-top: 5%;
     grid-area: 1/1/2/6;
   }
 
@@ -1433,34 +1567,34 @@ HOME PAGE STYLES BELOW
 
   #d_topSellerDes {
     grid-area: 3/1/4/6;
-    margin-bottom:15%;
+    margin-bottom: 15%;
   }
 
   #h1_topSeller {
     font-size: 15vw;
-    margin:0%;
+    margin: 0%;
   }
 
   #i_topSeller {
-  height: 80%; 
-  margin-top: 7.5%; 
-}
+    height: 80%;
+    margin-top: 7.5%;
+  }
 
-/* header */
-#h3_topSeller {
-  font-size: 9vw; 
-  text-align: center;
-  margin-top: 2%; 
-  margin-left: 10%; 
-  margin-right: 10%;
-}
+  /* header */
+  #h3_topSeller {
+    font-size: 9vw;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
-/* price */
-#h4_topSeller {
-  font-size: 6vw;
-  margin-top:10%;
-  margin-bottom:10%;
-}
+  /* price */
+  #h4_topSeller {
+    font-size: 6vw;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
 
   /***********************************************************/
   /*********************
@@ -1541,29 +1675,94 @@ CARE PAGE STYLES BELOW
 VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+  #h1_ourProducts{
+    margin-top:5%;
+    font-size: 10vw;
+  }
 
-#d_smallSwanPlant{
-  grid-area: 1/1/2/2;
+
+  #d_viewPlantsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    margin-top:0%;
+  }
+
+  #d_smallSwanPlant {
+    grid-area: 1/1/2/2;
+  }
+
+  #d_mediumSwanPlant {
+    grid-area: 2/1/3/2;
+  }
+
+  #d_largeSwanPlant {
+    grid-area: 3/1/4/2;
+  }
+
+  #d_extraLargeSwanPlant {
+    grid-area: 4/1/5/2;
+  }
+
+ .h3_swanPlant {
+    font-size: 4.5vw;
+  }
+
+
+  /***********************************************************/
+  /*********************
+  CLOSE VIEW PAGE STYLES BELOW 
+  /*********************/
+  /***********************************************************/
+#d_closeViewGrid { 
+  grid-template-rows: 3.5fr 0.75fr 0.5fr repeat(2, 1fr);
+  grid-template-columns: 1fr;  
 }
 
-#d_mediumSwanPlant{
-  grid-area:2/1/3/2;
+#d_closeViewImage { 
+  width: 70%; 
+  height: 75%;
+  margin:0%;
+  margin:10% 0% 0% 15%; 
+  grid-area:1/1/2/2; 
 }
 
-#d_largeSwanPlant{
-  grid-area: 1/1/2/2;
+#d_closeViewHeader{
+  grid-area: 2/1/3/2;
 }
 
-#d_extraLargeSwanPlant{
-  grid-area:2/1/3/2;
+#d_closeViewPrice{
+  grid-area: 3/1/4/2;
 }
 
-.h3_swanPlant{
-  font-size:3.5vw;
-  text-align: center;
-
+#d_closeViewDes{
+  grid-area: 4/1/5/2;
 }
- 
+
+#d_closeViewButton{
+  grid-area: 5/1/6/2;
+}
+
+#h1_closeViewHeader{
+  font-size:8.5vw; 
+}
+
+#h2_closeViewPrice{
+  font-size:6.5vw; 
+}
+
+#p_closeViewDes,
+#p_closeViewDesHeight{
+  font-size:3.75vw; 
+}
+
+#b_closeViewOrder{
+  font-size: 5vw; 
+}
+
+#b_closeViewBack{
+  font-size:4.5vw;
+}
+  
 }
 
 

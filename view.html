@@ -43,16 +43,21 @@
         </div>
     </header>
 
+<h1 id="h1_ourProducts">Our Products</h1>
+
     <div id="d_viewPlantsGrid">
 
-        <div id="d_smallSwanPlant" class="d_viewSwanPlants" onmouseenter="fbp_viewEnterSmall()"
-            onmouseleave="fbp_viewExitSmall()">
-            <div class="d_swanPlantsImage d_alignCenterVertHori" onclick="window.location.href='smallSwanPlants.html';">
+        <div id="d_smallSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='smallSwanPlants.html';">
+            <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_smallSwanPlant" class="i_swanPlant" src="images/swanPlants/smallSwanPlants.JPG">
             </div>
             <div class="d_swanPlantsHeader d_alignCenterVertHori">
-                <h3 class="h3_swanPlant">Small swan plant: $4 each</h3>
+                <h3 class="h3_swanPlant">Small swan plant</h3>
             </div>
+             <div class="d_swanPlantsPrice d_alignCenterVertHori">
+                <h3 class="h3_swanPlant">$4 each</h3>
+            </div>
+            
         </div>
 
         <!----
@@ -61,48 +66,50 @@
             onmouseenter="fbp_viewEnterMed()"
             onmouseleave="fbp_viewExitMed()"
 --->
-        <div id="d_mediumSwanPlant" class="d_viewSwanPlants" onmouseenter="fbp_viewEnterMed()"
-            onmouseleave="fbp_viewExitMed()">
+        <div id="d_mediumSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='mediumSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_mediumSwanPlant" class="i_swanPlant" src="images/swanPlants/mediumSwanPlants.JPG">
             </div>
             <div class="d_swanPlantsHeader d_alignCenterVertHori">
-                <h3 class="h3_swanPlant">Medium swan plant: $5 each</h3>
+                <h3 class="h3_swanPlant">Medium swan plant</h3>
+            </div>
+            <div class="d_swanPlantsPrice d_alignCenterVertHori">
+                <h3 class="h3_swanPlant">$5 each</h3>
             </div>
         </div>
 
 
-        <div id="d_largeSwanPlant" class="d_viewSwanPlants" onmouseenter="fbp_viewEnterLarge()"
-            onmouseleave="fbp_viewExitLarge()">
+        <div id="d_largeSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='largeSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_largeSwanPlant" class="i_swanPlant" src="images/swanPlants/largeSwanPlants.JPG">
             </div>
             <div class="d_swanPlantsHeader d_alignCenterVertHori">
-                <h3 class="h3_swanPlant">Large swan plant: $7 each</h3>
+                <h3 class="h3_swanPlant">Large swan plant</h3>
             </div>
-            
-
+            <div class="d_swanPlantsPrice d_alignCenterVertHori">
+                <h3 class="h3_swanPlant">$7 each</h3>
+            </div>
         </div>
 
 
-        <div id="d_extraLargeSwanPlant" class="d_viewSwanPlants" onmouseenter="fbp_viewEnterExLarge()"
-            onmouseleave="fbp_viewExitExLarge()">
+        <div id="d_extraLargeSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='extraLargeSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_extraLargeSwanPlant" class="i_swanPlant" src="images/swanPlants/extraLargeSwanPlants.JPG">
             </div>
             <div class="d_swanPlantsHeader d_alignCenterVertHori">
-                <h3 class="h3_swanPlant">Extra large swan plant: $9 each</h3>
+                <h3 class="h3_swanPlant">Extra large swan plant</h3>
             </div>
-
-
+            <div class="d_swanPlantsPrice d_alignCenterVertHori">
+                <h3 class="h3_swanPlant">$9 each</h3>
+            </div>
         </div>
 </div>
         <!---- Footer ---->
         <footer>
             <div id="d_footerGrid">
-                <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">View</a> </div>
-                <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Care</a></div>
-                <div class="d_footerLinkGrid"> <a class="a_footer" href="test.html">Order</a></div>
+                <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
+                <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
+                <div class="d_footerLinkGrid"> <a class="a_footer" href="order.html">Order</a></div>
                 <div class="d_contactUsGrid">
 
                     <div id="d_contactUsBackground">
@@ -121,7 +128,7 @@
                     </div>
                 </div>
                 <div id="d_backToTopGrid">
-                    <img id="i_backToTop" class="hoverOverElement
+                    <img id="i_backToTop"
                         alt=" Back to top Arrow" src="images/backToTopImage.png"
                         onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
                     <!---- <button class="b_backToTop"
