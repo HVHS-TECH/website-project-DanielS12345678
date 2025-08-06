@@ -1,3 +1,41 @@
+/*********************************************/
+// fbP_manager.js()
+// processes reads, and writes 
+// Has other fucntions like zoom 
+/*********************************************/
+
+
+/*********************************************/
+// fbP_dropDownLinksDisplay()
+// Called: When the user loads on any page
+// Does: senors if the user has lcikced of the drop down link 
+// Used on a touchscreen device 
+// Calls: n/a
+/*********************************************/
+function fbP_dropDownLinksDisplay(){
+   const CLICKAREA = document.getElementById('d_homeGridMain');
+   const DROPDOWNLINKSDIV = document.getElementById('d_dropDownLinks');
+   const VIEWLINK = document.getElementById('d_headerLink2');
+
+
+
+  // Checks to see if the user has clicked off the drop down link
+  CLICKAREA.addEventListener('touchstart', () => {
+  
+    DROPDOWNLINKSDIV.style.display = 'none';
+ 
+  });
+ // Checking if the user has clicked on the view link so drop down links appear 
+ // used for when drop down links have already been hided 
+  VIEWLINK.addEventListener('touchstart', () => {
+  
+    DROPDOWNLINKSDIV.style.display = 'block';
+ 
+  });
+
+}
+
+
 
 /*********************************************/
 // fbP_zoomOnPlant()

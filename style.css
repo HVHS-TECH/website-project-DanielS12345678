@@ -6,6 +6,8 @@ START OF STYLE - Writen 2025 By Daniel Saunders
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 
 /********************************************************************************
@@ -17,15 +19,13 @@ GENERAL STYLES BELOW
 *********************************************************************************/
 html {
   height: 100%;
-  font-family: "eb garamond", monospace;
 }
 
 body {
   margin: 0px;
   background-color: #dfeef4;
-
+  font-family: "eb garamond", "Libertinus Sans";
 }
-
 
 header {
   height: 10vh;
@@ -35,7 +35,6 @@ header {
 
 footer {
   background-color: #2D662C;
-
 }
 
 h1 {
@@ -43,18 +42,21 @@ h1 {
   text-align: center;
 }
 
-  h2 {
-    margin: 0px;
-    text-align: center;
-  }
-
+h2 {
+  margin: 0px;
+  text-align: center;
+}
 
 h3 {
   margin: 0px;
 }
 
-p{
-  text-align:center;
+p {
+  text-align: center;
+}
+
+button {
+  font-family: "eb garamond", "Libertinus Sans";
 }
 
 button:hover {
@@ -69,8 +71,6 @@ button:hover {
   align-items: center;
 }
 
-
-
 #i_backToTop:hover {
   cursor: pointer;
 }
@@ -78,7 +78,6 @@ button:hover {
 #i_backToTop:hover {
   cursor: pointer;
 }
-
 
 .d_headerGrid {
   display: grid;
@@ -105,6 +104,66 @@ button:hover {
 
 #d_headerLink2 {
   grid-area: 1/3/2/4;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-self: center;
+}
+
+#d_dropDownLinks {
+  display: none; 
+  position: absolute;
+  background-color: #fffef4;
+  z-index: 1;
+  padding: 0% 10% 7.5% 10%;
+  margin-left: 15%;
+  width:50%;
+}
+
+#ul_dropDownLinks {
+  list-style-type: none;
+  padding-left: 0%;
+  margin: 0%;
+}
+
+.li_dropDownLinks {
+  margin-top: 15%;
+}
+
+.a_dropDown,
+.a_change,
+.a_current {
+  color: black;
+  text-decoration: none;
+  align-self: center;
+  position: relative;
+}
+
+.a_dropDown::after,
+.a_change::after,
+.a_current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fffef4, #005CA3);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.a_dropDown::after {
+  transition: transform 0.5s ease;
+}
+
+.a_dropDown:hover::after,
+.a_change:hover::after {
+  transform: scaleX(1);
+}
+
+#d_headerLink2:hover #d_dropDownLinks {
+  display: block;
 }
 
 #d_headerLink3 {
@@ -115,55 +174,20 @@ button:hover {
   grid-area: 1/5/2/6;
 }
 
-.a_current {
-  color: black;
-  align-self: center;
-  text-decoration: none;
-  position: relative;
-}
-
-
 .a_current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #fffef4, #005CA3);
   transform: scaleX(1);
   transform-origin: left;
   transition: transform 0.3s ease;
-}
-
-.a_change {
-  color: black;
-  text-decoration: none;
-  align-self: center;
-  position: relative;
 }
 
 .a_change::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #fffef4, #005CA3);
-  transform: scaleX(0);
-  transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.a_change:hover::after {
-  transform: scaleX(1);
-}
 
 /********************************/
 
 /********** Footer Css grid ********/
-
 #d_footerGrid {
   display: grid;
   height: 100%;
@@ -177,7 +201,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
 
 .a_footer {
   color: white;
@@ -230,7 +253,6 @@ button:hover {
   justify-content: center;
 }
 
-
 #d_contactPhone {
   grid-area: 3/1/4/2;
   display: flex;
@@ -264,7 +286,7 @@ button:hover {
   bottom: 0;
   width: 100%;
   height: 2px;
- background:black;
+  background: black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -306,7 +328,6 @@ HOME PAGE STYLES BELOW
 #i_homeMain {
   width: 80%;
   height: 99%;
-
 }
 
 #d_homeGridMain {
@@ -322,7 +343,6 @@ HOME PAGE STYLES BELOW
 #h1_homeMainHeader {
   border-bottom-style: solid;
 }
-
 
 #h3_subHeader {
   text-align: center;
@@ -341,13 +361,12 @@ HOME PAGE STYLES BELOW
   justify-content: center;
 }
 
-
 #b_takeLook {
   color: white;
   background-color: #26530C;
   border: none;
   border-radius: 20px;
-  padding: 1.5%;
+  padding: 1%;
   align-self: flex-start;
 }
 
@@ -368,7 +387,6 @@ HOME PAGE STYLES BELOW
   height: 90%;
 }
 
-
 /****** Our story ******/
 #d_homeStoryHeaderFlex {
   display: flex;
@@ -379,7 +397,6 @@ HOME PAGE STYLES BELOW
 #d_homeStoryMainFlex {
   display: flex;
 }
-
 
 #d_homeStoryAboutUs {
   display: flex;
@@ -394,7 +411,8 @@ HOME PAGE STYLES BELOW
 
 #a_location {
   color: black;
-  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
   align-self: center;
   position: relative;
 }
@@ -406,7 +424,7 @@ HOME PAGE STYLES BELOW
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #fffef4, #005CA3);
+  background: black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -419,7 +437,6 @@ HOME PAGE STYLES BELOW
 #a_location:hover::after {
   transform: scaleX(1);
 }
-
 
 /***** Top Seller *****/
 #d_homeGridTopSeller {
@@ -493,7 +510,6 @@ HOME PAGE STYLES BELOW
 #d_topSellerHead {
   grid-area: 1/1/2/9;
 }
-
 
 #d_topSellerImg {
   grid-area: 2/1/3/7;
@@ -620,18 +636,18 @@ VIEW PAGE STYLES BELOW
 }
 
 .d_viewSwanPlants {
-    margin: 7.5% 20% 5% 20%;
-    border: 2px solid black;
-  }
+  margin: 7.5% 20% 5% 20%;
+  border: 2px solid black;
+}
 
-  .d_swanPlantsImage {
-    height: 87.5%;
-  }
+.d_swanPlantsImage {
+  height: 87.5%;
+}
 
-  .d_swanPlantsHeader,
-  .d_swanPlantsPrice {
-    height: 6.25%;
-  }
+.d_swanPlantsHeader,
+.d_swanPlantsPrice {
+  height: 6.25%;
+}
 
 .i_swanPlant {
   height: 95%;
@@ -644,9 +660,9 @@ VIEW PAGE STYLES BELOW
 
 }
 
-.d_viewSwanPlants:hover{
-  border:none;
-  cursor:pointer;
+.d_viewSwanPlants:hover {
+  border: none;
+  cursor: pointer;
 }
 
 
@@ -658,10 +674,10 @@ CLOSE VIEW PAGE STYLES BELOW
 /********************************************************************************
 *********************************************************************************/
 
-#d_closeViewGrid{
-  display:grid;
+#d_closeViewGrid {
+  display: grid;
   grid-template-rows: 1fr 0.5fr repeat(2, 2fr);
-  margin:5% 0% 2% 0%;
+  margin: 5% 0% 2% 0%;
 }
 
 
@@ -670,7 +686,7 @@ CLOSE VIEW PAGE STYLES BELOW
   border: 2px solid black;
   overflow: auto;
   white-space: nowrap;
-   
+
   display: flex;
   justify-content: center;
 
@@ -682,24 +698,24 @@ CLOSE VIEW PAGE STYLES BELOW
   transform-origin: top left;
 }
 
-#d_closeViewHeader{
-  grid-area:1/2/2/3;
+#d_closeViewHeader {
+  grid-area: 1/2/2/3;
 }
 
-#d_closeViewPrice{
-  grid-area:2/2/3/3;
+#d_closeViewPrice {
+  grid-area: 2/2/3/3;
 }
 
-#d_closeViewDes{
-  grid-area:3/2/4/3;
-  margin:0% 5% 0% 5%;
+#d_closeViewDes {
+  grid-area: 3/2/4/3;
+  margin: 0% 5% 0% 5%;
 }
 
-#d_closeViewButton{
-  grid-area:4/2/5/3;
+#d_closeViewButton {
+  grid-area: 4/2/5/3;
 }
 
-#b_closeViewOrder{
+#b_closeViewOrder {
   color: white;
   background-color: #26530C;
   border: none;
@@ -708,17 +724,17 @@ CLOSE VIEW PAGE STYLES BELOW
 }
 
 #b_closeViewOrder:hover,
-#b_closeViewBack:hover{
-  padding:17.5px 17.5px;
+#b_closeViewBack:hover {
+  padding: 17.5px 17.5px;
 }
 
-#d_closeViewBack{
-  margin-bottom:10%;
+#d_closeViewBack {
+  margin-bottom: 10%;
 }
 
-#b_closeViewBack{
-  color:black;
-  background-color:white;
+#b_closeViewBack {
+  color: black;
+  background-color: white;
   border: none;
   border-radius: 60px;
   padding: 1.5%;
@@ -734,6 +750,10 @@ CLOSE VIEW PAGE STYLES BELOW
   #i_backToTop {
     height: 80%;
     width: 40%
+  }
+
+  .a_dropDown {
+    font-size: 1.5vw;
   }
 
   /***********************************************************/
@@ -768,7 +788,7 @@ HOME PAGE STYLES BELOW
   }
 
   #h1_homeMainHeader {
-    font-size: 8vw;
+    font-size: 7.75vw;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
@@ -978,11 +998,11 @@ Care PAGE STYLES BELOW
 View PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
-  #h1_ourProducts{
-     margin-top:2%;
+  #h1_ourProducts {
+    margin-top: 2%;
     font-size: 6vw;
   }
-  
+
   #d_viewPlantsGrid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -1003,55 +1023,49 @@ View PAGE STYLES BELOW
   #d_extraLargeSwanPlant {
     grid-area: 2/2/3/3;
   }
- 
+
   .h3_swanPlant {
     font-size: 1.5vw;
   }
+
   /***********************************************************/
   /*********************
 CLOSE VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
-#d_closeViewGrid{
-  grid-template-columns: repeat(2, 1fr);
-}
+  #d_closeViewGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-#d_closeViewImage{
+  #d_closeViewImage {
     width: 70%;
-  height: 80%;
-  margin-left: 15%;
+    height: 80%;
+    margin-left: 15%;
+  }
+
+  #h1_closeViewHeader {
+    font-size: 4.75vw;
+  }
+
+  #h2_closeViewPrice {
+    font-size: 2.75vw;
+  }
+
+  #p_closeViewDes,
+  #p_closeViewDesHeight {
+    font-size: 1.9vw;
+  }
+
+  #b_closeViewOrder {
+    font-size: 3.5vw;
+  }
+
+  #b_closeViewBack {
+    font-size: 3vw;
+  }
+
 }
-
-#h1_closeViewHeader{
-  font-size:4.75vw;
-}
-
-#h2_closeViewPrice{
-  font-size:2.75vw;
-}
-
-#p_closeViewDes,
-#p_closeViewDesHeight{
-  font-size:1.9vw;
-}
-
-#b_closeViewOrder{
-  font-size: 3.5vw;
-}
-
-#b_closeViewBack{
-  font-size:3vw;
-}
-
-}
-
-
-
-
-
-
-
 
 /********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
 /*** Tablet like size ***/
@@ -1076,10 +1090,21 @@ CLOSE VIEW PAGE STYLES BELOW
     font-size: 4vw;
   }
 
+#d_dropDownLinks{
+  width:80%;
+  margin:0%;
+  padding-bottom:12%;
+}
+
+  .a_dropDown {
+    font-size: 2.5vw;
+  }
+
   #i_backToTop {
     height: 80%;
-    width: 60%
+    width: 75%
   }
+
 
 
   /***********************************************************/
@@ -1125,7 +1150,7 @@ HOME PAGE STYLES BELOW
   }
 
   #b_takeLook {
-    font-size: 6vw;
+    font-size: 10vw;
   }
 
   /********************************/
@@ -1307,11 +1332,11 @@ HOME PAGE STYLES BELOW
   VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
-   #h1_ourProducts{
-    margin-top:2.5%;
+  #h1_ourProducts {
+    margin-top: 2.5%;
     font-size: 8vw;
   }
-  
+
   #d_viewPlantsGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -1333,7 +1358,7 @@ HOME PAGE STYLES BELOW
     grid-area: 2/2/3/3;
   }
 
- .h3_swanPlant {
+  .h3_swanPlant {
     font-size: 2.25vw;
   }
 
@@ -1344,36 +1369,36 @@ HOME PAGE STYLES BELOW
   CLOSE VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
-#d_closeViewGrid{ 
-  grid-template-columns: 0.75fr  1fr; 
-}
+  #d_closeViewGrid {
+    grid-template-columns: 0.75fr 1fr;
+  }
 
-#d_closeViewImage {
-  width: 80%; 
-  height: 65%;
-  margin: 20% 0% 0% 7.5%; 
-}
+  #d_closeViewImage {
+    width: 80%;
+    height: 65%;
+    margin: 20% 0% 0% 7.5%;
+  }
 
-#h1_closeViewHeader{
-  font-size:5.5vw; 
-}
+  #h1_closeViewHeader {
+    font-size: 5.5vw;
+  }
 
-#h2_closeViewPrice{
-  font-size:3.5vw; 
-}
+  #h2_closeViewPrice {
+    font-size: 3.5vw;
+  }
 
-#p_closeViewDes,
-#p_closeViewDesHeight{
-  font-size:2.5vw; 
-}
+  #p_closeViewDes,
+  #p_closeViewDesHeight {
+    font-size: 2.5vw;
+  }
 
-#b_closeViewOrder{
-  font-size: 4.25vw; 
-}
+  #b_closeViewOrder {
+    font-size: 4.25vw;
+  }
 
-#b_closeViewBack{
-  font-size:3.5vw;
-}
+  #b_closeViewBack {
+    font-size: 3.5vw;
+  }
 
 
   /**** footer ****/
@@ -1422,11 +1447,54 @@ HOME PAGE STYLES BELOW
   }
 
 
+}
 
 
+/****************************************************************************************************/
+/********** Small - medium screen size **********/
+/********** used for getting rid of main image on home page **********/
+/****************************************************************************************************/
+@media (max-width:705px) {
 
+
+    /********** Main Css grid ********/
+  #d_homeGridMain {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr 1fr;
+    height: 90vh;
+  }
+
+  /** image is hiden on a phone like screen **/
+  #d_homeMainImage {
+    display: none;
+  }
+
+  #d_homeHeader {
+    grid-area: 1/1/2/6;
+    display: flex;
+    align-items: center;
+  }
+
+    #d_homeSubHeader {
+    grid-area: 2/1/3/6;
+  }
+
+    #d_homeTakeLookButton {
+    grid-area: 3/1/4/6;
+  }
+
+    #h1_homeMainHeader {
+    font-size: 15vw;
+    margin: 0% 2.5% 2.5% 2.5%;
+  }
+
+   #h3_subHeader {
+    font-size: 5vw;
+    margin: 0% 10% 5% 10%;
+  }
 
 }
+
 
 
 /********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
@@ -1446,19 +1514,51 @@ MULTIPLE PAGE STYLES BELOW
   h2 {
     margin: 0px;
     margin-bottom: 1.5%;
-    font-size: 30px;
     text-align: center;
   }
 
   /*** header ***/
 
-  #h3_navHeader {
-    font-size: 3.5vw;
-  }
+.d_headerCompany{
+  display:none;
+}
+
+.d_headerGrid{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#d_headerLink1{
+  grid-area:1/1/2/2;
+}
+
+#d_headerLink2{
+  grid-area:1/2/2/3;
+}
+
+#d_headerLink3{
+  grid-area:1/3/2/4;
+}
+
+#d_headerLink4{
+  grid-area:1/4/2/5;
+}
 
   .a_change,
   .a_current {
-    font-size: 3.5vw;
+    font-size: 5vw;
+  }
+
+
+#d_dropDownLinks{
+  padding:0% 7.5% 20% 7.5%;
+  width:auto;
+}
+
+.li_dropDownLinks{
+  margin-top:20%;
+}
+  .a_dropDown {
+    font-size: 4.75vw;
   }
 
   /*** footer ***/
@@ -1474,11 +1574,13 @@ HOME PAGE STYLES BELOW
   /***********************************************************/
 
 
+
+
   /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3fr 2fr 1fr;
-    height: 80vh;
+    grid-template-rows: 2fr 1.5fr 1fr;
+    height: 90vh;
   }
 
   /** image is hiden on a phone like screen **/
@@ -1493,7 +1595,7 @@ HOME PAGE STYLES BELOW
   }
 
   #h1_homeMainHeader {
-    font-size: 17vw;
+    font-size: 16vw;
     margin: 0% 2.5% 2.5% 2.5%;
   }
 
@@ -1502,8 +1604,8 @@ HOME PAGE STYLES BELOW
   }
 
   #h3_subHeader {
-    font-size: 7.5vw;
-    margin: 0% 5% 5% 5%;
+    font-size: 7vw;
+    margin: 0% 10% 5% 10%;
   }
 
   #d_homeTakeLookButton {
@@ -1514,36 +1616,48 @@ HOME PAGE STYLES BELOW
 
   /********** Story Css grid ********/
 
+/** d_homeStoryMainFlex was a flex on the 2 large screen sizes but is now a grid on the small screen size **/
+#d_homeStoryMainFlex{
+ display:grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: repeat(2, 1fr);
+}
 
-  #d_chrysalisShowRight,
-  #d_chrysalisShowLeft {
-    display: none;
-  }
+/** d_homeStoryImage held the image of the owner and now is on top  **/
+
+#d_homeStoryImage{
+  grid-area:1/1/2/2;
+}
+
+/** d_homeStoryAboutUs was held the our story text on the right and now is on the bottom **/
+#d_homeStoryAboutUs{
+  grid-area:2/1/3/2;
+}
 
   #h2_Story {
     font-size: 14vw;
   }
 
   #d_homeStoryImage {
-    width: 40%;
+    width: 100%;
   }
 
-  #i_ownerImage {
-    width: 75%;
-
+ 
+  #i_ownerImage{
+    width:75%;
   }
 
   #d_homeStoryAboutUs {
-    width: 60%;
+    width: 100%;
   }
 
 
   #p_aboutUs {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 0.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
     margin-bottom: 0.5%;
-    font-size: 2.5vw;
+    font-size: 4.75vw;
   }
 
   /********************************/
@@ -1657,7 +1771,7 @@ CARE PAGE STYLES BELOW
   }
 
   /** d_whiteAphidsImage held the image on the right and now is on the bottom **/
-  /** was right side of flex box in bigger screen sizes now is bottom **/
+  /** d_toxicPlantDesFlexRight was right side of flex box in bigger screen sizes now is bottom **/
   #d_whiteAphidsImage,
   #d_toxicPlantDesFlexRight {
     grid-area: 2/1/3/3;
@@ -1675,8 +1789,8 @@ CARE PAGE STYLES BELOW
 VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
-  #h1_ourProducts{
-    margin-top:5%;
+  #h1_ourProducts {
+    margin-top: 5%;
     font-size: 10vw;
   }
 
@@ -1684,7 +1798,7 @@ VIEW PAGE STYLES BELOW
   #d_viewPlantsGrid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    margin-top:0%;
+    margin-top: 0%;
   }
 
   #d_smallSwanPlant {
@@ -1703,7 +1817,7 @@ VIEW PAGE STYLES BELOW
     grid-area: 4/1/5/2;
   }
 
- .h3_swanPlant {
+  .h3_swanPlant {
     font-size: 4.5vw;
   }
 
@@ -1713,56 +1827,62 @@ VIEW PAGE STYLES BELOW
   CLOSE VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
-#d_closeViewGrid { 
-  grid-template-rows: 3.5fr 0.75fr 0.5fr repeat(2, 1fr);
-  grid-template-columns: 1fr;  
-}
+  #d_closeViewGrid {
+    grid-template-rows: 2.5fr 0.5fr 0.25fr 1fr 0.75fr;
+    grid-template-columns: 1fr;
+  }
 
-#d_closeViewImage { 
-  width: 70%; 
-  height: 75%;
-  margin:0%;
-  margin:10% 0% 0% 15%; 
-  grid-area:1/1/2/2; 
-}
+  #d_closeViewImage {
+    width: 70%;
+    height: 90%;
+    margin: 0%;
+    margin: 5% 0% 0% 15%;
+    grid-area: 1/1/2/2;
+  }
 
-#d_closeViewHeader{
-  grid-area: 2/1/3/2;
-}
+  #d_closeViewHeader {
+    grid-area: 2/1/3/2;
+  }
 
-#d_closeViewPrice{
-  grid-area: 3/1/4/2;
-}
+  #d_closeViewPrice {
+    grid-area: 3/1/4/2;
+  }
 
-#d_closeViewDes{
-  grid-area: 4/1/5/2;
-}
+  #d_closeViewDes {
+    grid-area: 4/1/5/2;
+  }
 
-#d_closeViewButton{
-  grid-area: 5/1/6/2;
-}
+  #d_closeViewButton {
+    grid-area: 5/1/6/2;
+  }
 
-#h1_closeViewHeader{
-  font-size:8.5vw; 
-}
+  #d_closeViewBack {
+margin-top:7.5%;
+margin-bottom:15%;
+  }
 
-#h2_closeViewPrice{
-  font-size:6.5vw; 
-}
+  #h1_closeViewHeader {
+    font-size: 9vw;
+  }
 
-#p_closeViewDes,
-#p_closeViewDesHeight{
-  font-size:3.75vw; 
-}
+  #h2_closeViewPrice {
+    font-size: 7vw;
+  }
 
-#b_closeViewOrder{
-  font-size: 5vw; 
-}
+  #p_closeViewDes,
+  #p_closeViewDesHeight {
+    font-size: 3.75vw;
+  }
 
-#b_closeViewBack{
-  font-size:4.5vw;
-}
-  
+  #b_closeViewOrder {
+    font-size: 6vw;
+  }
+
+
+  #b_closeViewBack {
+    font-size: 5vw;
+  }
+
 }
 
 
