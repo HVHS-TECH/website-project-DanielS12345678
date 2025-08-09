@@ -25,22 +25,22 @@
             </div>
             <div class="d_headerLink" id="d_headerLink2">
                 <a class="a_change" href="view.html">View</a>
-                                    <div id="d_dropDownLinks">
-                        <ul id="ul_dropDownLinks"> 
-                            <li class="li_dropDownLinks">
-                                <a class="a_dropDown" href="smallSwanPlants.html">Small</a>
-                            </li>
-                            <li class="li_dropDownLinks">
-                                <a class="a_dropDown" href="mediumSwanPlants.html">Medium</a>
-                            </li>
-                            <li class="li_dropDownLinks">
-                                <a class="a_dropDown" href="largeSwanPlants.html">Large</a>
-                            </li>
-                            <li class="li_dropDownLinks">
-                                <a class="a_dropDown" href="extraLargeSwanPlants.html">Extra Large</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div id="d_dropDownLinks">
+                    <ul id="ul_dropDownLinks">
+                        <li class="li_dropDownLinks">
+                            <a class="a_dropDown" href="smallSwanPlants.html">Small</a>
+                        </li>
+                        <li class="li_dropDownLinks">
+                            <a class="a_dropDown" href="mediumSwanPlants.html">Medium</a>
+                        </li>
+                        <li class="li_dropDownLinks">
+                            <a class="a_dropDown" href="largeSwanPlants.html">Large</a>
+                        </li>
+                        <li class="li_dropDownLinks">
+                            <a class="a_dropDown" href="extraLargeSwanPlants.html">Extra Large</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="d_headerLink" id="d_headerLink3">
                 <a class="a_change" href="care.html">Care</a>
@@ -53,25 +53,181 @@
         </div>
     </header>
 
+    <h1 id="h1_orderFormHeader">Order form</h1>
+
+    <div id="d_orderForm">
+
+        <!-- Name -->
+        <div id="d_orderFormNameInput" class="d_orderFormItem">
+            <div id="d_nameLabel" class="d_orderFormLabelItem">
+                <label id="l_name" class="l_orderForm" for="in_name">Name:</label>
+            </div>
+            <div id="d_nameInput" class="d_orderFormInputItem">
+                <input id="in_name" class="in_orderForm" type="text" name="in_name"
+                    placeholder=" Please enter your name (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div id="d_orderFormEmailInput" class="d_orderFormItem">
+            <div id="d_emailLabel" class="d_orderFormLabelItem">
+                <label id="l_email" class="l_orderForm" for="in_email">Email:</label>
+            </div>
+            <div id="d_emailInput" class="d_orderFormInputItem">
+
+                <input id="in_email" class="in_orderForm" type="email" name="in_email" placeholder=" Email (Required)">
+            </div>
+        </div>
+
+        <!-- Small swan plant -->
+        <div id="d_orderFormSmallImage" class="d_swanPlantOrderImage">
+            <img class="i_swanPlantOrderImage" alt="picture of small swan plants"
+                src="images/swanPlants/smallSwanPlants.JPG">
+
+        </div>
+        <div id="d_orderFormSmallInput" class="d_orderFormItem">
+
+            <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem">
+                <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+            </div>
+
+            <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
+                <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
+                    placeholder="Small swan plants" min="0" max="10">
+            </div>
+
+        </div>
+
+        <!-- Medium swan plants -->
+        <div id="d_orderFormMediumImage" class="d_swanPlantOrderImage">
+            <img class="i_swanPlantOrderImage" alt="picture of medium swan plants"
+                src="images/swanPlants/mediumSwanPlants.JPG">
+        </div>
+
+        <div id="d_orderFormMediumInput" class="d_orderFormItem">
+            <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem">
+                <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
+
+            </div>
+
+            <div id="d_mediumSwanPlantsInput" class="d_orderFormInputItem">
+                <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
+                    placeholder="Medium swan plants" min="0" max="10">
+            </div>
+        </div>
+
+
+        <!-- Large swan plants -->
+        <div id="d_orderFormLargeImage" class="d_swanPlantOrderImage">
+            <img class="i_swanPlantOrderImage" alt="picture of large swan plants"
+                src="images/swanPlants/largeSwanPlants.JPG">
+        </div>
+
+        <div id="d_orderFormLargeInput" class="d_orderFormItem">
+            <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem">
+                <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
+
+            </div>
+
+            <div id="d_largeSwanPlantsInput" class="d_orderFormInputItem">
+                <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
+                    placeholder="Large swan plants" min="0" max="10">
+            </div>
+        </div>
+
+        <!-- Extra large swan plants -->
+        <div id="d_orderFormExtraLargeImage" class="d_swanPlantOrderImage">
+            <img class="i_swanPlantOrderImage" alt="picture of extra large swan plants"
+                src="images/swanPlants/extraLargeSwanPlants.JPG">
+        </div>
+        <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
+            <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem">
+                <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
+
+            </div>
+
+
+            <div id="d_extraLargeSwanPlantsInput" class="d_orderFormInputItem">
+                <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
+                    placeholder="Extra large swan plants" min="0" max="10">
+            </div>
+        </div>
+
+        <div id="d_orderFormPaymentNote">
+            <h4 id="h4_orderPaymentNote">Please note: Payment must be made as cash on pick up</h4>
+        </div>
+
+        <div id="d_orderFormButtons">
+            <div class="d_orderButton">
+                <button class="b_order" type="reset">Reset</button>
+            </div>
+
+            <div class="d_orderButton">
+                <button class="b_order">Order</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!---
+             <div id="d_orderForm">
+        <form id="f_orderForm">
+        </form>
+    -->
+    <!---
+
+            <label id="l_name" class="l_orderForm" for="name">Name:</label>
+            <input id="in_name" class="in_orderForm" type="text" name="name"
+                placeholder=" Please enter your name (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
+            <br>
+            <label id="l_email" class="l_orderForm" for="email">Email:</label>
+            <input id="in_email" class="in_orderForm" type="email" name="email" placeholder=" Email (Required)">
+            <br>
+            <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+            <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
+                placeholder="Small swan plants" min="0" max="10">
+            <br>
+            <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
+            <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
+                placeholder="Medium swan plants" min="0" max="10">
+            <br>
+            <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
+            <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
+                placeholder="Large swan plants" min="0" max="10">
+            <br>
+            <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
+            <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
+                placeholder="Extra large swan plants" min="0" max="10">
+            <br>
+
+
+
+        </div>
+    </div>
+-->
+
+
+
     <!---- Footer ---->
     <footer>
-        <div class="d_footerGrid">
+        <div id="d_footerGrid">
             <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="view.html">View</a></div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
             <div class="d_contactUsGrid">
 
                 <div id="d_contactUsBackground">
-                    <h4 class="h4_contactUs">Contact us</h4>
-                    <h5 class="h5_contactEmail">Email - <a class="a_contact" target="_blank"
+                    <h4 id="h4_contactUs">Contact us</h4>
+                    <h5 id="h5_contactEmail">Email - <a class="a_contact" target="_blank"
                             href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a></h5>
-                    <h5 class="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046">
+                    <h5 id="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046">
                             +64 027 254 6046</a></h5>
                 </div>
             </div>
-            <div class="d_backToTopGrid"> <button class="b_backToTop"
-                    onclick='window.scrollTo({top: 0, behavior: "smooth"});'> <img class="i_backToTop"
-                        alt="Back to top Arrow" src="images/backToTopImage.png"></button></div>
+            <div id="d_backToTopGrid">
+                <img id="i_backToTop" alt="Back to top button" src="images/backToTopImage.png"
+                    onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+            </div>
         </div>
     </footer>
 </body>

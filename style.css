@@ -57,6 +57,7 @@ p {
 
 button {
   font-family: "eb garamond", "Libertinus Sans";
+  border:none;
 }
 
 button:hover {
@@ -364,7 +365,6 @@ HOME PAGE STYLES BELOW
 #b_takeLook {
   color: white;
   background-color: #26530C;
-  border: none;
   border-radius: 20px;
   padding: 1%;
   align-self: flex-start;
@@ -488,13 +488,6 @@ HOME PAGE STYLES BELOW
 #b_topSeller {
   color: white;
   background-color: #26530C;
-  /*
-  26530C green good
-2D662C green
-661300 red
-0E6BA8 blue
-  */
-  border: none;
   border-radius: 50px;
   padding: 3%;
   font-size: 3.5vw;
@@ -718,7 +711,6 @@ CLOSE VIEW PAGE STYLES BELOW
 #b_closeViewOrder {
   color: white;
   background-color: #26530C;
-  border: none;
   border-radius: 50px;
   padding: 3%;
 }
@@ -735,11 +727,156 @@ CLOSE VIEW PAGE STYLES BELOW
 #b_closeViewBack {
   color: black;
   background-color: white;
-  border: none;
   border-radius: 60px;
   padding: 1.5%;
 }
 
+/********************************************************************************
+*********************************************************************************
+/*********************
+ORDER PAGE STYLES BELOW 
+/*********************/
+/********************************************************************************
+*********************************************************************************/
+#h1_orderFormHeader{
+  margin-top: 1.5%;
+  font-size:6vw;
+}
+
+#d_orderForm{
+  /*
+  display:flex;
+  justify-content: center;
+  */
+  margin-top:2%;
+  margin-bottom:10%;
+  
+  display:grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-template-rows:repeat(6, 0.5fr) 0.2fr 0.5fr;
+
+  }
+
+
+
+  #f_orderForm{
+    width:80%;
+  }
+
+.l_orderForm{
+  font-size:3vw;
+}
+
+.in_orderForm{
+width:60%;
+height:25%;
+  font-size:1.5vw;
+  padding:1%;
+}
+
+
+.d_orderFormItem {
+  display:flex;
+  margin-top:1%;
+}
+
+.d_orderFormLabelItem{
+  width:20%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content:right;
+
+}
+
+
+.d_orderFormInputItem{
+  width:80%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.d_swanPlantOrderImage{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i_swanPlantOrderImage{
+  width:70%;
+  height:80%;
+}
+
+#h4_orderPaymentNote{
+  text-align: center;
+  font-size:1.5vw;
+}
+
+.d_orderButton{
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.b_order{
+  font-size:4vw;
+  background-color:#144e73;
+  color:white;
+  padding:1% 2.5% 1% 2.5%;
+  border-radius: 10px;
+}
+
+#d_orderFormNameInput{
+  grid-area:1/2/2/3;
+}
+
+#d_orderFormEmailInput{
+  grid-area:2/2/3/3;
+}
+
+#d_orderFormSmallImage{
+  grid-area:3/1/4/2;
+}
+
+#d_orderFormSmallInput{
+    grid-area:3/2/4/3;
+}
+
+#d_orderFormMediumImage{
+      grid-area: 4/1/5/2;
+}
+
+#d_orderFormMediumInput{
+    grid-area:4/2/5/3;
+}
+
+#d_orderFormLargeImage{
+    grid-area: 5/1/6/2;
+}
+
+#d_orderFormLargeInput{
+  grid-area: 5/2/6/3;
+}
+
+#d_orderFormExtraLargeImage{
+      grid-area: 6/1/7/2;
+}
+
+#d_orderFormExtraLargeInput{
+   grid-area: 6/2/7/3;
+}
+
+#d_orderFormPaymentNote{
+  grid-area:7/1/8/3;
+}
+
+#d_orderFormButtons{
+    grid-area:8/1/9/3;
+    display:flex;
+}
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -1557,7 +1694,9 @@ MULTIPLE PAGE STYLES BELOW
 .li_dropDownLinks{
   margin-top:20%;
 }
-  .a_dropDown {
+
+
+.a_dropDown {
     font-size: 4.75vw;
   }
 
