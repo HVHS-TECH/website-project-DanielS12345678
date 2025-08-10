@@ -7,14 +7,23 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- firebase start ****************************************-->
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+      <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+      <!-- firebase end ******************************************-->
     <script src="scripts/fb_io.js"></script>
     <script src="scripts/fbP_manager.js"></script>
 </head>
 
-<body>
+<body onload="fb_login(fbP_userDetails, fbP_procLogin)">
 
     <!---- Header ---->
-    <header>
+    <header id="h_header">
         <div class="d_headerGrid">
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
@@ -53,8 +62,15 @@
         </div>
     </header>
 
+<div id="d_checkingAcount" class="d_alignCenterVertHori">
+   <h2 id="h2_checkingAccount">Checking for account</h2>
+</div>
+
+
+<div id="d_formElements"> 
     <h1 id="h1_orderFormHeader">Order form</h1>
 
+ 
     <div id="d_orderForm">
 
         <!-- Name -->
@@ -64,7 +80,7 @@
             </div>
             <div id="d_nameInput" class="d_orderFormInputItem">
                 <input id="in_name" class="in_orderForm" type="text" name="in_name"
-                    placeholder=" Please enter your name (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
+                    placeholder=" John Doe (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
             </div>
         </div>
 
@@ -75,16 +91,19 @@
             </div>
             <div id="d_emailInput" class="d_orderFormInputItem">
 
-                <input id="in_email" class="in_orderForm" type="email" name="in_email" placeholder=" Email (Required)">
+                <input id="in_email" class="in_orderForm" type="email" name="in_email" placeholder=" JohnDoe@gmail.com (Required)">
             </div>
         </div>
 
         <!-- Small swan plant -->
+
+        <!---
         <div id="d_orderFormSmallImage" class="d_swanPlantOrderImage">
             <img class="i_swanPlantOrderImage" alt="picture of small swan plants"
                 src="images/swanPlants/smallSwanPlants.JPG">
 
         </div>
+    -->
         <div id="d_orderFormSmallInput" class="d_orderFormItem">
 
             <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem">
@@ -93,17 +112,17 @@
 
             <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
                 <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
-                    placeholder="Small swan plants" min="0" max="10">
+                    placeholder="Max order 10" min="0" max="10">
             </div>
 
         </div>
 
-        <!-- Medium swan plants -->
+        <!-- Medium swan plants --
         <div id="d_orderFormMediumImage" class="d_swanPlantOrderImage">
             <img class="i_swanPlantOrderImage" alt="picture of medium swan plants"
                 src="images/swanPlants/mediumSwanPlants.JPG">
         </div>
-
+    -->
         <div id="d_orderFormMediumInput" class="d_orderFormItem">
             <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem">
                 <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
@@ -112,16 +131,17 @@
 
             <div id="d_mediumSwanPlantsInput" class="d_orderFormInputItem">
                 <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
-                    placeholder="Medium swan plants" min="0" max="10">
+                    placeholder="Max order 10" min="0" max="10">
             </div>
         </div>
 
 
-        <!-- Large swan plants -->
+        <!-- Large swan plants --
         <div id="d_orderFormLargeImage" class="d_swanPlantOrderImage">
             <img class="i_swanPlantOrderImage" alt="picture of large swan plants"
                 src="images/swanPlants/largeSwanPlants.JPG">
         </div>
+    -->
 
         <div id="d_orderFormLargeInput" class="d_orderFormItem">
             <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem">
@@ -131,15 +151,16 @@
 
             <div id="d_largeSwanPlantsInput" class="d_orderFormInputItem">
                 <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
-                    placeholder="Large swan plants" min="0" max="10">
+                    placeholder="Max order 10" min="0" max="10">
             </div>
         </div>
 
-        <!-- Extra large swan plants -->
+        <!-- Extra large swan plants --
         <div id="d_orderFormExtraLargeImage" class="d_swanPlantOrderImage">
             <img class="i_swanPlantOrderImage" alt="picture of extra large swan plants"
                 src="images/swanPlants/extraLargeSwanPlants.JPG">
         </div>
+    -->
         <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
             <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem">
                 <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
@@ -149,7 +170,7 @@
 
             <div id="d_extraLargeSwanPlantsInput" class="d_orderFormInputItem">
                 <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
-                    placeholder="Extra large swan plants" min="0" max="10">
+                    placeholder="Max order 10" min="0" max="10">
             </div>
         </div>
 
@@ -159,7 +180,7 @@
 
         <div id="d_orderFormButtons">
             <div class="d_orderButton">
-                <button class="b_order" type="reset">Reset</button>
+                <button class="b_order" onclick="fbP_resetForm()">Reset</button>
             </div>
 
             <div class="d_orderButton">
@@ -168,7 +189,7 @@
 
         </div>
     </div>
-
+</div>
     <!---
              <div id="d_orderForm">
         <form id="f_orderForm">
@@ -209,7 +230,7 @@
 
 
     <!---- Footer ---->
-    <footer>
+    <footer id="f_footer">
         <div id="d_footerGrid">
             <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="view.html">View</a></div>

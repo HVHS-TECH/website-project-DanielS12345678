@@ -57,7 +57,7 @@ p {
 
 button {
   font-family: "eb garamond", "Libertinus Sans";
-  border:none;
+  border: none;
 }
 
 button:hover {
@@ -112,13 +112,13 @@ button:hover {
 }
 
 #d_dropDownLinks {
-  display: none; 
+  display: none;
   position: absolute;
   background-color: #fffef4;
   z-index: 1;
   padding: 0% 10% 7.5% 10%;
   margin-left: 15%;
-  width:50%;
+  width: 50%;
 }
 
 #ul_dropDownLinks {
@@ -241,25 +241,13 @@ button:hover {
   grid-template-rows: 2fr 1fr;
   height: 90%;
   width: 85%;
-  padding-bottom: 1%;
+  padding-bottom: 1.25%;
 }
 
 #d_contactUs {
   grid-area: 1/1/2/2;
 }
 
-#d_contactEmail {
-  grid-area: 2/1/3/2;
-  display: flex;
-  justify-content: center;
-}
-
-#d_contactPhone {
-  grid-area: 3/1/4/2;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1%;
-}
 
 #h4_contactUs {
   margin: 0%;
@@ -272,6 +260,7 @@ button:hover {
   margin: 0%;
   text-align: center;
   font-size: 1.5vw;
+  margin-bottom: 1.25%;
 }
 
 .a_contact {
@@ -738,66 +727,87 @@ ORDER PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-#h1_orderFormHeader{
+#d_formElements {
+  display: none;
+}
+
+#d_checkingAcount{
+  height:100vh;
+}
+
+#h1_orderFormHeader {
   margin-top: 1.5%;
-  font-size:6vw;
+  font-size: 6vw;
 }
 
-#d_orderForm{
-  /*
-  display:flex;
-  justify-content: center;
-  */
-  margin-top:2%;
-  margin-bottom:10%;
-  
-  display:grid;
-  grid-template-columns: 0.5fr 2fr;
-  grid-template-rows:repeat(6, 0.5fr) 0.2fr 0.5fr;
-
-  }
-
-
-
-  #f_orderForm{
-    width:80%;
-  }
-
-.l_orderForm{
-  font-size:3vw;
+#h2_checkingAccount{
+font-size:5vw;
 }
 
-.in_orderForm{
-width:60%;
-height:25%;
-  font-size:1.5vw;
-  padding:1%;
+#d_orderForm {
+
+  margin-top: 2%;
+  margin-bottom: 15%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
+  width: 65%;
+  margin-left: 17.5%;
+  border: 1px solid black;
+}
+
+.l_orderForm {
+  font-size: 3vw;
+}
+
+.in_orderForm {
+  width: 80%;
+  height: 50%;
+  font-size: 1.5vw;
+  padding: 1%;
+  border: 1px solid black;
+}
+
+.in_orderForm::placeholder {
+  font-style: italic;
+}
+
+.in_orderForm:hover {
+  outline: none;
+  box-shadow: 0 0 5px 2px #000000;
+}
+
+.in_orderForm:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px #000000;
 }
 
 
 .d_orderFormItem {
-  display:flex;
-  margin-top:1%;
+  display: flex;
+  margin-top: 2%;
 }
 
-.d_orderFormLabelItem{
-  width:20%;
-  height:100%;
-  display:flex;
+.d_orderFormLabelItem {
+  width: 30%;
+  height: 100%;
+  display: flex;
   align-items: center;
-  justify-content:right;
+  justify-content: right;
+}
+
+.d_orderFormInputItem {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 7.5%;
 
 }
 
-
-.d_orderFormInputItem{
-  width:80%;
-  height:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
+/*
 .d_swanPlantOrderImage{
   display:flex;
   justify-content: center;
@@ -808,26 +818,34 @@ height:25%;
   width:70%;
   height:80%;
 }
+  */
 
-#h4_orderPaymentNote{
+#h4_orderPaymentNote {
   text-align: center;
-  font-size:1.5vw;
+  font-size: 1.5vw;
+  margin: 3% 0% 4% 0%;
 }
 
-.d_orderButton{
-  width:50%;
-  display:flex;
+.d_orderButton {
+  width: 50%;
+  display: flex;
   justify-content: center;
-  align-items: end;
 }
 
-.b_order{
-  font-size:4vw;
-  background-color:#144e73;
-  color:white;
-  padding:1% 2.5% 1% 2.5%;
+.b_order {
+  font-size: 4vw;
+  background-color: #16324F;
+  color: white;
+  padding: 0% 1.25% 0% 1.25%;
   border-radius: 10px;
 }
+
+#d_orderFormButtons {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+/*
 
 #d_orderFormNameInput{
   grid-area:1/2/2/3;
@@ -877,6 +895,7 @@ height:25%;
     grid-area:8/1/9/3;
     display:flex;
 }
+*/
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -886,7 +905,7 @@ height:25%;
 
   #i_backToTop {
     height: 80%;
-    width: 40%
+    width: 45%
   }
 
   .a_dropDown {
@@ -1227,11 +1246,11 @@ CLOSE VIEW PAGE STYLES BELOW
     font-size: 4vw;
   }
 
-#d_dropDownLinks{
-  width:80%;
-  margin:0%;
-  padding-bottom:12%;
-}
+  #d_dropDownLinks {
+    width: 80%;
+    margin: 0%;
+    padding-bottom: 12%;
+  }
 
   .a_dropDown {
     font-size: 2.5vw;
@@ -1594,7 +1613,7 @@ HOME PAGE STYLES BELOW
 @media (max-width:705px) {
 
 
-    /********** Main Css grid ********/
+  /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3fr 2fr 1fr;
@@ -1612,20 +1631,20 @@ HOME PAGE STYLES BELOW
     align-items: center;
   }
 
-    #d_homeSubHeader {
+  #d_homeSubHeader {
     grid-area: 2/1/3/6;
   }
 
-    #d_homeTakeLookButton {
+  #d_homeTakeLookButton {
     grid-area: 3/1/4/6;
   }
 
-    #h1_homeMainHeader {
+  #h1_homeMainHeader {
     font-size: 15vw;
     margin: 0% 2.5% 2.5% 2.5%;
   }
 
-   #h3_subHeader {
+  #h3_subHeader {
     font-size: 5vw;
     margin: 0% 10% 5% 10%;
   }
@@ -1656,29 +1675,29 @@ MULTIPLE PAGE STYLES BELOW
 
   /*** header ***/
 
-.d_headerCompany{
-  display:none;
-}
+  .d_headerCompany {
+    display: none;
+  }
 
-.d_headerGrid{
-  grid-template-columns: repeat(4, 1fr);
-}
+  .d_headerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-#d_headerLink1{
-  grid-area:1/1/2/2;
-}
+  #d_headerLink1 {
+    grid-area: 1/1/2/2;
+  }
 
-#d_headerLink2{
-  grid-area:1/2/2/3;
-}
+  #d_headerLink2 {
+    grid-area: 1/2/2/3;
+  }
 
-#d_headerLink3{
-  grid-area:1/3/2/4;
-}
+  #d_headerLink3 {
+    grid-area: 1/3/2/4;
+  }
 
-#d_headerLink4{
-  grid-area:1/4/2/5;
-}
+  #d_headerLink4 {
+    grid-area: 1/4/2/5;
+  }
 
   .a_change,
   .a_current {
@@ -1686,17 +1705,17 @@ MULTIPLE PAGE STYLES BELOW
   }
 
 
-#d_dropDownLinks{
-  padding:0% 7.5% 20% 7.5%;
-  width:auto;
-}
+  #d_dropDownLinks {
+    padding: 0% 7.5% 20% 7.5%;
+    width: auto;
+  }
 
-.li_dropDownLinks{
-  margin-top:20%;
-}
+  .li_dropDownLinks {
+    margin-top: 20%;
+  }
 
 
-.a_dropDown {
+  .a_dropDown {
     font-size: 4.75vw;
   }
 
@@ -1755,23 +1774,23 @@ HOME PAGE STYLES BELOW
 
   /********** Story Css grid ********/
 
-/** d_homeStoryMainFlex was a flex on the 2 large screen sizes but is now a grid on the small screen size **/
-#d_homeStoryMainFlex{
- display:grid;
- grid-template-columns: 1fr;
- grid-template-rows: repeat(2, 1fr);
-}
+  /** d_homeStoryMainFlex was a flex on the 2 large screen sizes but is now a grid on the small screen size **/
+  #d_homeStoryMainFlex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 
-/** d_homeStoryImage held the image of the owner and now is on top  **/
+  /** d_homeStoryImage held the image of the owner and now is on top  **/
 
-#d_homeStoryImage{
-  grid-area:1/1/2/2;
-}
+  #d_homeStoryImage {
+    grid-area: 1/1/2/2;
+  }
 
-/** d_homeStoryAboutUs was held the our story text on the right and now is on the bottom **/
-#d_homeStoryAboutUs{
-  grid-area:2/1/3/2;
-}
+  /** d_homeStoryAboutUs was held the our story text on the right and now is on the bottom **/
+  #d_homeStoryAboutUs {
+    grid-area: 2/1/3/2;
+  }
 
   #h2_Story {
     font-size: 14vw;
@@ -1781,9 +1800,9 @@ HOME PAGE STYLES BELOW
     width: 100%;
   }
 
- 
-  #i_ownerImage{
-    width:75%;
+
+  #i_ownerImage {
+    width: 75%;
   }
 
   #d_homeStoryAboutUs {
@@ -1996,8 +2015,8 @@ VIEW PAGE STYLES BELOW
   }
 
   #d_closeViewBack {
-margin-top:7.5%;
-margin-bottom:15%;
+    margin-top: 7.5%;
+    margin-bottom: 15%;
   }
 
   #h1_closeViewHeader {
