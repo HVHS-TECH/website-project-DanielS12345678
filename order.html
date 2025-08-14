@@ -19,7 +19,6 @@
     <script src="scripts/fb_io.js"></script>
     <script src="scripts/fbP_manager.js"></script>
 </head>
-
 <body onload="fb_login(fbP_userDetails, fbP_procLogin)">
 
     <!---- Header ---->
@@ -75,7 +74,7 @@
 
         <!-- Name -->
         <div id="d_orderFormNameInput" class="d_orderFormItem">
-            <div id="d_nameLabel" class="d_orderFormLabelItem">
+            <div id="d_nameLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_name" class="l_orderForm" for="in_name">Name:</label>
             </div>
             <div id="d_nameInput" class="d_orderFormInputItem">
@@ -86,7 +85,7 @@
 
         <!-- Email -->
         <div id="d_orderFormEmailInput" class="d_orderFormItem">
-            <div id="d_emailLabel" class="d_orderFormLabelItem">
+            <div id="d_emailLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_email" class="l_orderForm" for="in_email">Email:</label>
             </div>
             <div id="d_emailInput" class="d_orderFormInputItem">
@@ -106,7 +105,7 @@
     -->
         <div id="d_orderFormSmallInput" class="d_orderFormItem">
 
-            <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem">
+            <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
             </div>
 
@@ -124,7 +123,7 @@
         </div>
     -->
         <div id="d_orderFormMediumInput" class="d_orderFormItem">
-            <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem">
+            <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
 
             </div>
@@ -144,7 +143,7 @@
     -->
 
         <div id="d_orderFormLargeInput" class="d_orderFormItem">
-            <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem">
+            <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
 
             </div>
@@ -162,7 +161,7 @@
         </div>
     -->
         <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
-            <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem">
+            <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
 
             </div>
@@ -184,7 +183,7 @@
             </div>
 
             <div class="d_orderButton">
-                <button class="b_order">Order</button>
+                <button class="b_order" onclick="fbP_orderMade()">Order</button>
             </div>
 
         </div>

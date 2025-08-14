@@ -731,40 +731,27 @@ ORDER PAGE STYLES BELOW
   display: none;
 }
 
-#d_checkingAcount{
-  height:100vh;
-}
-
-#h1_orderFormHeader {
-  margin-top: 1.5%;
-  font-size: 6vw;
-}
-
-#h2_checkingAccount{
-font-size:5vw;
+#d_checkingAcount {
+  height: 100vh;
 }
 
 #d_orderForm {
-
-  margin-top: 2%;
-  margin-bottom: 15%;
-
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
-  width: 65%;
-  margin-left: 17.5%;
+   grid-template-columns: 1fr;
   border: 1px solid black;
+
 }
 
-.l_orderForm {
-  font-size: 3vw;
+.d_orderFormItem {
+  display: flex;
+  margin-top: 2%;
+
 }
+
 
 .in_orderForm {
   width: 80%;
   height: 50%;
-  font-size: 1.5vw;
   padding: 1%;
   border: 1px solid black;
 }
@@ -783,28 +770,41 @@ font-size:5vw;
   box-shadow: 0 0 5px 2px #000000;
 }
 
-
-.d_orderFormItem {
+.d_orderFormInputItem {
   display: flex;
-  margin-top: 2%;
+  align-items: center;
+  justify-content: left;
+  margin-left: 7.5%;
+  width: 70%;
+  height: 100%;
 }
 
 .d_orderFormLabelItem {
   width: 30%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
 }
 
-.d_orderFormInputItem {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  margin-left: 7.5%;
+#h4_orderPaymentNote {
+  text-align: center;
+}
 
+#d_orderFormButtons {
+  display: flex;
+}
+
+.d_orderButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  width: 50%;
+
+}
+
+.b_order {
+  background-color: #16324F;
+  color: white;
+  border-radius: 10px;
+  width: 40%;
 }
 
 /*
@@ -819,31 +819,6 @@ font-size:5vw;
   height:80%;
 }
   */
-
-#h4_orderPaymentNote {
-  text-align: center;
-  font-size: 1.5vw;
-  margin: 3% 0% 4% 0%;
-}
-
-.d_orderButton {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.b_order {
-  font-size: 4vw;
-  background-color: #16324F;
-  color: white;
-  padding: 0% 1.25% 0% 1.25%;
-  border-radius: 10px;
-}
-
-#d_orderFormButtons {
-  display: flex;
-  margin-bottom: 3%;
-}
 
 /*
 
@@ -1221,7 +1196,81 @@ CLOSE VIEW PAGE STYLES BELOW
     font-size: 3vw;
   }
 
+
+  /***********************************************************/
+  /*********************
+ORDER VIEW PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+  #h1_orderFormHeader {
+    margin-top: 1.5%;
+    font-size: 6vw;
+  }
+
+  #h2_checkingAccount {
+    font-size: 5vw;
+  }
+
+  #d_orderForm {
+    margin-top: 2%;
+    margin-bottom: 15%;
+   
+    grid-template-rows: repeat(6, 0.75fr) 0.25fr 1fr;
+    width: 65%;
+    margin-left: 17.5%;
+  }
+
+
+
+
+  
+  .l_orderForm {
+    font-size: 3vw;
+  }
+
+  .in_orderForm {
+    font-size: 1.5vw;
+  }
+
+  #h4_orderPaymentNote {
+    font-size: 1.75vw;
+    margin: 3% 0% 4% 0%;
+  }
+
+  .b_order {
+    font-size: 4vw;
+    padding: 0% 1.25% 0% 1.25%;
+  }
+
+  #d_orderFormButtons {
+    margin-bottom: 3%;
+  }
+
+
+
 }
+
+
+/****************************************************************************************************/
+/********** Large - medium screen size **********/
+/********** used for resize of form on order page **********/
+/****************************************************************************************************/
+@media (max-width:950px) {
+
+
+  #d_orderForm {
+    margin-top: 2%;
+    margin-bottom: 15%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
+    width: 75%;
+    margin-left: 12.5%;
+    /* background-color:green; */
+  }
+
+
+}
+
 
 /********** MEDIUM SCREEN SIZE CSS GRID BELOW  **********/
 /*** Tablet like size ***/
@@ -1556,6 +1605,55 @@ HOME PAGE STYLES BELOW
     font-size: 3.5vw;
   }
 
+  /***********************************************************/
+  /*********************
+ORDER VIEW PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+  #h1_orderFormHeader {
+    margin-top: 3%;
+    font-size: 8vw;
+  }
+
+  #h2_checkingAccount {
+    font-size: 8vw;
+  }
+
+  #d_orderForm {
+    grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
+    margin-top: 4%;
+    margin-bottom: 17.5%;
+    margin-left: 10%;
+    padding-top: 3%;
+    width: 80%;
+    /* background-color: red; */
+  }
+
+  .l_orderForm {
+    font-size: 4vw;
+  }
+
+  .in_orderForm {
+    font-size: 2vw;
+    padding: 1%;
+  }
+
+  #h4_orderPaymentNote {
+    font-size: 2.5vw;
+    margin: 5% 0% 6% 0%;
+  }
+
+  .b_order {
+    font-size: 4vw;
+    padding: 1% 1.25% 1% 1.25%;
+  }
+
+  #d_orderFormButtons {
+    margin-bottom: 2%;
+  }
+
+
 
   /**** footer ****/
 
@@ -1569,7 +1667,7 @@ HOME PAGE STYLES BELOW
 
 
   #d_contactUsBackground {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
     height: 85%;
     width: 95%;
@@ -1650,8 +1748,6 @@ HOME PAGE STYLES BELOW
   }
 
 }
-
-
 
 /********** SMALL SCREEN SIZE CSS GRID BELOW  **********/
 /** starts at a large phone (samsung flip) / very small tablet **/
@@ -2040,6 +2136,54 @@ VIEW PAGE STYLES BELOW
   #b_closeViewBack {
     font-size: 5vw;
   }
+
+
+  /***********************************************************/
+  /*********************
+ORDER VIEW PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+  #h1_orderFormHeader {
+    margin-top: 5%;
+    font-size: 12vw;
+  }
+
+  #h2_checkingAccount {
+    font-size: 9vw;
+  }
+
+  #d_orderForm {
+    margin-top: 10%;
+    margin-bottom: 22.5%;
+    margin-left: 5%;
+
+    width: 90%;
+    /*   background-color: blue; */
+  }
+
+  .l_orderForm {
+    font-size: 4.5vw;
+  }
+
+  .in_orderForm {
+    font-size: 2.5vw;
+  }
+
+  #h4_orderPaymentNote {
+    font-size: 3vw;
+    margin: 5% 0% 7% 0%;
+    /** only 7 change **/
+  }
+
+  .b_order {
+    font-size: 6vw;
+    padding: 3% 2% 3% 2%;
+  }
+
+  #d_orderFormButtons {
+    margin-bottom: 3%;
+  }
+
 
 }
 

@@ -124,10 +124,8 @@ function fb_login(_save, _procFunc) {
   console.log('fb_login() START:');
 
   // hiding header and footer
-document.getElementById("h_header").style.display = "none";
-    document.getElementById("f_footer").style.display = "none";
-
-
+  document.getElementById("h_header").style.display = "none";
+  document.getElementById("f_footer").style.display = "none";
 
   firebase.auth().onAuthStateChanged(newLogin);
 
@@ -205,34 +203,499 @@ function fbP_procLogin(loginStatus, _user, _save, _error) {
     console.log("fbP_procLogin(): the users email is " + _save.email);
     console.log("fbP_procLogin(): the users uid is " + _save.uid);
 
-    
-    document.getElementById("d_checkingAcount").style.display = "none";
+    // reading if login data is already in database
+    fb_readForAccount('accounts', _user.uid, fbP_userDetails, fbP_procReadForAccount);
+  }
+}
 
-    document.getElementById("d_formElements").style.display = "block";
-     document.getElementById("h_header").style.display = "block";
-    document.getElementById("f_footer").style.display = "block";
+/**************************************************************/
+// fb_readForAccount(_path, _key, _save, _procFunc)
+// Called by fbP_procLogin
+// Read a record from DB: for the acocunt details.
+// Input:
+// _path is the first location point where the data is stored which is accounts
+// _key is the second location point where the date is stored which is the users uid
+// _save is the data the userDetails (fbP_userDetails)
+// _procFunc is the function that proceess the read: fbP_procReadForAccount()
+// Return: console log _path and _key
+/**************************************************************/
+//      fb_readForAccount('userDetails', _user.uid , fbP_userDetails, fbP_procReadRec);
+function fb_readForAccount(_path, _key, _save, _procFunc) {
+  console.log('fb_readForAccount(): START path = ' + _path + ' key = ' + _key);
+  var readStatus = 'waiting';
 
-    // putting values from account into form 
-   document.getElementById('in_name').value = fbP_userDetails.name;
-    document.getElementById('in_email').value = fbP_userDetails.email;
+  // reading 
+  firebase.database().ref(_path + '/' + _key)
+    .once('value', fb_readOk, fb_readErr);
+
+  console.table(_save);
+
+  // if no errors are caught 
+  function fb_readOk(_snapshot) {
+    console.log('fb_readOk()');
+    var dbData = _snapshot.val();
+
+    // dbData is the reg data
+    if (dbData == null) {
+      readStatus = 'no record';
+      console.log('fb_readForAccount(): fb_readOk(): NO RECORD FOUND!');
+    } else {
+      readStatus = 'ok';
+      console.log('fb_readForAccount(): fb_readOk(): READ ALL GOOD');
+    }
+    _procFunc(readStatus, _path, _key, dbData, _save, null);
+  }
+
+  // if an error is caught
+  function fb_readErr(_error) {
+    readStatus = 'error';
+    _procFunc(readStatus, _path, _key, null, _save, _error);
   }
 }
 
 
-function fbP_resetForm(){
+/**************************************************************/
+// fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error )
+// Called by fb_readForAccount
+// Processes the result of fb_readForAccount for the users account data
+// Input: readStatus is the point through the process where the data is read 
+// _path is the first location point where the data is stored which is accounts 
+// _key is the second location point where the date is stored which is the users uid
+// dbData is the account data from the database
+// _save is the log in data fbP_userDetails
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+// console.error an error if any
+/**************************************************************/
+//                  _procFunc(readStatus, _path, _key, dbData, _save, _error);
+function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) {
+  console.log("fbP_procReadForAccount(): Start path = " + _path + " key = " + _key);
 
-    // clearing form values
-   document.getElementById('in_name').value = '';
-    document.getElementById('in_email').value = '';
- document.getElementById('in_smallSwanPlants').value = '';
-    document.getElementById('in_mediumSwanPlants').value = '';
- document.getElementById('in_largeSwanPlants').value = '';
-    document.getElementById('in_extraLargeSwanPlants').value = '';
+  console.table(dbData);
 
-   // const SWANPLANTINPUTS = document.getElementsByClassName('in_orderForm');
-//SWANPLANTINPUTS.value = '';
+  if (dbData == null) {
+    readStatus = "no record";
+  } else {
+    readStatus = "ok"
+  }
+
+  if (readStatus == "ok") {
+    console.log("fbP_procReadForAccount(): OK for path = " + _path + " key = " + _key);
+    /** account data in DB so login data doesn't need to be writen to DB **/
+
+    document.getElementById("d_checkingAcount").style.display = "none";
+
+    document.getElementById("d_formElements").style.display = "block";
+    document.getElementById("h_header").style.display = "block";
+    document.getElementById("f_footer").style.display = "block";
+
+    // putting values from account into form 
+    document.getElementById('in_name').value = fbP_userDetails.name;
+    document.getElementById('in_email').value = fbP_userDetails.email;
+
+  } else if (readStatus == "no record") {
+    console.log("fbP_procReadForAccount(): no record for path = " + _path + " key = " + _key);
+    /** no account data in DB login data will be writen to DB **/
+
+    fb_writeRec("accounts", fbP_userDetails.uid, fbP_userDetails, fbP_procWriteLoginData);
+
+  } else {
+    console.log("There is an error in fbP_procReadForAccount() for path = " + _path + " key = " + _key);
+    console.error("This is the error " + _error);
+
+    /** A message telling them about the error **/
+    alert("An error has occured see console for details");
+  }
+  console.log("fbP_procReadForAccount(): COMPLETED");
+
+}
+
+
+/**************************************************************/
+// fbP_orderMade()
+// Called whne user clicks the order button on the order page 
+// Processes the order the user made and calls the write so the order can be writen to the database
+// Input: n/a
+// Return: 
+// console log _path and _key
+// console.error an error if any
+/**************************************************************/
+function fbP_orderMade() {
+  console.log("orderMade(): start");
+
+  var name = document.getElementById("in_name").value;
+  var email = document.getElementById("in_email").value;
+
+  var small = document.getElementById("in_smallSwanPlants").value;
+  var medium = document.getElementById("in_mediumSwanPlants").value;
+  var large = document.getElementById("in_largeSwanPlants").value;
+  var extraLarge = document.getElementById("in_extraLargeSwanPlants").value;
+
+
+  if (name == '' && email == '') {
+    console.log("Customer has not chnaged name or email");
+
+    fbP_order = {
+      name: fbP_userDetails.name,
+      email: fbP_userDetails.email,
+      uid: fbP_userDetails.uid,
+      sSP: small,
+      mSP: medium,
+      lSP: large,
+      elSP: extraLarge,
+    }
+
+  } else if (name != '' && email == '') {
+    console.log("customer changed name for order");
+
+    fbP_order = {
+      name: name,
+      email: fbP_userDetails.email,
+      uid: fbP_userDetails.uid,
+      sSP: small,
+      mSP: medium,
+      lSP: large,
+      elSP: extraLarge,
+    }
+
+
+  } else if (name == '' && email != '') {
+    console.log("customer changed email for order");
+
+    _user.dispalyName = sessionStorage.getItem('displayName');
+    cosole.log(_user.dispalyName);
+
+    fbP_order = {
+      name: fbP_userDetails.name,
+      email: email,
+      uid: fbP_userDetails.uid,
+      sSP: small,
+      mSP: medium,
+      lSP: large,
+      elSP: extraLarge,
+    }
+
+  } else {
+    console.log("customer changed name and email for order");
+
+    fbP_order = {
+      name: name,
+      email: email,
+      uid: fbP_userDetails.uid,
+      sSP: small,
+      mSP: medium,
+      lSP: large,
+      elSP: extraLarge,
+    }
 
   }
+
+  fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder)
+}
+
+
+/**************************************************************/
+// fbP_procWriteOrder(_path, _key, _data, _error)
+// Called by writew rec when the users order is writen to the database
+// Processes the order the user made and calls the write so the order can be writen to the database
+// Input: 
+// _path is the first location point where the data is stored which is orders 
+// _key is the second location point where the date is stored which is the users uid
+// _data is the order data writen to the database: fbP_order
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+// console.error an error if any
+/**************************************************************/
+//    _procFunc(_path, _key, _data, _error);
+function fbP_procWriteOrder(_path, _key, _data, _error) {
+  console.log(_path);
+  console.log(_key);
+  console.log(_data);
+  console.table(_data);
+  console.log(_data.email)
+  console.log(fbP_order.email);
+
+  fbP_stock = {
+    sSP: _data.sSP,
+    mSP: _data.mSP,
+    lSP: _data.lSP,
+    elSP: _data.elSP,
+  }
+
+  console.table(fbP_stock);
+
+  fb_readStockSold("quantitySold", fbP_stock, fbP_procReadStockSold)
+
+}
+
+
+/**************************************************************/
+// function fb_readStockSold(_path, _save, _procFunc)
+// Called by fbP_procWriteOrder
+// Reads the quantity sold in the database
+// Input:
+// _path is the first location point where the data is stored which is accounts
+// _key is the second location point where the date is stored which is the users uid
+// _save is the data the userDetails (fbP_userDetails)
+// _procFunc is the function that proceess the read: fbP_procReadStockSold()
+// Return: console log _path and _key
+/**************************************************************/
+function fb_readStockSold(_path, _save, _procFunc) {
+
+  firebase.database().ref(_path)
+    .once('value', fb_readOk, fb_readErr);
+
+  // if no errors are caught 
+  function fb_readOk(_snapshot) {
+    console.log('fb_readOk()');
+    var dbData = _snapshot.val();
+
+
+    // dbData is the reg data
+    if (dbData == null) {
+      readStatus = 'no record';
+      console.log('NO RECORD FOUND!');
+    } else {
+      readStatus = 'ok';
+      console.log('fb_readOk(): READ ALL GOOD');
+    }
+    _procFunc(readStatus, _path, dbData, _save, null);
+  }
+
+  // if an error is caught
+  function fb_readErr(_error) {
+    readStatus = 'error';
+    _procFunc(readStatus, _path, null, _save, _error);
+  }
+}
+
+/**************************************************************/
+// fbP_procReadStockSold(readStatus, _path, _key, dbData, _save, _error )
+// Called by fb_readForAccount
+// Processes the result of fb_readForAccount for the users account data
+// Input: readStatus is the point through the process where the data is read 
+// _path is the first location point where the data is stored which is  quantitySold
+// dbData is the quantity sold amount from the database
+// _save is order fbP_stock
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+// console.error an error if any
+/**************************************************************/
+//                  _procFunc(readStatus, _path, _key, dbData, _save, _error);
+function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
+  console.log(_path);
+  console.table(_save);
+  console.table(dbData);
+  console.log(_save.sSP);
+  console.log(dbData.sSP);
+  Number(_save.sSP);
+  Number(dbData.sSP);
+  console.log(Number(_save.sSP));
+  console.log(Number(dbData.sSP));
+
+
+  if (readStatus == "ok") {
+    var qsSP = Number(_save.sSP) + Number(dbData.sSP)
+    console.log(qsSP);
+    var qmSP = Number(_save.mSP) + Number(dbData.mSP)
+    console.log(qmSP);
+    var qlSP = Number(_save.lSP) + Number(dbData.lSP)
+    console.log(qlSP);
+    var qelSP = Number(_save.elSP) + Number(dbData.elSP)
+    console.log(qelSP);
+
+
+    fbP_stock = {
+      sSP: qsSP,
+      mSP: qmSP,
+      lSP: qlSP,
+      elSP: qelSP,
+    }
+
+    console.table(fbP_stock);
+
+
+     fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+
+  } else if (readStatus == 'no record') {
+    // no quantity sold in database 
+    var qsSP = Number(_save.sSP)
+    console.log(qsSP);
+    var qmSP = Number(_save.mSP)
+    console.log(qmSP);
+    var qlSP = Number(_save.lSP)
+    console.log(qlSP);
+    var qelSP = Number(_save.elSP)
+    console.log(qelSP);
+
+
+    fbP_stock = {
+      sSP: qsSP,
+      mSP: qmSP,
+      lSP: qlSP,
+      elSP: qelSP,
+    }
+     fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+  } else {
+    console.log("There is an error in fbP_procReadStockSold() for path = " + _path);
+    console.error("This is the error " + _error);
+
+    /** A message telling them about the error **/
+    alert("An error has occured see console for details");
+  }
+  console.log("fbP_procReadStockSold(): COMPLETED");
+
+}
+
+/**************************************************************/
+// fb_writeQuantitySold(_path, _data, _procFunc); 
+// Called by 
+// fbP_procReadForAccount
+// Writes a record to the Database
+// Input: 
+// _path is the first location point where the data is stored: quantitySold
+// _data is the stock data: fbP_stock
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path
+/**************************************************************/
+function fb_writeQuantitySold(_path, _data, _procFunc) {
+  console.log('fb_writeQuantitySold() START: path = ' + _path);
+
+  firebase.database().ref(_path)
+    .set(_data, fb_writeVerify);
+
+  function fb_writeVerify(_error) {
+    if (_error != null) {
+      _procFunc(_path, _data, _error);
+    } else {
+      _procFunc(_path, _data, null);
+    }
+  }
+
+}
+
+/**************************************************************/
+// fbP_procWriteQuantitySold(_path, _data, _error)
+// Called by fb_writeQuantitySold when the new quantity sold is writen to the database
+// Processes the write of the new quantity
+// Input: 
+// _path is the first location point where the data is stored which is quantitySold 
+// _data is the stock data: fbP_stock
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path
+// console.error an error if any
+/**************************************************************/
+//    _procFunc(_path, _data, _error);
+function fbP_procWriteQuantitySold(_path, _data, _error) {
+  console.log("fbP_procWriteQuantitySold(): start for path " + _path);
+
+  if(_error != null){
+    // error
+        console.log("There is an error in fbP_procWriteQuantitySold(): for path = " + _path);
+    console.error("This is the error " + _error);
+
+    /** A message telling them about the error **/
+    alert("An error has occured see console for details");
+
+  } else{
+    //no error
+    console.log("fbP_procWriteQuantitySold(): no error in making write");
+
+  }
+
+}
+
+/**************************************************************/
+//  fb_writeRec(_path, _key, _data, _procFunc); 
+// Called by 
+// fbP_procReadForAccount
+// Writes a record to the Database
+// Input: 
+// _path is the first location point where the data is stored
+// _key is the second location point where the data is stored
+// _data is the data that is being writen
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+/**************************************************************/
+function fb_writeRec(_path, _key, _data, _procFunc) {
+  console.log('fb_writeRec() START: path = ' + _path + ' key = ' + _key);
+
+  firebase.database().ref(_path + '/' + _key)
+    .set(_data, fb_writeVerify);
+
+  function fb_writeVerify(_error) {
+    if (_error != null) {
+      _procFunc(_path, _key, _data, _error);
+    } else {
+      _procFunc(_path, _key, _data, null);
+    }
+  }
+
+}
+
+/**************************************************************/
+//fbP_procWriteLoginData(_path, _key, _data, _error)
+// Called by 
+// fbP_procReadForAccount
+//
+// Writes a record to the Database
+// Input: 
+// _path is the first location point where the data is stored: accounts
+// _key is the second location point where the data is stored: the users uid 
+// _data is the data that has been writen: fbP_userDetails
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+/**************************************************************/
+function fbP_procWriteLoginData(_path, _key, _data, _error) {
+  console.log("fbP_procWriteLoginData Start for  path: " + _path + " and key: " + _key);
+
+  if (_error != null) {
+    /** if error the user will be notified with an alert **/
+    console.log("fbP_procWriteLoginData(): error path = " + _path + " key = " + _key);
+    console.error("fbP_procWriteLoginData(): ERROR!");
+    console.log(_error);
+    alert("error making delete see console log");
+  } else {
+    console.log("fbP_procWriteLoginData(): ok for path = " + _path + " key = " + _key);
+
+    document.getElementById("d_checkingAcount").style.display = "none";
+
+    document.getElementById("d_formElements").style.display = "block";
+    document.getElementById("h_header").style.display = "block";
+    document.getElementById("f_footer").style.display = "block";
+
+    // putting values from account into form 
+    document.getElementById('in_name').value = fbP_userDetails.name;
+    document.getElementById('in_email').value = fbP_userDetails.email;
+
+  }
+  console.log("fbP_procWriteLoginData(): COMPLETED");
+
+
+}
+
+
+function fbP_resetForm() {
+
+  // clearing form values
+  document.getElementById('in_name').value = '';
+  document.getElementById('in_email').value = '';
+  document.getElementById('in_smallSwanPlants').value = '';
+  document.getElementById('in_mediumSwanPlants').value = '';
+  document.getElementById('in_largeSwanPlants').value = '';
+  document.getElementById('in_extraLargeSwanPlants').value = '';
+
+  // const SWANPLANTINPUTS = document.getElementsByClassName('in_orderForm');
+  //SWANPLANTINPUTS.value = '';
+
+}
 
 /*********************************************/
 // fbP_backToTop()
