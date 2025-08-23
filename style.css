@@ -735,25 +735,26 @@ ORDER PAGE STYLES BELOW
   height: 100vh;
 }
 
+#h1_orderFormHeader{
+  text-decoration: underline;
+}
+
 #d_orderForm {
   display: grid;
-   grid-template-columns: 1fr;
-  border: 1px solid black;
-
+  border:3px solid black;
 }
 
 .d_orderFormItem {
   display: flex;
   margin-top: 2%;
-
 }
-
 
 .in_orderForm {
   width: 80%;
   height: 50%;
   padding: 1%;
   border: 1px solid black;
+  font-family: "eb garamond", "Libertinus Sans";
 }
 
 .in_orderForm::placeholder {
@@ -774,7 +775,7 @@ ORDER PAGE STYLES BELOW
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-left: 7.5%;
+  /*margin-left: 7.5%; */
   width: 70%;
   height: 100%;
 }
@@ -800,77 +801,25 @@ ORDER PAGE STYLES BELOW
 
 }
 
-.b_order {
+#b_resetForm{
+  background-color: #4F171B;
+}
+
+#b_submitOrderForm{
   background-color: #16324F;
+}
+
+.b_order {
   color: white;
   border-radius: 10px;
   width: 40%;
 }
 
-/*
-.d_swanPlantOrderImage{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+#b_resetForm:hover,
+#b_submitOrderForm:hover{
+opacity:60%;
 }
 
-.i_swanPlantOrderImage{
-  width:70%;
-  height:80%;
-}
-  */
-
-/*
-
-#d_orderFormNameInput{
-  grid-area:1/2/2/3;
-}
-
-#d_orderFormEmailInput{
-  grid-area:2/2/3/3;
-}
-
-#d_orderFormSmallImage{
-  grid-area:3/1/4/2;
-}
-
-#d_orderFormSmallInput{
-    grid-area:3/2/4/3;
-}
-
-#d_orderFormMediumImage{
-      grid-area: 4/1/5/2;
-}
-
-#d_orderFormMediumInput{
-    grid-area:4/2/5/3;
-}
-
-#d_orderFormLargeImage{
-    grid-area: 5/1/6/2;
-}
-
-#d_orderFormLargeInput{
-  grid-area: 5/2/6/3;
-}
-
-#d_orderFormExtraLargeImage{
-      grid-area: 6/1/7/2;
-}
-
-#d_orderFormExtraLargeInput{
-   grid-area: 6/2/7/3;
-}
-
-#d_orderFormPaymentNote{
-  grid-area:7/1/8/3;
-}
-
-#d_orderFormButtons{
-    grid-area:8/1/9/3;
-    display:flex;
-}
-*/
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -1214,16 +1163,60 @@ ORDER VIEW PAGE STYLES BELOW
   #d_orderForm {
     margin-top: 2%;
     margin-bottom: 15%;
-   
-    grid-template-rows: repeat(6, 0.75fr) 0.25fr 1fr;
-    width: 65%;
     margin-left: 17.5%;
+
+   grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr repeat(6, 0.75fr) 0.25fr;
+    padding-top:1%;
+    width: 70%;
   }
 
+.d_orderFormInputItem{
+  justify-content: center;
+}
+/*
+#d_orderHeader{
+  grid-area:1/1/2/3;
+}
 
+*/
+#d_orderFormNameInput{
+  grid-area:1/1/2/2;
+}
 
+#d_orderFormEmailInput{
+  grid-area:1/2/2/3;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#d_orderFormSmallInput{
+  grid-area:2/1/3/3;
+}
+
+#d_orderFormMediumInput{
+  grid-area:3/1/4/3;
+}
+
+#d_orderFormLargeInput{
+  grid-area:4/1/5/3;
+}
   
+#d_orderFormExtraLargeInput{
+  grid-area:5/1/6/3;
+}
+
+#d_orderFormPaymentNote{
+  grid-area:6/1/7/3;
+}
+
+#d_orderFormButtons{
+  grid-area:7/1/8/3;
+}
+
+
+
   .l_orderForm {
     font-size: 3vw;
   }
@@ -1616,6 +1609,7 @@ ORDER VIEW PAGE STYLES BELOW
     font-size: 8vw;
   }
 
+
   #h2_checkingAccount {
     font-size: 8vw;
   }
@@ -1629,6 +1623,7 @@ ORDER VIEW PAGE STYLES BELOW
     width: 80%;
     /* background-color: red; */
   }
+
 
   .l_orderForm {
     font-size: 4vw;
@@ -2156,7 +2151,6 @@ ORDER VIEW PAGE STYLES BELOW
     margin-top: 10%;
     margin-bottom: 22.5%;
     margin-left: 5%;
-
     width: 90%;
     /*   background-color: blue; */
   }

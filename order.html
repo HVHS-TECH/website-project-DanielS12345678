@@ -67,10 +67,11 @@
 
 
 <div id="d_formElements"> 
+
     <h1 id="h1_orderFormHeader">Order form</h1>
 
- 
     <div id="d_orderForm">
+    
 
         <!-- Name -->
         <div id="d_orderFormNameInput" class="d_orderFormItem">
@@ -95,14 +96,6 @@
         </div>
 
         <!-- Small swan plant -->
-
-        <!---
-        <div id="d_orderFormSmallImage" class="d_swanPlantOrderImage">
-            <img class="i_swanPlantOrderImage" alt="picture of small swan plants"
-                src="images/swanPlants/smallSwanPlants.JPG">
-
-        </div>
-    -->
         <div id="d_orderFormSmallInput" class="d_orderFormItem">
 
             <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
@@ -116,12 +109,7 @@
 
         </div>
 
-        <!-- Medium swan plants --
-        <div id="d_orderFormMediumImage" class="d_swanPlantOrderImage">
-            <img class="i_swanPlantOrderImage" alt="picture of medium swan plants"
-                src="images/swanPlants/mediumSwanPlants.JPG">
-        </div>
-    -->
+        <!-- Medium swan plants -->
         <div id="d_orderFormMediumInput" class="d_orderFormItem">
             <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
@@ -135,12 +123,7 @@
         </div>
 
 
-        <!-- Large swan plants --
-        <div id="d_orderFormLargeImage" class="d_swanPlantOrderImage">
-            <img class="i_swanPlantOrderImage" alt="picture of large swan plants"
-                src="images/swanPlants/largeSwanPlants.JPG">
-        </div>
-    -->
+        <!-- Large swan plants -->
 
         <div id="d_orderFormLargeInput" class="d_orderFormItem">
             <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
@@ -154,18 +137,11 @@
             </div>
         </div>
 
-        <!-- Extra large swan plants --
-        <div id="d_orderFormExtraLargeImage" class="d_swanPlantOrderImage">
-            <img class="i_swanPlantOrderImage" alt="picture of extra large swan plants"
-                src="images/swanPlants/extraLargeSwanPlants.JPG">
-        </div>
-    -->
+        <!-- Extra large swan plants -->
         <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
             <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                 <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
-
             </div>
-
 
             <div id="d_extraLargeSwanPlantsInput" class="d_orderFormInputItem">
                 <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
@@ -173,61 +149,24 @@
             </div>
         </div>
 
+        <!-- Payment note -->
         <div id="d_orderFormPaymentNote">
             <h4 id="h4_orderPaymentNote">Please note: Payment must be made as cash on pick up</h4>
         </div>
 
+        <!-- Buttons -->
         <div id="d_orderFormButtons">
             <div class="d_orderButton">
-                <button class="b_order" onclick="fbP_resetForm()">Reset</button>
+                <button id="b_resetForm" class="b_order" onclick="fbP_resetForm()">Clear</button>
             </div>
 
             <div class="d_orderButton">
-                <button class="b_order" onclick="fbP_orderMade()">Order</button>
+                <button id="b_submitOrderForm" class="b_order" onclick="fbP_orderMade()">Order</button>
             </div>
 
         </div>
     </div>
 </div>
-    <!---
-             <div id="d_orderForm">
-        <form id="f_orderForm">
-        </form>
-    -->
-    <!---
-
-            <label id="l_name" class="l_orderForm" for="name">Name:</label>
-            <input id="in_name" class="in_orderForm" type="text" name="name"
-                placeholder=" Please enter your name (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
-            <br>
-            <label id="l_email" class="l_orderForm" for="email">Email:</label>
-            <input id="in_email" class="in_orderForm" type="email" name="email" placeholder=" Email (Required)">
-            <br>
-            <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
-            <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
-                placeholder="Small swan plants" min="0" max="10">
-            <br>
-            <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
-            <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
-                placeholder="Medium swan plants" min="0" max="10">
-            <br>
-            <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
-            <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
-                placeholder="Large swan plants" min="0" max="10">
-            <br>
-            <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
-            <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
-                placeholder="Extra large swan plants" min="0" max="10">
-            <br>
-
-
-
-        </div>
-    </div>
--->
-
-
-
     <!---- Footer ---->
     <footer id="f_footer">
         <div id="d_footerGrid">
