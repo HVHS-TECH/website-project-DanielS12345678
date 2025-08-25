@@ -7,18 +7,19 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-       <!-- firebase start ****************************************-->
-      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-      <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
-      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
-      <!-- Add Firebase products that you want to use -->
-      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
-      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
-      <!-- firebase end ******************************************-->
+    <!-- firebase start ****************************************-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <!-- firebase end ******************************************-->
     <script src="scripts/fb_io.js"></script>
     <script src="scripts/fbP_manager.js"></script>
 </head>
+
 <body onload="fb_login(fbP_userDetails, fbP_procLogin)">
 
     <!---- Header ---->
@@ -61,112 +62,112 @@
         </div>
     </header>
 
-<div id="d_checkingAcount" class="d_alignCenterVertHori">
-   <h2 id="h2_checkingAccount">Checking for account</h2>
-</div>
+    <div id="d_checkingAcount" class="d_alignCenterVertHori">
+        <h2 id="h2_checkingAccount">Checking for account</h2>
+    </div>
 
 
-<div id="d_formElements"> 
+    <div id="d_formElements">
 
-    <h1 id="h1_orderFormHeader">Order form</h1>
+        <h1 id="h1_orderFormHeader">Order form</h1>
 
-    <div id="d_orderForm">
-    
+        <div id="d_orderForm">
 
-        <!-- Name -->
-        <div id="d_orderFormNameInput" class="d_orderFormItem">
-            <div id="d_nameLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_name" class="l_orderForm" for="in_name">Name:</label>
-            </div>
-            <div id="d_nameInput" class="d_orderFormInputItem">
-                <input id="in_name" class="in_orderForm" type="text" name="in_name"
-                    placeholder=" John Doe (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
-            </div>
-        </div>
 
-        <!-- Email -->
-        <div id="d_orderFormEmailInput" class="d_orderFormItem">
-            <div id="d_emailLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_email" class="l_orderForm" for="in_email">Email:</label>
-            </div>
-            <div id="d_emailInput" class="d_orderFormInputItem">
-
-                <input id="in_email" class="in_orderForm" type="email" name="in_email" placeholder=" JohnDoe@gmail.com (Required)">
-            </div>
-        </div>
-
-        <!-- Small swan plant -->
-        <div id="d_orderFormSmallInput" class="d_orderFormItem">
-
-            <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+            <!-- Name -->
+            <div id="d_orderFormNameInput" class="d_orderFormItem">
+                <div id="d_nameLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_name" class="l_orderForm" for="in_name">Name:</label>
+                </div>
+                <div id="d_nameInput" class="d_orderFormInputItem">
+                    <input id="in_name" class="in_orderForm" type="text" name="in_name"
+                        placeholder=" John Doe (Required)" maxLength="32" pattern="[A-Za-z\s]{2,}" required>
+                </div>
             </div>
 
-            <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
-                <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
-                    placeholder="Max order 10" min="0" max="10">
+            <!-- Email -->
+            <div id="d_orderFormEmailInput" class="d_orderFormItem">
+                <div id="d_emailLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_email" class="l_orderForm" for="in_email">Email:</label>
+                </div>
+                <div id="d_emailInput" class="d_orderFormInputItem">
+
+                    <input id="in_email" class="in_orderForm" type="email" name="in_email"
+                        placeholder=" JohnDoe@gmail.com (Required)">
+                </div>
             </div>
 
-        </div>
+            <!-- Small swan plant -->
+            <div id="d_orderFormSmallInput" class="d_orderFormItem">
 
-        <!-- Medium swan plants -->
-        <div id="d_orderFormMediumInput" class="d_orderFormItem">
-            <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
+                <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+                </div>
+
+                <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
+                    <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
+                        placeholder="Max order 10" min="0" max="10">
+                </div>
 
             </div>
 
-            <div id="d_mediumSwanPlantsInput" class="d_orderFormInputItem">
-                <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
-                    placeholder="Max order 10" min="0" max="10">
-            </div>
-        </div>
+            <!-- Medium swan plants -->
+            <div id="d_orderFormMediumInput" class="d_orderFormItem">
+                <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
 
+                </div>
 
-        <!-- Large swan plants -->
-
-        <div id="d_orderFormLargeInput" class="d_orderFormItem">
-            <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
-
+                <div id="d_mediumSwanPlantsInput" class="d_orderFormInputItem">
+                    <input id="in_mediumSwanPlants" class="in_orderForm" type="number" name="mediumSwanPlants"
+                        placeholder="Max order 10" min="0" max="10">
+                </div>
             </div>
 
-            <div id="d_largeSwanPlantsInput" class="d_orderFormInputItem">
-                <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
-                    placeholder="Max order 10" min="0" max="10">
-            </div>
-        </div>
+            <!-- Large swan plants -->
+            <div id="d_orderFormLargeInput" class="d_orderFormItem">
+                <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
 
-        <!-- Extra large swan plants -->
-        <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
-            <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra large:</label>
-            </div>
+                </div>
 
-            <div id="d_extraLargeSwanPlantsInput" class="d_orderFormInputItem">
-                <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number" name="Extra Large Swan Plants"
-                    placeholder="Max order 10" min="0" max="10">
-            </div>
-        </div>
-
-        <!-- Payment note -->
-        <div id="d_orderFormPaymentNote">
-            <h4 id="h4_orderPaymentNote">Please note: Payment must be made as cash on pick up</h4>
-        </div>
-
-        <!-- Buttons -->
-        <div id="d_orderFormButtons">
-            <div class="d_orderButton">
-                <button id="b_resetForm" class="b_order" onclick="fbP_resetForm()">Clear</button>
+                <div id="d_largeSwanPlantsInput" class="d_orderFormInputItem">
+                    <input id="in_largeSwanPlants" class="in_orderForm" type="number" name="largeSwanPlants"
+                        placeholder="Max order 10" min="0" max="10">
+                </div>
             </div>
 
-            <div class="d_orderButton">
-                <button id="b_submitOrderForm" class="b_order" onclick="fbP_orderMade()">Order</button>
+            <!-- Extra large swan plants -->
+            <div id="d_orderFormExtraLargeInput" class="d_orderFormItem">
+                <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                    <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra
+                        large:</label>
+                </div>
+
+                <div id="d_extraLargeSwanPlantsInput" class="d_orderFormInputItem">
+                    <input id="in_extraLargeSwanPlants" class="in_orderForm" type="number"
+                        name="Extra Large Swan Plants" placeholder="Max order 10" min="0" max="10">
+                </div>
             </div>
 
+            <!-- Payment note -->
+            <div id="d_orderFormPaymentNote">
+                <h4 id="h4_orderPaymentNote">Please note: Payment must be made as cash on pick up</h4>
+            </div>
+
+            <!-- Buttons -->
+            <div id="d_orderFormButtons">
+                <div class="d_orderButton">
+                    <button id="b_resetForm" class="b_order" onclick="fbP_resetForm()">Clear</button>
+                </div>
+
+                <div class="d_orderButton">
+                    <button id="b_submitOrderForm" class="b_order" onclick="fbP_orderMade()">Order</button>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
     <!---- Footer ---->
     <footer id="f_footer">
         <div id="d_footerGrid">
@@ -176,11 +177,19 @@
             <div class="d_contactUsGrid">
 
                 <div id="d_contactUsBackground">
-                    <h4 id="h4_contactUs">Contact us</h4>
-                    <h5 id="h5_contactEmail">Email - <a class="a_contact" target="_blank"
-                            href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a></h5>
-                    <h5 id="h5_contactPhone">Phone - <a class="a_contact" target="_blank" href="tel:+640272546046">
-                            +64 027 254 6046</a></h5>
+                    <div id="d_contactUs">
+                        <h4 id="h4_contactUs">Contact us</h4>
+                    </div>
+                    <div id="d_contactEmail" class="d_alignCenterVertHori">
+                        <img class="i_contactIcon" alt="email icon" src="images/emailIcon.png">
+                        <a id="a_contactEmail" class="a_contact" target="_blank"
+                            href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a>
+                    </div>
+                    <div id="d_contactPhone" class="d_alignCenterVertHori">
+                        <img id="a_contactPhone" class="i_contactIcon" alt="phone icon" src="images/phoneIcon.png">
+                        <a class="a_contact" target="_blank" href="tel:+640272546046">
+                            +64 027 254 6046</a>
+                    </div>
                 </div>
             </div>
             <div id="d_backToTopGrid">
