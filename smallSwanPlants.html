@@ -12,17 +12,20 @@
 
 <body onload="fbP_zoomOnPlant()">
 
+    <!-- Header nav bar -->
     <header>
         <div class="d_headerGrid">
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
-            <div class="d_headerLink" id="d_headerLink1">
+            <div class="d_headerLink" id="d_headerLinkHome">
                 <a class="a_change" href="index.html">Home</a>
 
             </div>
-            <div class="d_headerLink" id="d_headerLink2">
+            <div class="d_headerLink" id="d_headerLinkView">
                 <a class="a_current">View</a>
+
+                <!-- Drop down links -->
                 <div id="d_dropDownLinks">
                     <ul id="ul_dropDownLinks">
                         <li class="li_dropDownLinks">
@@ -40,28 +43,31 @@
                     </ul>
                 </div>
             </div>
-            <div class="d_headerLink" id="d_headerLink3">
+            <div class="d_headerLink" id="d_headerLinkCare">
                 <a class="a_change" href="care.html">Care</a>
 
             </div>
-            <div class="d_headerLink" id="d_headerLink4">
+            <div class="d_headerLink" id="d_headerLinkOrder">
                 <a class="a_change" href="order.html">Order</a>
             </div>
         </div>
     </header>
 
     <div id="d_closeViewGrid">
-
+        <!-- Image  -->
         <div id="d_closeViewImage">
             <img id="i_closeViewSwanPlant" alt="image of the small swan plants"
                 src="images/swanPlants/smallSwanPlants.JPG">
         </div>
+        <!-- Header -->
         <div id="d_closeViewHeader" class="d_alignCenterVertHori">
             <h1 id="h1_closeViewHeader">Small Swan Plants</h1>
         </div>
+        <!-- Price -->
         <div id="d_closeViewPrice" class="d_alignCenterVertHori">
             <h2 id="h2_closeViewPrice">$4 each</h2>
         </div>
+        <!-- Description -->
         <div id="d_closeViewDes">
             <p id="p_closeViewDes">Would like a smaller swan plant for your hungry caterpillars, look no further than
                 our swan swan plants which are our Top Seller, everyone wants a plant. Get yours today before they sell
@@ -70,14 +76,12 @@
             <p id="p_closeViewDesHeight">Heights range from 45 to 55 cm</p>
         </div>
 
-        <div id="d_closeViewButton" class="d_alignCenterVertHori">
-
+        <!-- Links -->
+        <div id="d_closeViewOrderLink" class="d_alignCenterVertHori">
             <a id="a_orderForm" class="a_closeView" href="order.html">Order here</a>
-
         </div>
     </div>
-    <div id="d_closeViewBack" class="d_alignCenterVertHori">
-
+    <div id="d_closeViewKeepLooking" class="d_alignCenterVertHori">
         <a id="a_keepLooking" class="a_closeView" onclick="history.back()">Keep looking</a>
     </div>
 

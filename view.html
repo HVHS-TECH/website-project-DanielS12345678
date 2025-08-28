@@ -7,25 +7,24 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="scripts/fb_io.js"></script>
-    <script src="scripts/fbP_manager.js"></script>
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- Header nav bar -->
     <header>
         <div class="d_headerGrid">
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
-            <div class="d_headerLink" id="d_headerLink1">
+            <div class="d_headerLink" id="d_headerLinkHome">
                 <a class="a_change" href="../index.html">Home</a>
 
             </div>
-            <div class="d_headerLink" id="d_headerLink2">
+            <div class="d_headerLink" id="d_headerLinkView">
                 <a class="a_current">View</a>
+                
+                <!-- Drop down links -->
                     <div id="d_dropDownLinks">
                         <ul id="ul_dropDownLinks"> 
                             <li class="li_dropDownLinks">
@@ -44,11 +43,11 @@
                     </div>
             </div>
 
-            <div class="d_headerLink" id="d_headerLink3">
+            <div class="d_headerLink" id="d_headerLinkCare">
                 <a class="a_change" href="care.html">Care</a>
 
             </div>
-            <div class="d_headerLink" id="d_headerLink4">
+            <div class="d_headerLink" id="d_headerLinkOrder">
                 <a class="a_change" href="order.html">Order</a>
 
             </div>
@@ -58,7 +57,7 @@
     <h1 id="h1_ourProducts">Our Products</h1>
 
     <div id="d_viewPlantsGrid">
-
+        <!-- Small Swan plant -->
         <div id="d_smallSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='smallSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_smallSwanPlant" class="i_swanPlant" alt="Small swan plant image" src="images/swanPlants/smallSwanPlants.JPG">
@@ -71,6 +70,7 @@
             </div>
         </div>
 
+        <!-- Medium Swan plant -->
         <div id="d_mediumSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='mediumSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_mediumSwanPlant" class="i_swanPlant" alt="Medium swan plant image" src="images/swanPlants/mediumSwanPlants.JPG">
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-
+        <!-- Large Swan plant -->
         <div id="d_largeSwanPlant" class="d_viewSwanPlants" onclick="window.location.href='largeSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
                 <img id="i_largeSwanPlant" class="i_swanPlant" alt="Large swan plant image" src="images/swanPlants/largeSwanPlants.JPG">
@@ -96,7 +96,7 @@
             </div>
         </div>
 
-
+        <!-- Extra large Swan plant -->
         <div id="d_extraLargeSwanPlant" class="d_viewSwanPlants"
             onclick="window.location.href='extraLargeSwanPlants.html';">
             <div class="d_swanPlantsImage d_alignCenterVertHori">
@@ -110,14 +110,17 @@
             </div>
         </div>
     </div>
+
     <!-- Footer -->
     <footer>
         <div id="d_footerGrid">
+            <!-- Quick links -->
             <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="order.html">Order</a></div>
             <div class="d_contactUsGrid">
 
+                <!-- contact info -->
                 <div id="d_contactUsBackground">
                                <div id="d_contactUs">
                             <h4 id="h4_contactUs">Contact us</h4>
@@ -135,6 +138,7 @@
                         </div>
                 </div>
             </div>
+            <!-- Back to top -->
             <div id="d_backToTopGrid">
        <img id="i_backToTop" alt=" Back to top Arrow" src="images/backToTopImage.png"
                     onclick='window.scrollTo({top: 0, behavior: "smooth"});'> 

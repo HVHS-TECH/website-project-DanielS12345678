@@ -28,8 +28,10 @@ body {
 }
 
 header {
-  height: 10vh;
+  height: 12.5vh;
   width: 100%;
+  /*  background-color: #C4CBCA; */
+
   background-color: #fffef4;
 }
 
@@ -65,6 +67,10 @@ button:hover {
   opacity: 90%;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 /***********************************************************/
 /*********************
 LINK STYLES BELOW 
@@ -73,7 +79,7 @@ LINK STYLES BELOW
 .a_dropDown,
 .a_change,
 .a_current,
-.a_closeView,
+#a_orderForm,
 .a_contact {
   color: black;
   text-decoration: none;
@@ -91,7 +97,7 @@ LINK STYLES BELOW
 .a_change::after,
 .a_current::after,
 #a_location::after,
-.a_closeView::after,
+#a_orderForm::after,
 .a_footer::after,
 .a_contact::after {
   content: "";
@@ -106,13 +112,13 @@ LINK STYLES BELOW
   transform-origin: left;
 }
 
-.a_closeView::after {
+#a_orderForm::after {
   background: black;
 }
 
 .a_dropDown:hover::after,
 .a_change:hover::after,
-.a_closeView:hover::after {
+#a_orderForm:hover::after {
   transform: scaleX(1);
 }
 
@@ -130,7 +136,7 @@ LINK STYLES BELOW
   transition: transform 0.5s ease;
 }
 
-.a_closeView::after {
+#a_orderForm::after {
   transition: transform 0.4s ease;
 }
 
@@ -215,11 +221,11 @@ HEADER STYLES BELOW
   align-items: center;
 }
 
-#d_headerLink1 {
+#d_headerLinkHome {
   grid-area: 1/2/2/3;
 }
 
-#d_headerLink2 {
+#d_headerLinkView {
   grid-area: 1/3/2/4;
   position: relative;
   display: inline-block;
@@ -227,6 +233,7 @@ HEADER STYLES BELOW
   align-self: center;
 }
 
+/** drop down links **/
 #d_dropDownLinks {
   display: none;
   position: absolute;
@@ -248,15 +255,15 @@ HEADER STYLES BELOW
 }
 
 
-#d_headerLink2:hover #d_dropDownLinks {
+#d_headerLinkView:hover #d_dropDownLinks {
   display: block;
 }
 
-#d_headerLink3 {
+#d_headerLinkCare {
   grid-area: 1/4/2/5;
 }
 
-#d_headerLink4 {
+#d_headerLinkOrder {
   grid-area: 1/5/2/6;
 }
 
@@ -327,6 +334,24 @@ FOOTER STYLES BELOW
   cursor: pointer;
 }
 
+/****************************/
+#b_closeViewOrder {
+  font-size: 2.5vw;
+}
+
+#b_closeViewBack {
+  font-size: 1.5vw;
+}
+
+
+#b_closeViewOrder:hover,
+#b_closeViewBack:hover {
+  opacity: 80%;
+}
+
+
+
+
 /********************************************************************************
 *********************************************************************************
 /*********************
@@ -359,7 +384,7 @@ HOME PAGE STYLES BELOW
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #1B2019;
-  height: 90vh;
+  height: 87.5vh;
 
 }
 
@@ -698,7 +723,7 @@ CLOSE VIEW PAGE STYLES BELOW
   margin: 0% 5% 0% 5%;
 }
 
-#d_closeViewButton {
+#d_closeViewOrderLink {
   grid-area: 4/2/5/3;
 }
 
@@ -710,6 +735,32 @@ CLOSE VIEW PAGE STYLES BELOW
   font-weight: bolder;
 }
 
+#a_keepLooking {
+  color: #4F4B4B;
+  background-color: #C9E1EB;
+  padding: 1%;
+  border: 2px solid #4F4B4B;
+  border-radius: 30px;
+  transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+#d_closeViewKeepLooking {
+  margin-top:5%;
+  margin-bottom: 10%;
+}
+
+#a_keepLooking:hover {
+  border-color: black;
+  color: black;
+}
+
+/*
+b90e0a
+6E6868
+
+C9E1EB
+4F4B4B
+*/
 
 #b_closeViewOrder {
   color: white;
@@ -724,9 +775,7 @@ CLOSE VIEW PAGE STYLES BELOW
   padding: 17.5px 17.5px;
 }
 
-#d_closeViewBack {
-  margin-bottom: 10%;
-}
+
 
 #b_closeViewBack {
   color: white;
@@ -843,7 +892,7 @@ ORDER PAGE STYLES BELOW
 
   #i_backToTop {
     height: 80%;
-    width: 45%
+    width: 50%
   }
 
   .a_dropDown {
@@ -920,6 +969,7 @@ HOME PAGE STYLES BELOW
   #h2_Story {
     font-size: 9vw;
     margin-top: 2%;
+    margin-bottom: 1.5%;
   }
 
   /*** Main ***/
@@ -955,6 +1005,7 @@ HOME PAGE STYLES BELOW
   #h1_topSeller {
     font-size: 9vw;
     margin-top: 3%;
+    margin-bottom: 1.5%;
   }
 
 
@@ -968,10 +1019,10 @@ HOME PAGE STYLES BELOW
   }
 
   .i_contactIcon {
-  width: 2.75vw;
-  height: 4.25vh;
-  margin-right: 2%;
-}
+    width: 2.75vw;
+    height: 4.25vh;
+    margin-right: 2%;
+  }
 
   .a_contact {
     font-size: 1.5vw;
@@ -1169,7 +1220,6 @@ CLOSE VIEW PAGE STYLES BELOW
     font-size: 3vw;
   }
 
-
   /***********************************************************/
   /*********************
 ORDER VIEW PAGE STYLES BELOW 
@@ -1205,30 +1255,30 @@ ORDER VIEW PAGE STYLES BELOW
 }
 
 */
-  #d_orderFormNameInput {
+  #d_orderFormNameItem {
     grid-area: 1/1/2/2;
   }
 
-  #d_orderFormEmailInput {
+  #d_orderFormEmailItem {
     grid-area: 1/2/2/3;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  #d_orderFormSmallInput {
+  #d_orderFormSmalItem {
     grid-area: 2/1/3/3;
   }
 
-  #d_orderFormMediumInput {
+  #d_orderFormMediumItem {
     grid-area: 3/1/4/3;
   }
 
-  #d_orderFormLargeInput {
+  #d_orderFormLargeItem {
     grid-area: 4/1/5/3;
   }
 
-  #d_orderFormExtraLargeInput {
+  #d_orderFormExtraLargeItem {
     grid-area: 5/1/6/3;
   }
 
@@ -1303,11 +1353,11 @@ ORDER VIEW PAGE STYLES BELOW
     text-align: center;
   }
 
-/***********************************************************/
-/*********************
+  /***********************************************************/
+  /*********************
 HEADER STYLES BELOW 
 /*********************/
-/***********************************************************/
+  /***********************************************************/
   #h3_navHeader {
     font-size: 3.5vw;
   }
@@ -1728,11 +1778,11 @@ ORDER VIEW PAGE STYLES BELOW
 @media (max-width:705px) {
 
 
-/***********************************************************/
-/*********************
+  /***********************************************************/
+  /*********************
 FOOTER STYLES BELOW 
 /*********************/
-/***********************************************************/
+  /***********************************************************/
 
   #h4_contactUs {
     font-size: 3.5vw;
@@ -1757,11 +1807,11 @@ FOOTER STYLES BELOW
     width: 80%
   }
 
-/***********************************************************/
-/*********************
+  /***********************************************************/
+  /*********************
 HOME PAGE STYLES BELOW 
 /*********************/
-/***********************************************************/
+  /***********************************************************/
 
   /********** Main Css grid ********/
   #d_homeGridMain {
@@ -1799,7 +1849,7 @@ HOME PAGE STYLES BELOW
     margin: 0% 12% 5% 12%;
   }
 
- #d_homeGridTopSeller {
+  #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
     grid-template-rows: 0.25fr 0.5fr 0.25fr;
@@ -1826,7 +1876,7 @@ HOME PAGE STYLES BELOW
 
   #i_topSeller {
     height: 80%;
-    width:70%;
+    width: 70%;
     margin-top: 7.5%;
   }
 
@@ -1847,31 +1897,31 @@ HOME PAGE STYLES BELOW
   }
 
   /***********************************************************/
-/*********************
+  /*********************
 CARE PAGE STYLES BELOW 
 /*********************/
-/***********************************************************/
+  /***********************************************************/
 
   .p_careDes {
     font-size: 2.25vw;
   }
 
-   .d_effectsOfSapFlex {
+  .d_effectsOfSapFlex {
     margin-top: 3%;
   }
 
-/***********************************************************/
-/*********************
+  /***********************************************************/
+  /*********************
 CLOSE VIEW PAGE STYLES BELOW 
 /*********************/
-/***********************************************************/
+  /***********************************************************/
 
-   #d_closeViewGrid {
+  #d_closeViewGrid {
     grid-template-rows: 2.5fr 0.5fr 0.25fr 0.75fr 0.25fr;
     grid-template-columns: 1fr;
   }
 
-    #d_closeViewImage {
+  #d_closeViewImage {
     width: 70%;
     height: 90%;
     margin: 0%;
@@ -1891,11 +1941,11 @@ CLOSE VIEW PAGE STYLES BELOW
     grid-area: 4/1/5/2;
   }
 
-  #d_closeViewButton {
+  #d_closeViewOrderLink {
     grid-area: 5/1/6/2;
   }
 
-    #d_closeViewBack {
+  #d_closeViewKeepLooking {
     margin-top: 7.5%;
     margin-bottom: 15%;
   }
@@ -1953,19 +2003,19 @@ HEADER STYLES BELOW
     grid-template-columns: repeat(4, 1fr);
   }
 
-  #d_headerLink1 {
+  #d_headerLinkHome {
     grid-area: 1/1/2/2;
   }
 
-  #d_headerLink2 {
+  #d_headerLinkView {
     grid-area: 1/2/2/3;
   }
 
-  #d_headerLink3 {
+  #d_headerLinkCare {
     grid-area: 1/3/2/4;
   }
 
-  #d_headerLink4 {
+  #d_headerLinkOrder {
     grid-area: 1/4/2/5;
   }
 
@@ -2024,7 +2074,7 @@ HOME PAGE STYLES BELOW
 
   #h3_subHeader {
     font-size: 7vw;
-    color:blue;
+    color: blue;
     margin: 0% 10% 5% 10%;
   }
 
@@ -2040,7 +2090,7 @@ HOME PAGE STYLES BELOW
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    margin-top:3%;
+    margin-top: 3%;
   }
 
   /** d_homeStoryImage held the image of the owner and now is on top  **/
@@ -2083,8 +2133,8 @@ HOME PAGE STYLES BELOW
 
   /********** Top seller Css grid ********/
 
- 
- #i_topSeller {
+
+  #i_topSeller {
     height: 80%;
     margin-top: 7.5%;
   }
@@ -2232,13 +2282,13 @@ VIEW PAGE STYLES BELOW
     grid-area: 4/1/5/2;
   }
 
-  #d_closeViewButton {
+  #d_closeViewOrderLink {
     grid-area: 5/1/6/2;
+    margin-top:2.5%;
   }
 
-  #d_closeViewBack {
-    margin-top: 7.5%;
-    margin-bottom: 15%;
+  #d_closeViewKeepLooking {
+    margin-top: 10%;
   }
 
   #h1_closeViewHeader {
@@ -2254,9 +2304,7 @@ VIEW PAGE STYLES BELOW
     font-size: 3.75vw;
   }
 
-  #a_orderForm {
-    font-size: 6vw;
-  }
+ 
 
   #a_keepLooking {
     font-size: 5vw;
