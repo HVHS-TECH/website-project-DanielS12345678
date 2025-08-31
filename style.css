@@ -1548,6 +1548,10 @@ HOME PAGE STYLES BELOW
     color: red;
   }
 
+#h1_careProb {
+  margin-top:5%;
+}
+
   .h2_careDes {
     font-size: 6vw;
     margin-bottom: 5%;
@@ -1563,7 +1567,7 @@ HOME PAGE STYLES BELOW
   #d_carePlantsGrowGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.25fr 1.75fr 1.5fr 1.75fr 1.25fr 1.75fr;
+    grid-template-rows: 1.25fr 1.5fr 1.25fr 1.5fr 1.25fr 1.5fr;
   }
 
   #d_greenhouseDes {
@@ -1591,13 +1595,13 @@ HOME PAGE STYLES BELOW
   }
 
   #i_greenhouseMade {
-    width: 60%;
-    height: 85%;
+    width: 65%;
+    height: 80%;
   }
 
   #i_soil {
-    width: 45%;
-    height: 85%;
+    width: 50%;
+    height: 82.5%;
   }
 
   #i_topCut {
@@ -1608,7 +1612,7 @@ HOME PAGE STYLES BELOW
   #d_carePlantsProblemGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: repeat(2,1fr) 1.5fr;
     margin-bottom: 7%;
   }
 
