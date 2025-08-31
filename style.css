@@ -549,11 +549,10 @@ CARE PAGE STYLES BELOW
 }
 
 .h2_careDes {
-  font-weight: lighter;
+  font-weight: 500;
   margin-top: 5%;
   text-decoration: underline;
 }
-
 
 .i_care {
   border: 1.25px solid black;
@@ -745,7 +744,7 @@ CLOSE VIEW PAGE STYLES BELOW
 }
 
 #d_closeViewKeepLooking {
-  margin-top:5%;
+  margin-top: 5%;
   margin-bottom: 10%;
 }
 
@@ -1041,10 +1040,12 @@ Care PAGE STYLES BELOW
 
   .h1_care {
     font-size: 5vw;
+
   }
 
   .h2_careDes {
     font-size: 3.5vw;
+  text-underline-offset: 20px;
   }
 
   .p_careDes {
@@ -1544,14 +1545,18 @@ HOME PAGE STYLES BELOW
 
   .h1_care {
     font-size: 6vw;
+    color: red;
   }
 
   .h2_careDes {
     font-size: 6vw;
+    margin-bottom: 5%;
+  text-underline-offset: 17.5px;
+
   }
 
   .p_careDes {
-    font-size: 2vw;
+    font-size: 2.5vw;
     margin: 3% 5% 0 5%;
   }
 
@@ -1902,6 +1907,14 @@ CARE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  .h1_care {
+    color: blue;
+  }
+
+  .h2_careDes {
+    text-underline-offset: 15px;
+  }
+
   .p_careDes {
     font-size: 2.25vw;
   }
@@ -2145,6 +2158,14 @@ HOME PAGE STYLES BELOW
 CARE PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+  .h1_care {
+    font-size: 6vw;
+    color: yellow;
+  }
+
+  .h2_careDes {
+    text-underline-offset: 10px;
+  }
 
   .p_careDes {
     font-size: 3vw;
@@ -2284,7 +2305,7 @@ VIEW PAGE STYLES BELOW
 
   #d_closeViewOrderLink {
     grid-area: 5/1/6/2;
-    margin-top:2.5%;
+    margin-top: 2.5%;
   }
 
   #d_closeViewKeepLooking {
@@ -2304,7 +2325,7 @@ VIEW PAGE STYLES BELOW
     font-size: 3.75vw;
   }
 
- 
+
 
   #a_keepLooking {
     font-size: 5vw;
