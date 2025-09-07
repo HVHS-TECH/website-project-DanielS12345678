@@ -1304,7 +1304,7 @@ ORDER VIEW PAGE STYLES BELOW
   #d_orderForm {
     margin-top: 2%;
     margin-bottom: 15%;
-    margin-left: 17.5%;
+    margin-left: 15%;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr repeat(6, 0.75fr) 0.25fr;
