@@ -18,9 +18,7 @@ GENERAL STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-html {
-  height: 100%;
-}
+
 
 body {
   margin: 0px;
@@ -32,8 +30,7 @@ header {
   height: 12.5vh;
   width: 100%;
   /*  background-color: #C4CBCA; */
-    border-radius:50px;
-
+  border-radius: 50px;
   background-color: #fffef4;
 }
 
@@ -209,7 +206,7 @@ HEADER STYLES BELOW
   grid-template-columns: 2fr repeat(4, 1fr);
   grid-template-rows: 1fr;
   height: 100%;
-    border-radius:50px;
+  border-radius: 50px;
 
 }
 
@@ -545,17 +542,13 @@ CARE PAGE STYLES BELOW
   margin-bottom: 2%;
 }
 
-#h1_careGrow {
-  margin-top: 4%;
-}
-
 #h1_careProb {
   margin-top: 2%;
 }
 
 .h2_careDes {
   font-weight: 500;
-  margin-top: 5%;
+  margin-top: 7.5%;
   text-decoration: underline;
 }
 
@@ -589,7 +582,7 @@ CARE PAGE STYLES BELOW
   grid-template-rows: 0.25fr 0.5fr 1.25fr 0.25fr;
 }
 
-#d_effectOfPlantsHeader{
+#d_effectOfPlantsHeader {
   grid-area: 1/1/2/3;
 
 }
@@ -607,18 +600,19 @@ CARE PAGE STYLES BELOW
   grid-area: 2/2/3/3;
 
 }
+
 #d_effectOfPlantsHumanHeader,
 #d_effectOfPlantsAnimalHeader {
-  display:flex;
-  align-items:flex-end;
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
 
 
 }
 
 #d_effectOfPlantsHumanList,
-#d_effectOfPlantsAnimalList{
-  padding-top:2.5%;
+#d_effectOfPlantsAnimalList {
+  padding-top: 2.5%;
 }
 
 #d_effectOfPlantsAnimalList {
@@ -631,13 +625,19 @@ CARE PAGE STYLES BELOW
   text-decoration: underline;
 }
 
-.li_effectOfPlantsHumans {
+.li_effectOfPlants {
   list-style-type: square;
 }
 
 .d_effectsOfSapFlex {
   display: flex;
 }
+
+#d_effectOfSapToxicPlant {
+  grid-area: 4/1/5/3;
+  margin-top: 2%;
+}
+
 
 .d_effectsOfSapHeader {
   width: 30%;
@@ -650,6 +650,7 @@ CARE PAGE STYLES BELOW
 .h3_effetsOfSap {
   text-align: center;
 }
+
 
 
 /********************************************************************************
@@ -973,7 +974,7 @@ HOME PAGE STYLES BELOW
 
   #b_takeLook {
     font-size: 3.5vw;
-    margin-top:4%;
+    margin-top: 4%;
   }
 
   /********************************/
@@ -1061,8 +1062,12 @@ Care PAGE STYLES BELOW
 
   .h1_care {
     font-size: 5vw;
-
   }
+
+  #h1_careGrow {
+  margin-top: 4%;
+}
+
 
   .h2_careDes {
     font-size: 3.5vw;
@@ -1145,40 +1150,33 @@ Care PAGE STYLES BELOW
   }
 
 
-.d_bugsImage {
-  padding-top:10%;
-}
-
+  .d_bugsImage {
+    padding-top: 10%;
+  }
 
   #d_toxicPlantDes {
     grid-area: 2/1/3/11;
   }
 
-#d_toxicPlantDesGrid{
-display:grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 0.75fr 1.75fr;
-margin-top:3.5%;
-  margin-bottom:10%;
-}
+  #d_toxicPlantDesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.75fr 1.75fr;
+    margin-top: 1%;
+    margin-bottom: 10%;
+  }
 
-#d_toxicPlantExplain{
-grid-area:1/1/2/3;
-}
+  #d_toxicPlantExplain {
+    grid-area: 1/1/2/3;
+  }
 
-#d_effectOfPlantsGrid{
-  grid-area:2/1/3/3;
-}
+  #d_effectOfPlantsGrid {
+    grid-area: 2/1/3/3;
+  }
 
-#p_effectOfPlant{
-  margin-top:2%;
-  margin-bottom:3.5%;
-}
-
-#d_effectOfSapToxicPlant{
-  grid-area:4/1/5/3;
-  margin-top:2%;
-}
+  #p_effectOfPlant {
+    margin-top: 2%;
+  }
 
   #h2_toxicPlant {
     margin-top: 0%;
@@ -1188,7 +1186,7 @@ grid-area:1/1/2/3;
     font-size: 2.25vw;
   }
 
-  .li_effectOfPlantsHumans {
+  .li_effectOfPlants {
     font-size: 1.5vw;
   }
 
@@ -1197,14 +1195,23 @@ grid-area:1/1/2/3;
   }
 
   .h3_effetsOfSap {
-    font-size: 2.5vw;
-    float:right;
-    margin-right:5%;
+    font-size: 2.25vw;
+    float: right;
+    margin-right: 5%;
   }
 
-  #p_effectOfSapToxicPlant{
-    font-size:1.75vw;
-    margin-left:10%;
+
+  .p_effectOfSap {
+    font-size: 1.6vw;
+  }
+
+  #p_effectOfSapTopCut {
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+
+  #p_effectOfSapToxicPlant {
+    margin-left: 10%;
   }
 
   /***********************************************************/
@@ -1527,7 +1534,7 @@ HOME PAGE STYLES BELOW
 
   #h3_subHeader {
     font-size: 4vw;
-    margin:0% 5% 5% 5%;
+    margin: 0% 5% 5% 5%;
   }
 
   #d_homeTakeLookButton {
@@ -1536,7 +1543,7 @@ HOME PAGE STYLES BELOW
 
   #b_takeLook {
     font-size: 5vw;
-    padding:2.5%;
+    padding: 2.5%;
   }
 
   /********************************/
@@ -1604,6 +1611,10 @@ HOME PAGE STYLES BELOW
     font-size: 7vw;
   }
 
+  #h1_careGrow{
+    margin-top:7.5%;
+  }
+
   #h1_careProb {
     margin-top: 5%;
   }
@@ -1612,18 +1623,32 @@ HOME PAGE STYLES BELOW
     font-size: 5.5vw;
     margin-bottom: 5%;
     text-underline-offset: 17.5px;
-
   }
 
+  #h2_greenHouse {
+    margin-top: 1%;
+    color:red;
+  }
+
+
   .p_careDes {
-    font-size: 2.5vw;
-    margin: 3% 5% 0 5%;
+    font-size: 2.75vw;
+    margin: 7.5% 5% 0 5%;
+  }
+
+  #p_plantTonic {
+    margin-top: 5%;
+  }
+
+  #p_effectOfPlant {
+    margin-bottom: 5%;
   }
 
   #d_carePlantsGrowGrid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.25fr 1.5fr 1.25fr 1.5fr 1.25fr 1.5fr;
+    grid-template-rows: 0.5fr 0.9fr 0.75fr 1fr 0.75fr 1fr;
+    margin-top: 7.5%;
   }
 
   #d_greenhouseDes {
@@ -1651,18 +1676,18 @@ HOME PAGE STYLES BELOW
   }
 
   #i_greenhouseMade {
-    width: 65%;
+    width: 75%;
     height: 80%;
   }
 
   #i_soil {
-    width: 50%;
-    height: 82.5%;
+    width: 60%;
+    height: 85%;
   }
 
   #i_topCut {
-    width: 45%;
-    height: 65%;
+    width: 60%;
+    height: 80%;
   }
 
   #d_carePlantsProblemGrid {
@@ -1683,7 +1708,7 @@ HOME PAGE STYLES BELOW
 
   #d_toxicPlantDes {
     grid-area: 3/1/4/2;
-  
+
   }
 
   .i_bugs {
@@ -1697,11 +1722,11 @@ HOME PAGE STYLES BELOW
 
 
   .h3_effectOfPlants {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
 
-  .li_effectOfPlantsHumans {
-    font-size: 2vw;
+  .li_effectOfPlants {
+    font-size: 2.5vw;
   }
 
   .d_effectsOfSapFlex {
@@ -1709,9 +1734,12 @@ HOME PAGE STYLES BELOW
   }
 
   .h3_effetsOfSap {
-    font-size: 2.25vw;
+    font-size: 3vw;
   }
 
+  .p_effectOfSap {
+    margin-right: 5%;
+  }
 
   /***********************************************************/
   /*********************
@@ -1973,10 +2001,6 @@ CARE PAGE STYLES BELOW
     text-underline-offset: 15px;
   }
 
-  .p_careDes {
-    font-size: 2.25vw;
-  }
-
   .d_effectsOfSapFlex {
     margin-top: 3%;
   }
@@ -2215,45 +2239,90 @@ HOME PAGE STYLES BELOW
 CARE PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
-  .h1_care {
-    font-size: 6vw;
+  
+  #h1_careGrow{
+    margin-top:15%;
+    font-size:7vw;
+
+  }
+
+    #h2_greenHouse {
+    margin-top: 2.5%;
+  }
+
+  #d_carePlantsGrowGrid {
+    margin-top: 10%;
+    grid-template-rows: 0.85fr 0.75fr 1fr 0.75fr 0.9fr 0.75fr;
   }
 
   .h2_careDes {
     text-underline-offset: 10px;
+    font-size: 6.5vw;
   }
 
   .p_careDes {
-    font-size: 3vw;
+    font-size: 4.75vw;
+    margin: 10% 7.5% 0% 7.5%;
+  }
+
+  .d_effectsOfSapHeader {
+    width: 40%;
+  }
+
+  .d_effectsOfSapDes {
+    width: 60%;
+  }
+
+  #p_effectOfPlant {
+    margin-top: 8.5%;
+    margin-bottom: 4%;
+
+  }
+
+  .p_effectOfSap {
+    font-size: 4vw;
+  }
+
+  #p_plantTonic {
+    margin-top: 5%;
   }
 
   .h3_effectOfPlants {
-    font-size: 4.5vw;
+    font-size: 5.75vw;
   }
 
-  .li_effectOfPlantsHumans {
-    font-size: 3vw;
+  .li_effectOfPlants {
+    font-size: 3.75vw;
   }
 
   .d_effectOfPlantsList {
     margin-right: 5%;
   }
 
+  
+
   .h3_effetsOfSap {
-    font-size: 3.25vw;
+    font-size: 5vw;
   }
 
   #i_greenhouseMade {
-    width: 80%;
-    height: 85%;
+    width: 85%;
+    height: 70%;
   }
 
-  #i_soil,
+  #i_soil {
+    width: 75%;
+    height: 80%;
+  }
+
   #i_topCut {
-    width: 70%;
-    height: 75%;
+    width: 75%;
+    height: 70%;
   }
 
+  #d_carePlantsProblemGrid {
+    grid-template-rows: 0.5fr 1fr;
+  }
 
   /** was a flex box in bigger screen sizes **/
   #d_bugsImageFlex {
@@ -2286,10 +2355,17 @@ CARE PAGE STYLES BELOW
   }
 
   .i_bugs {
-    width: 60%;
-    height: 80%;
+    width: 70%;
+    height: 85%;
   }
 
+  #p_toxicPlantExplain {
+    margin: 5% 7.5% 0% 7.5%;
+  }
+
+  .d_effectsOfSapDes {
+    margin-right: 5%;
+  }
 
   /***********************************************************/
   /*********************
