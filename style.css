@@ -26,8 +26,12 @@ body {
   font-family: "eb garamond", "Libertinus Sans";
 }
 
+#d_firstView{
+  background-color:#C4CBCA ;
+}
+
 header {
-  height: 12.5vh;
+  height: 13.5vh;
   width: 100%;
   /*  background-color: #C4CBCA; */
   border-radius: 50px;
@@ -381,11 +385,10 @@ HOME PAGE STYLES BELOW
 
 #d_homeGridMain {
   display: grid;
-  background-color: #C4CBCA;
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #1B2019;
-  height: 87.5vh;
+  height: 86.5vh;
 
 }
 
@@ -405,17 +408,11 @@ HOME PAGE STYLES BELOW
   align-items: center;
 }
 
-#d_homeTakeLookButton {
-  display: flex;
-  justify-content: center;
-}
-
 #b_takeLook {
   color: white;
   background-color: #26530C;
   border-radius: 20px;
   padding: 1%;
-  align-self: flex-start;
 }
 
 #b_takeLook:hover {
@@ -910,6 +907,11 @@ ORDER PAGE STYLES BELOW
 /********** Large screen size **********/
 @media (min-width:850px) {
 
+.i_navIcon{
+  width: 40%;
+  height:75%;
+}
+
   #i_backToTop {
     height: 80%;
     width: 50%
@@ -939,7 +941,7 @@ HOME PAGE STYLES BELOW
   /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: 2fr repeat(3, 1fr);
-    grid-template-rows: 2fr 1.5fr 1fr;
+    grid-template-rows: 2fr 1fr 1.25fr;
   }
 
   #d_homeMainImage {
@@ -951,7 +953,7 @@ HOME PAGE STYLES BELOW
   }
 
   #h1_homeMainHeader {
-    font-size: 7.75vw;
+    font-size: 7.5vw;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
@@ -964,7 +966,7 @@ HOME PAGE STYLES BELOW
   }
 
   #h3_subHeader {
-    font-size: 5.5vh;
+    font-size: 5vh;
   }
 
 
@@ -974,7 +976,7 @@ HOME PAGE STYLES BELOW
 
   #b_takeLook {
     font-size: 3.5vw;
-    margin-top: 4%;
+    /*margin-top: 4%; */
   }
 
   /********************************/
@@ -1065,8 +1067,8 @@ Care PAGE STYLES BELOW
   }
 
   #h1_careGrow {
-  margin-top: 4%;
-}
+    margin-top: 4%;
+  }
 
 
   .h2_careDes {
@@ -1163,7 +1165,7 @@ Care PAGE STYLES BELOW
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.75fr 1.75fr;
     margin-top: 1%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 
   #d_toxicPlantExplain {
@@ -1175,7 +1177,7 @@ Care PAGE STYLES BELOW
   }
 
   #p_effectOfPlant {
-    margin-top: 2%;
+    margin-top: 1.5%;
   }
 
   #h2_toxicPlant {
@@ -1293,8 +1295,10 @@ ORDER VIEW PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
   #h1_orderFormHeader {
-    margin-top: 1.5%;
+    margin: 5% 0% 4% 0%;
     font-size: 6vw;
+    text-underline-offset: 17.5px;
+
   }
 
   #h2_checkingAccount {
@@ -1597,7 +1601,7 @@ HOME PAGE STYLES BELOW
   /* price */
   #h4_topSeller {
     margin-top: 15%;
-    margin-bottom: 10%; 
+    margin-bottom: 10%;
   }
 
 
@@ -1611,8 +1615,8 @@ HOME PAGE STYLES BELOW
     font-size: 7vw;
   }
 
-  #h1_careGrow{
-    margin-top:7.5%;
+  #h1_careGrow {
+    margin-top: 7.5%;
   }
 
   #h1_careProb {
@@ -1753,6 +1757,11 @@ HOME PAGE STYLES BELOW
   #d_viewPlantsGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 13.5%;
+  }
+
+  .d_viewSwanPlants {
+    margin-top: 10%;
   }
 
   #d_smallSwanPlant {
@@ -1820,8 +1829,9 @@ ORDER VIEW PAGE STYLES BELOW
   /***********************************************************/
 
   #h1_orderFormHeader {
-    margin-top: 3%;
+    margin: 5.5% 0% 4.5% 0%;
     font-size: 8vw;
+    text-underline-offset: 12.5px;
   }
 
 
@@ -1909,7 +1919,7 @@ HOME PAGE STYLES BELOW
   /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2.5fr 1.5fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     height: 90vh;
   }
 
@@ -2005,6 +2015,16 @@ CARE PAGE STYLES BELOW
 
   /***********************************************************/
   /*********************
+VIEW PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+  .d_viewSwanPlants {
+    margin-top: 15%;
+  }
+
+  /***********************************************************/
+  /*********************
 CLOSE VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
@@ -2058,6 +2078,17 @@ CLOSE VIEW PAGE STYLES BELOW
 
   #a_orderForm {
     font-size: 7vw;
+  }
+
+
+  /***********************************************************/
+  /*********************
+ORDER PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+  #h1_orderFormHeader {
+    text-underline-offset: 10px;
   }
 
 }
@@ -2237,14 +2268,14 @@ HOME PAGE STYLES BELOW
 CARE PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
-  
-  #h1_careGrow{
-    margin-top:15%;
-    font-size:7vw;
+
+  #h1_careGrow {
+    margin-top: 15%;
+    font-size: 7vw;
 
   }
 
-    #h2_greenHouse {
+  #h2_greenHouse {
     margin-top: 2.5%;
   }
 
@@ -2297,7 +2328,7 @@ CARE PAGE STYLES BELOW
     margin-right: 5%;
   }
 
-  
+
 
   .h3_effetsOfSap {
     font-size: 5vw;
@@ -2478,6 +2509,8 @@ ORDER VIEW PAGE STYLES BELOW
   #h1_orderFormHeader {
     margin-top: 5%;
     font-size: 12vw;
+        text-underline-offset: 8px;
+
   }
 
   #h2_checkingAccount {
