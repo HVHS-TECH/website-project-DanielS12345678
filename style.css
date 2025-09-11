@@ -26,15 +26,13 @@ body {
   font-family: "eb garamond", "Libertinus Sans";
 }
 
-#d_firstView{
-  background-color:#C4CBCA ;
+#d_firstView {
+  background-color: #C4CBCA;
 }
 
 header {
   height: 13.5vh;
   width: 100%;
-  /*  background-color: #C4CBCA; */
-  border-radius: 50px;
   background-color: #fffef4;
 }
 
@@ -458,7 +456,7 @@ HOME PAGE STYLES BELOW
 #d_homeGridTopSeller {
   display: grid;
   grid-template-columns: 1fr repeat(6, 2fr) 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 2.5fr;
 }
 
 #d_topSellerHead {
@@ -479,7 +477,7 @@ HOME PAGE STYLES BELOW
 
 #i_topSeller {
   height: 70%;
-  width: 70%;
+  width: 65%;
   margin-top: 5%;
   border: 1.75px solid black;
 }
@@ -812,9 +810,29 @@ ORDER PAGE STYLES BELOW
   display: none;
 }
 
-#d_checkingAcount {
+#d_checkingAcount,
+#d_orderComplete {
   height: 100vh;
 }
+
+#d_orderComplete {
+  display: none;
+}
+
+
+#d_orderCompleteMainHeader {
+  margin-top: 10%;
+}
+
+.d_orderCompleteItems {
+  height: 20%;
+}
+
+
+#h3_conatctSoon {
+  text-align: center;
+}
+
 
 #h1_orderFormHeader {
   text-decoration: underline;
@@ -895,10 +913,18 @@ ORDER PAGE STYLES BELOW
   width: 40%;
 }
 
+
+
 #b_resetForm:hover,
 #b_submitOrderForm:hover {
   opacity: 60%;
 }
+
+#b_homeAfterOrder {
+  width: 20%;
+  background-color: black;
+}
+
 
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
@@ -907,10 +933,10 @@ ORDER PAGE STYLES BELOW
 /********** Large screen size **********/
 @media (min-width:850px) {
 
-.i_navIcon{
-  width: 40%;
-  height:75%;
-}
+  .i_navIcon {
+    width: 40%;
+    height: 75%;
+  }
 
   #i_backToTop {
     height: 80%;
@@ -1301,8 +1327,13 @@ ORDER VIEW PAGE STYLES BELOW
 
   }
 
-  #h2_checkingAccount {
+  .h2_statusUpdate {
     font-size: 5vw;
+  }
+
+
+  #h3_conatctSoon {
+    font-size: 3vw;
   }
 
   #d_orderForm {
@@ -1404,9 +1435,7 @@ ORDER VIEW PAGE STYLES BELOW
     grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
     width: 75%;
     margin-left: 12.5%;
-    /* background-color:green; */
   }
-
 
 }
 
@@ -1590,7 +1619,7 @@ HOME PAGE STYLES BELOW
   }
 
   #i_topSeller {
-    width: 80%;
+    width: 75%;
   }
 
   /* header */
@@ -1835,8 +1864,12 @@ ORDER VIEW PAGE STYLES BELOW
   }
 
 
-  #h2_checkingAccount {
+  .h2_statusUpdate {
     font-size: 8vw;
+  }
+
+  #h3_conatctSoon {
+    font-size: 6vw;
   }
 
   #d_orderForm {
@@ -1979,7 +2012,7 @@ HOME PAGE STYLES BELOW
 
   #i_topSeller {
     height: 80%;
-    width: 70%;
+    width: 75%;
     margin-top: 7.5%;
   }
 
@@ -2099,7 +2132,7 @@ ORDER PAGE STYLES BELOW
 /****************************************************************************************************/
 /********** Small screen size **********/
 @media (max-width:500px) {
-  /* 575*/
+
 
   /***********************************************************/
   /*********************
@@ -2107,18 +2140,15 @@ MULTIPLE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
-  /*** headers ***/
-  h2 {
-    margin: 0px;
-    margin-bottom: 1.5%;
-    text-align: center;
-  }
-
-  /***********************************************************/
   /*********************
 HEADER STYLES BELOW 
 /*********************/
-  /***********************************************************/
+
+header{
+  border-radius:25px;
+   height: 10vh;
+}
+
   .d_headerCompany {
     display: none;
   }
@@ -2163,6 +2193,14 @@ HEADER STYLES BELOW
     font-size: 4.75vw;
   }
 
+
+  /*** headings ***/
+  h2 {
+    margin: 0px;
+    margin-bottom: 1.5%;
+    text-align: center;
+  }
+
   /***********************************************************/
   /*********************
 HOME PAGE STYLES BELOW 
@@ -2181,28 +2219,38 @@ HOME PAGE STYLES BELOW
     display: none;
   }
 
+/* main header **/
   #d_homeHeader {
     grid-area: 1/1/2/6;
     display: flex;
     align-items: center;
   }
-
+/** Main heading **/
   #h1_homeMainHeader {
     font-size: 16vw;
     margin: 0% 2.5% 2.5% 2.5%;
   }
 
+  /** sub header **/
   #d_homeSubHeader {
     grid-area: 2/1/3/6;
   }
 
+  /** sub heading **/
   #h3_subHeader {
     font-size: 7vw;
     margin: 0% 10% 5% 10%;
   }
 
+  /** div for take a close look button **/
   #d_homeTakeLookButton {
     grid-area: 3/1/4/6;
+    align-items:start;
+  }
+
+    #b_takeLook {
+    font-size: 7vw;
+    
   }
 
   /********************************/
@@ -2262,6 +2310,10 @@ HOME PAGE STYLES BELOW
     margin-top: 7.5%;
   }
 
+  
+#b_topSeller {
+  font-size: 5vw;
+}
 
   /***********************************************************/
   /*********************
@@ -2509,13 +2561,14 @@ ORDER VIEW PAGE STYLES BELOW
   #h1_orderFormHeader {
     margin-top: 5%;
     font-size: 12vw;
-        text-underline-offset: 8px;
+    text-underline-offset: 8px;
 
   }
 
-  #h2_checkingAccount {
+  .h2_statusUpdate {
     font-size: 9vw;
   }
+
 
   #d_orderForm {
     border: 2px solid black;

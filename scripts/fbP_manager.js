@@ -82,7 +82,8 @@ function fbP_dropDownLinksDisplay() {
 /*********************************************/
 // fbP_zoomOnPlant()
 // Called: When the user loads on to a close view page
-// Does: Controls the zoom on the swan plant Image 
+// Does: Controls the zoom on the swan plant Images:
+// when the user scrolls over it  
 // Calls: n/a
 /*********************************************/
 function fbP_zoomOnPlant() {
@@ -92,16 +93,12 @@ function fbP_zoomOnPlant() {
   var currentZoom = 1;
   const ZOOMSPEED = 0.3;
 
-
   /***** Image Zoom *****/
   // listening for the scroll wheel on the image 
   ZOOMIMAGE.addEventListener('wheel', (zoom) => {
 
-    //     event.preventDefault();
-
     //  Determines what way is the user zooming 
-    // -1 is out 
-    // 1 is in 
+    // -1 is out  1 is in 
     const DIRECTION = zoom.deltaY > 0 ? -1 : 1;
 
     // the current zoom 
@@ -436,10 +433,15 @@ function fbP_procWriteQuantitySold(_path, _data, _error) {
     /** A message telling them about the error **/
     alert("An error has occured see console for details");
 
+
+
   } else{
     //no error
     console.log("fbP_procWriteQuantitySold(): no error in making write");
+    document.getElementById("d_formElements").style.display = "none";
+    document.getElementById("d_orderComplete").style.display= "block";
 
+    
   }
 
 }

@@ -34,7 +34,7 @@
             </div>
             <div class="d_headerLink" id="d_headerLinkView">
                 <a class="a_change" href="view.html">View</a>
-                
+
                 <!-- Drop down links -->
                 <div id="d_dropDownLinks">
                     <ul id="ul_dropDownLinks">
@@ -64,10 +64,23 @@
 
     <!-- checking account -->
     <div id="d_checkingAcount" class="d_alignCenterVertHori">
-        <h2 id="h2_checkingAccount">Checking for account</h2>
+        <h2 class="h2_statusUpdate">Checking for account</h2>
     </div>
 
-<!-- Form -->
+    <!-- Order complete -->
+    <div id="d_orderComplete">
+        <div id="d_orderCompleteMainHeader" class="d_orderCompleteItems">
+            <h2 id="h2_orderMade" class="h2_statusUpdate">Order has been Made </h2>
+        </div>
+        <div class="d_orderCompleteItems">
+            <h3 id="h3_conatctSoon">We will be in contact soon</h3>
+        </div>
+        <div class="d_orderCompleteItems d_alignCenterVertHori">
+            <button id="b_homeAfterOrder" class="b_order" onclick="window.location='index.html'">Home</button>
+        </div>
+    </div>
+
+    <!-- Form -->
     <div id="d_formElements">
 
         <!-- Header -->
@@ -76,15 +89,12 @@
         <!-- Form -->
         <form action="https://formspree.io/f/xeogklkq" method="POST">
             <div id="d_orderForm">
-
-            <!-- Name -->
+                <!-- Name -->
                 <div id="d_orderFormNameItem" class="d_orderFormItem">
-
                     <!-- Label -->
                     <div id="d_nameLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                         <label id="l_name" class="l_orderForm" for="in_name">Name:</label>
                     </div>
-
                     <!-- Input -->
                     <div id="d_nameInput" class="d_orderFormInputItem">
                         <input id="in_name" class="in_orderForm" type="text" name="in_name"
@@ -92,29 +102,25 @@
                     </div>
                 </div>
 
-            <!-- Email -->
+                <!-- Email -->
                 <div id="d_orderFormEmailItem" class="d_orderFormItem">
-
-                     <!-- Label -->
+                    <!-- Label -->
                     <div id="d_emailLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
                         <label id="l_email" class="l_orderForm" for="in_email">Email:</label>
                     </div>
-
                     <!-- Input -->
                     <div id="d_emailInput" class="d_orderFormInputItem">
-                    <input id="in_email" class="in_orderForm" type="email" name="in_email"
+                        <input id="in_email" class="in_orderForm" type="email" name="in_email"
                             placeholder=" JohnDoe@gmail.com (Required)">
                     </div>
                 </div>
 
-            <!-- Small swan plant -->
-                <div id="d_orderFormSmalItem" class="d_orderFormItem">   
-
+                <!-- Small swan plant -->
+                <div id="d_orderFormSmalItem" class="d_orderFormItem">
                     <!-- Label -->
-                        <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                            <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+                    <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
+                        <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
                     </div>
-
                     <!-- Input -->
                     <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
                         <input id="in_smallSwanPlants" class="in_orderForm" type="number" name="smallSwanPlants"
@@ -122,7 +128,7 @@
                     </div>
                 </div>
 
-            <!-- Medium swan plants -->
+                <!-- Medium swan plants -->
                 <div id="d_orderFormMediumItem" class="d_orderFormItem">
 
                     <!-- Label -->

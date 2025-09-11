@@ -11,43 +11,52 @@
 </head>
 
 <body onload="fbP_dropDownLinksDisplay()">
+
+    <!-- first view is what the user first sees when load up the website -->
     <div id="d_firstView">
+
+        <!-- header has nav bar in it -->
         <header>
             <div class="d_headerGrid">
+                <!-- company name -->
                 <div class="d_headerCompany">
                     <h3 id="h3_navHeader">Daniel's swan plants</h3>
                 </div>
+                <!-- current link -->
                 <div class="d_headerLink" id="d_headerLinkHome">
                     <a class="a_current">Home</a>
-
                 </div>
+                <!-- view link -->
                 <div class="d_headerLink" id="d_headerLinkView">
                     <a class="a_change" href="view.html">View </a>
+                     <!-- Drop down links -->
                     <div id="d_dropDownLinks">
                         <ul id="ul_dropDownLinks">
+                            <!-- small -->
                             <li class="li_dropDownLinks">
                                 <a class="a_dropDown" href="smallSwanPlants.html">Small</a>
                             </li>
+                            <!-- medium -->
                             <li class="li_dropDownLinks">
                                 <a class="a_dropDown" href="mediumSwanPlants.html">Medium</a>
                             </li>
+                            <!-- large -->
                             <li class="li_dropDownLinks">
                                 <a class="a_dropDown" href="largeSwanPlants.html">Large</a>
                             </li>
+                            <!-- extra large -->
                             <li class="li_dropDownLinks">
                                 <a class="a_dropDown" href="extraLargeSwanPlants.html">Extra Large</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
+                <!-- care link -->
                 <div class="d_headerLink" id="d_headerLinkCare">
-                   <!--- <img class="i_navIcon" src="images/careIcon.png" onclick="window.location='care.html'"> -->
                  <a class="a_change" href="care.html">Care</a> 
-
                 </div>
+                <!-- order link -->
                 <div class="d_headerLink" id="d_headerLinkOrder">
-                   <!--- <img class="i_navIcon" src="images/orderIcon.png" onclick="window.location='order.html'"> -->
                 <a class="a_change" href="order.html">Order</a> 
                 </div>
 
@@ -75,7 +84,7 @@
         </div>
     </div>
 
-    <div id="d_homeStoryHeader"> <!--- check -->
+    <div id="d_homeStoryHeader">
         <h2 id="h2_Story">Our story</h2>
     </div>
 
@@ -102,13 +111,16 @@
 
     <!-- trail of different top seller layout -->
     <div id="d_homeGridTopSeller">
+        <!-- header -->
         <div id="d_topSellerHead" class="d_alignCenterVertHori">
             <h1 id="h1_topSeller">Top Seller</h1>
         </div>
+        <!-- image -->
         <div id="d_topSellerImg">
             <img id="i_topSeller" alt="Image of the top selling swan plant, small swan plants"
                 src="images/topSeller.JPG">
         </div>
+        <!-- description includes price and button-->
         <div id="d_topSellerDes">
             <h3 id="h3_topSeller">Small Swan Plants</h3>
             <h4 id="h4_topSeller">Only $4 each</h4>
@@ -116,7 +128,6 @@
                 <button id="b_topSeller" onclick="window.location='smallSwanPlants.html'">Take a Closer Look</button>
             </div>
         </div>
-
     </div>
 
     <!-- Footer -->
