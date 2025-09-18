@@ -4,13 +4,14 @@
 // Has other fucntions non read or write fucntions  
 /*********************************************/
 
+// users details 
 var fbP_userDetails = {
   name: '',
   email: '',
   uid: '',
 }
 
-
+// calling initalise 
 fbP_initialise();
 
 
@@ -35,8 +36,6 @@ function fbP_initialise() {
   };
 
   // Initialize Firebase
-  //  const app = initializeApp(firebaseConfig);
-  //  const analytics = getAnalytics(app);
 
   // Check if firebase already initialised
   if (!firebase.apps.length) {
@@ -55,8 +54,10 @@ function fbP_initialise() {
 // Does: senors if the user has lcikced of the drop down link 
 // Used on a touchscreen device 
 // Calls: n/a
-/*********************************************/
+/*********************************************
 function fbP_dropDownLinksDisplay() {
+
+  // constants 
   const CLICKAREA = document.getElementById('d_homeGridMain');
   const DROPDOWNLINKSDIV = document.getElementById('d_dropDownLinks');
   const VIEWLINK = document.getElementById('d_headerLinkView');
@@ -67,6 +68,7 @@ function fbP_dropDownLinksDisplay() {
     DROPDOWNLINKSDIV.style.display = 'none';
 
   });
+
   // Checking if the user has clicked on the view link so drop down links appear 
   // used for when drop down links have already been hided 
   VIEWLINK.addEventListener('touchstart', () => {
@@ -77,7 +79,7 @@ function fbP_dropDownLinksDisplay() {
 
 }
 
-
+**/
 
 /*********************************************/
 // fbP_zoomOnPlant()
@@ -88,10 +90,11 @@ function fbP_dropDownLinksDisplay() {
 /*********************************************/
 function fbP_zoomOnPlant() {
 
+  // constants and vars
   const ZOOMIMAGE = document.getElementById('i_closeViewSwanPlant');
+  const ZOOMSPEED = 0.3;
 
   var currentZoom = 1;
-  const ZOOMSPEED = 0.3;
 
   /***** Image Zoom *****/
   // listening for the scroll wheel on the image 
@@ -108,7 +111,6 @@ function fbP_zoomOnPlant() {
     if (currentZoom > 5) currentZoom = 5;
 
     // Apply the new zoom level
-
     ZOOMIMAGE.style.transform = `scale(${currentZoom})`;
   });
 }
@@ -182,8 +184,10 @@ function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) 
     console.log("fbP_procReadForAccount(): OK for path = " + _path + " key = " + _key);
     /** account data in DB so login data doesn't need to be writen to DB **/
 
+    // hiding the checking account div
     document.getElementById("d_checkingAcount").style.display = "none";
 
+    // displaying the form, header and footer
     document.getElementById("d_formElements").style.display = "block";
     document.getElementById("h_header").style.display = "block";
     document.getElementById("f_footer").style.display = "block";
@@ -196,6 +200,7 @@ function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) 
     console.log("fbP_procReadForAccount(): no record for path = " + _path + " key = " + _key);
     /** no account data in DB login data will be writen to DB **/
 
+    // Writing the users account
     fb_writeRec("accounts", fbP_userDetails.uid, fbP_userDetails, fbP_procWriteLoginData);
 
   } else {
@@ -206,6 +211,49 @@ function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) 
     alert("An error has occured see console for details");
   }
   console.log("fbP_procReadForAccount(): COMPLETED");
+
+}
+
+/**************************************************************/
+//fbP_procWriteLoginData(_path, _key, _data, _error)
+// Called by 
+// fbP_procReadForAccount
+//
+// Writes a record to the Database
+// Input: 
+// _path is the first location point where the data is stored: accounts
+// _key is the second location point where the data is stored: the users uid 
+// _data is the data that has been writen: fbP_userDetails
+// _error if there is an error throughout the process 
+// Return: 
+// console log _path and _key
+/**************************************************************/
+function fbP_procWriteLoginData(_path, _key, _data, _error) {
+  console.log("fbP_procWriteLoginData Start for  path: " + _path + " and key: " + _key);
+
+  if (_error != null) {
+    /** if error the user will be notified with an alert **/
+    console.log("fbP_procWriteLoginData(): error path = " + _path + " key = " + _key);
+    console.error("fbP_procWriteLoginData(): ERROR!");
+    console.log(_error);
+    alert("error making delete see console log");
+  } else {
+    console.log("fbP_procWriteLoginData(): ok for path = " + _path + " key = " + _key);
+
+    // hiding checking account div 
+    document.getElementById("d_checkingAcount").style.display = "none";
+
+    // displaying form, heading and footer
+    document.getElementById("d_formElements").style.display = "block";
+    document.getElementById("h_header").style.display = "block";
+    document.getElementById("f_footer").style.display = "block";
+
+    // putting values from account into form 
+    document.getElementById('in_name').value = fbP_userDetails.name;
+    document.getElementById('in_email').value = fbP_userDetails.email;
+
+  }
+  console.log("fbP_procWriteLoginData(): COMPLETED");
 
 }
 
@@ -222,17 +270,17 @@ function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) 
 function fbP_orderMade() {
   console.log("orderMade(): start");
 
+  // input vars 
   var name = document.getElementById("in_name").value;
   var email = document.getElementById("in_email").value;
-
   var small = document.getElementById("in_smallSwanPlants").value;
   var medium = document.getElementById("in_mediumSwanPlants").value;
   var large = document.getElementById("in_largeSwanPlants").value;
   var extraLarge = document.getElementById("in_extraLargeSwanPlants").value;
 
-
+  // customer hasn't changed pre filled form data
   if (name == '' && email == '') {
-    console.log("Customer has not chnaged name or email");
+    console.log("Customer has not changed name or email");
 
     fbP_order = {
       name: fbP_userDetails.name,
@@ -244,6 +292,7 @@ function fbP_orderMade() {
       elSP: extraLarge,
     }
 
+    // customer chnaged order name 
   } else if (name != '' && email == '') {
     console.log("customer changed name for order");
 
@@ -257,7 +306,7 @@ function fbP_orderMade() {
       elSP: extraLarge,
     }
 
-
+    // cutomer chnaged order email
   } else if (name == '' && email != '') {
     console.log("customer changed email for order");
 
@@ -274,6 +323,7 @@ function fbP_orderMade() {
       elSP: extraLarge,
     }
 
+    // customer chnaged both name and email
   } else {
     console.log("customer changed name and email for order");
 
@@ -289,6 +339,7 @@ function fbP_orderMade() {
 
   }
 
+  // writing order
   fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder)
 }
 
@@ -308,13 +359,9 @@ function fbP_orderMade() {
 /**************************************************************/
 //    _procFunc(_path, _key, _data, _error);
 function fbP_procWriteOrder(_path, _key, _data, _error) {
-  console.log(_path);
-  console.log(_key);
-  console.log(_data);
-  console.table(_data);
-  console.log(_data.email)
-  console.log(fbP_order.email);
+  console.log("path is " + _path + " key is " + _key);
 
+// stock
   fbP_stock = {
     sSP: _data.sSP,
     mSP: _data.mSP,
@@ -324,6 +371,7 @@ function fbP_procWriteOrder(_path, _key, _data, _error) {
 
   console.table(fbP_stock);
 
+  // reading for quantity 
   fb_readStockSold("quantitySold", fbP_stock, fbP_procReadStockSold)
 
 }
@@ -345,17 +393,14 @@ function fbP_procWriteOrder(_path, _key, _data, _error) {
 /**************************************************************/
 //                  _procFunc(readStatus, _path, _key, dbData, _save, _error);
 function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
-  console.log(_path);
-  console.table(_save);
-  console.table(dbData);
-  console.log(_save.sSP);
-  console.log(dbData.sSP);
+  console.log("Path is  " + _path);
+
   Number(_save.sSP);
   Number(dbData.sSP);
   console.log(Number(_save.sSP));
   console.log(Number(dbData.sSP));
 
-
+// adding new stock sold to old stock old 
   if (readStatus == "ok") {
     var qsSP = Number(_save.sSP) + Number(dbData.sSP)
     console.log(qsSP);
@@ -366,7 +411,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
     var qelSP = Number(_save.elSP) + Number(dbData.elSP)
     console.log(qelSP);
 
-
+// stock sold
     fbP_stock = {
       sSP: qsSP,
       mSP: qmSP,
@@ -376,9 +421,10 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
 
     console.table(fbP_stock);
 
-
+    // writing stock sold
      fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
 
+    // if no stock has been sold 
   } else if (readStatus == 'no record') {
     // no quantity sold in database 
     var qsSP = Number(_save.sSP)
@@ -397,6 +443,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
       lSP: qlSP,
       elSP: qelSP,
     }
+    // writng stock sold 
      fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
   } else {
     console.log("There is an error in fbP_procReadStockSold() for path = " + _path);
@@ -433,63 +480,23 @@ function fbP_procWriteQuantitySold(_path, _data, _error) {
     /** A message telling them about the error **/
     alert("An error has occured see console for details");
 
-
-
   } else{
     //no error
     console.log("fbP_procWriteQuantitySold(): no error in making write");
-    document.getElementById("d_formElements").style.display = "none";
-    document.getElementById("d_orderComplete").style.display= "block";
-
-    
+    document.getElementById("d_formElements").style.display = "none";    
   }
 
 }
 
+
+
+
 /**************************************************************/
-//fbP_procWriteLoginData(_path, _key, _data, _error)
-// Called by 
-// fbP_procReadForAccount
-//
-// Writes a record to the Database
-// Input: 
-// _path is the first location point where the data is stored: accounts
-// _key is the second location point where the data is stored: the users uid 
-// _data is the data that has been writen: fbP_userDetails
-// _error if there is an error throughout the process 
-// Return: 
-// console log _path and _key
+// fbP_clearForm()
+// called when the user clicks clear at the bottom of the form
+// clears the form values to nothing
 /**************************************************************/
-function fbP_procWriteLoginData(_path, _key, _data, _error) {
-  console.log("fbP_procWriteLoginData Start for  path: " + _path + " and key: " + _key);
-
-  if (_error != null) {
-    /** if error the user will be notified with an alert **/
-    console.log("fbP_procWriteLoginData(): error path = " + _path + " key = " + _key);
-    console.error("fbP_procWriteLoginData(): ERROR!");
-    console.log(_error);
-    alert("error making delete see console log");
-  } else {
-    console.log("fbP_procWriteLoginData(): ok for path = " + _path + " key = " + _key);
-
-    document.getElementById("d_checkingAcount").style.display = "none";
-
-    document.getElementById("d_formElements").style.display = "block";
-    document.getElementById("h_header").style.display = "block";
-    document.getElementById("f_footer").style.display = "block";
-
-    // putting values from account into form 
-    document.getElementById('in_name').value = fbP_userDetails.name;
-    document.getElementById('in_email').value = fbP_userDetails.email;
-
-  }
-  console.log("fbP_procWriteLoginData(): COMPLETED");
-
-
-}
-
-
-function fbP_resetForm() {
+function fbP_clearForm() {
 
   // clearing form values
   document.getElementById('in_name').value = '';
@@ -499,26 +506,9 @@ function fbP_resetForm() {
   document.getElementById('in_largeSwanPlants').value = '';
   document.getElementById('in_extraLargeSwanPlants').value = '';
 
-  // const SWANPLANTINPUTS = document.getElementsByClassName('in_orderForm');
-  //SWANPLANTINPUTS.value = '';
-
 }
 
-/*********************************************/
-// fbP_backToTop()
-// Called: When the user clicks the back to top arrow in the footer
-// Does: Takes the user back to the top of the page
-// Calls: n/a
-/*********************************************
-function fbP_backToTop(){
-console.log("backToTop(): Start");
 
-    // for Google and others
-  document.documentElement.scrollTop = 0; 
-
-    // for Safari
-  document.body.scrollTop = 0; 
-
-  console.log("backToTop(): Completed");
-}
-*/
+/***************************************************************
+ * END OF CODE
+ ***************************************************************/

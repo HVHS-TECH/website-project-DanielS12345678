@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- head -->
 <head>
     <title>Daniel's swan plants - Order</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -25,37 +27,45 @@
     <!-- Header -->
     <header id="h_header">
         <div class="d_headerGrid">
+            <!-- company name -->
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
+            <!-- home link -->
             <div class="d_headerLink" id="d_headerLinkHome">
-                <a class="a_change" href="../index.html">Home</a>
-
+                <a class="a_change" href="index.html">Home</a>
             </div>
+            <!-- view link-->
             <div class="d_headerLink" id="d_headerLinkView">
                 <a class="a_change" href="view.html">View</a>
 
                 <!-- Drop down links -->
                 <div id="d_dropDownLinks">
                     <ul id="ul_dropDownLinks">
+                        <!-- small -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="smallSwanPlants.html">Small</a>
                         </li>
+                        <!-- medium -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="mediumSwanPlants.html">Medium</a>
                         </li>
+                        <!-- large -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="largeSwanPlants.html">Large</a>
                         </li>
+                        <!-- extra large -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="extraLargeSwanPlants.html">Extra Large</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <!-- care -->
             <div class="d_headerLink" id="d_headerLinkCare">
                 <a class="a_change" href="care.html">Care</a>
             </div>
+            <!-- current link -->
             <div class="d_headerLink" id="d_headerLinkOrder">
                 <a class="a_current">Order</a>
             </div>
@@ -65,19 +75,6 @@
     <!-- checking account -->
     <div id="d_checkingAcount" class="d_alignCenterVertHori">
         <h2 class="h2_statusUpdate">Checking for account</h2>
-    </div>
-
-    <!-- Order complete -->
-    <div id="d_orderComplete">
-        <div id="d_orderCompleteMainHeader" class="d_orderCompleteItems">
-            <h2 id="h2_orderMade" class="h2_statusUpdate">Order has been Made </h2>
-        </div>
-        <div class="d_orderCompleteItems">
-            <h3 id="h3_conatctSoon">We will be in contact soon</h3>
-        </div>
-        <div class="d_orderCompleteItems d_alignCenterVertHori">
-            <button id="b_homeAfterOrder" class="b_order" onclick="window.location='index.html'">Home</button>
-        </div>
     </div>
 
     <!-- Form -->
@@ -119,7 +116,7 @@
                 <div id="d_orderFormSmalItem" class="d_orderFormItem">
                     <!-- Label -->
                     <div id="d_smallSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                        <label id="l_smallSwanPlants" class="l_orderForm" for="smallSwanPlants">Small:</label>
+                        <label id="l_smallSwanPlants" class="l_orderForm" for="in_smallSwanPlants">Small:</label>
                     </div>
                     <!-- Input -->
                     <div id="d_smallSwanPlantsInput" class="d_orderFormInputItem">
@@ -133,7 +130,7 @@
 
                     <!-- Label -->
                     <div id="d_mediumSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                        <label id="l_mediumSwanPlants" class="l_orderForm" for="mediumSwanPlants">Medium:</label>
+                        <label id="l_mediumSwanPlants" class="l_orderForm" for="in_mediumSwanPlants">Medium:</label>
                     </div>
 
                     <!-- Input -->
@@ -147,7 +144,7 @@
                 <div id="d_orderFormLargeItem" class="d_orderFormItem">
                     <!-- Label -->
                     <div id="d_largeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                        <label id="l_largeSwanPlants" class="l_orderForm" for="largeSwanPlants">Large:</label>
+                        <label id="l_largeSwanPlants" class="l_orderForm" for="in_largeSwanPlants">Large:</label>
                     </div>
 
                     <!-- Input -->
@@ -161,7 +158,7 @@
                 <div id="d_orderFormExtraLargeItem" class="d_orderFormItem">
                     <!-- Label -->
                     <div id="d_extraLargeSwanPlantsLabel" class="d_orderFormLabelItem d_alignCenterVertHori">
-                        <label id="l_extraLargeSwanPlants" class="l_orderForm" for="extraLargeSwanPlants">Extra
+                        <label id="l_extraLargeSwanPlants" class="l_orderForm" for="in_extraLargeSwanPlants">Extra
                             large:</label>
                     </div>
 
@@ -181,7 +178,7 @@
                 <div id="d_orderFormButtons">
                     <!-- Reset -->
                     <div class="d_orderButton">
-                        <button id="b_resetForm" class="b_order" onclick="fbP_resetForm()">Clear</button>
+                        <button id="b_resetForm" class="b_order" onclick="fbP_clearForm()">Clear</button>
                     </div>
 
                     <!-- Order -->
@@ -193,23 +190,28 @@
             </div>
         </form>
     </div>
-    <!---- Footer ---->
+    <!-- Footer -->
     <footer id="f_footer">
         <div id="d_footerGrid">
+
+            <!-- quick links -->
             <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="view.html">View</a></div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
             <div class="d_contactUsGrid">
 
                 <div id="d_contactUsBackground">
+                    <!-- contact header -->
                     <div id="d_contactUs">
                         <h4 id="h4_contactUs">Contact us</h4>
                     </div>
+                    <!-- email contact -->
                     <div id="d_contactEmail" class="d_alignCenterVertHori">
                         <img class="i_contactIcon" alt="email icon" src="images/emailIcon.png">
                         <a id="a_contactEmail" class="a_contact" target="_blank"
                             href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a>
                     </div>
+                    <!-- phone contact -->
                     <div id="d_contactPhone" class="d_alignCenterVertHori">
                         <img id="a_contactPhone" class="i_contactIcon" alt="phone icon" src="images/phoneIcon.png">
                         <a class="a_contact" target="_blank" href="tel:+640272546046">
@@ -217,6 +219,7 @@
                     </div>
                 </div>
             </div>
+            <!-- back to top -->
             <div id="d_backToTopGrid">
                 <img id="i_backToTop" alt="Back to top button" src="images/backToTopImage.png"
                     onclick='window.scrollTo({top: 0, behavior: "smooth"});'>

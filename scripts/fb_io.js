@@ -1,5 +1,8 @@
-
-
+/*********************************************/
+// fb_io.js()
+// fucntion deals directly with database
+// reads, writes and log in 
+/*********************************************/
 
 
 /**************************************************************/
@@ -33,15 +36,7 @@ function fb_login(_save, _procFunc) {
 
       var provider = new firebase.auth.GoogleAuthProvider();
       // To force Google sign to ask which account to use:
-      /*var provider = new firebase.auth.GoogleAuthProvider();
-      provider.setCustomParameters({
-         prompt: 'select_account'
-      });
-//error in code below
 
-      firebase.auth().signInWithPopup(provider).then(function(result) {
-            loginStatus = 'logged in via popup';
-   */
       firebase.auth().signInWithPopup(provider).then(function (result) {
         loginStatus = 'logged in via popup';
         console.log("working");
@@ -163,9 +158,11 @@ function fb_readStockSold(_path, _save, _procFunc) {
 function fb_writeRec(_path, _key, _data, _procFunc) {
   console.log('fb_writeRec() START: path = ' + _path + ' key = ' + _key);
 
+  // writing
   firebase.database().ref(_path + '/' + _key)
     .set(_data, fb_writeVerify);
 
+    // verifing 
   function fb_writeVerify(_error) {
     if (_error != null) {
       _procFunc(_path, _key, _data, _error);
@@ -191,9 +188,11 @@ function fb_writeRec(_path, _key, _data, _procFunc) {
 function fb_writeQuantitySold(_path, _data, _procFunc) {
   console.log('fb_writeQuantitySold() START: path = ' + _path);
 
+  // writing 
   firebase.database().ref(_path)
     .set(_data, fb_writeVerify);
 
+    // verifing 
   function fb_writeVerify(_error) {
     if (_error != null) {
       _procFunc(_path, _data, _error);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- head -->
 <head>
     <title>Daniel's swan plants - Medium Swan Plants</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -10,58 +11,76 @@
     <script src="scripts/fbP_manager.js"></script>
 </head>
 
+<!-- Functions listens for zoom on swan plant -->
+ <!-- firebase error in console due to firebase links not in head 
+  firebase links are not needed as this page doesn't use firebase 
+ -->
 <body onload="fbP_zoomOnPlant()">
 
+    <!-- header has nav bar in it -->
     <header>
         <div class="d_headerGrid">
+            <!-- company name -->
             <div class="d_headerCompany">
                 <h3 id="h3_navHeader">Daniel's swan plants</h3>
             </div>
+            <!-- home link -->
             <div class="d_headerLink" id="d_headerLinkHome">
                 <a class="a_change" href="index.html">Home</a>
-
             </div>
+            <!-- view link current -->
             <div class="d_headerLink" id="d_headerLinkView">
                 <a class="a_current">View</a>
+                <!-- drop down links -->
                 <div id="d_dropDownLinks">
                     <ul id="ul_dropDownLinks">
+                        <!-- small -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="smallSwanPlants.html">Small</a>
                         </li>
+                        <!-- medium -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="mediumSwanPlants.html">Medium</a>
                         </li>
+                        <!-- large -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="largeSwanPlants.html">Large</a>
                         </li>
+                        <!-- extra large -->
                         <li class="li_dropDownLinks">
                             <a class="a_dropDown" href="extraLargeSwanPlants.html">Extra Large</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <!-- care link -->
             <div class="d_headerLink" id="d_headerLinkCare">
                 <a class="a_change" href="care.html">Care</a>
-
             </div>
+            <!-- order link -->
             <div class="d_headerLink" id="d_headerLinkOrder">
                 <a class="a_change" href="order.html">Order</a>
             </div>
         </div>
     </header>
 
+    <!-- close view grid -->
     <div id="d_closeViewGrid">
 
+        <!-- image -->
         <div id="d_closeViewImage">
             <img id="i_closeViewSwanPlant" alt="image of the medium swan plants"
                 src="images/swanPlants/mediumSwanPlants.JPG">
         </div>
+        <!-- header -->
         <div id="d_closeViewHeader">
             <h1 id="h1_closeViewHeader">Medium Swan Plants</h1>
         </div>
+        <!-- price -->
         <div id="d_closeViewPrice">
             <h2 id="h2_closeViewPrice">$5 each</h2>
         </div>
+        <!-- description -->
         <div id="d_closeViewDes">
             <p id="p_closeViewDes">
                 Our Medium swan plants are perfect to add to your collection of swan plants, there size allows them to
@@ -69,11 +88,12 @@
             </p>
             <p id="p_closeViewDesHeight">Heights range from 60 to 70 cm </p>
         </div>
-          <!-- Links -->
+          <!-- order link  -->
         <div id="d_closeViewOrderLink" class="d_alignCenterVertHori">
             <a id="a_orderForm" class="a_closeView" href="order.html">Order here</a>
         </div>
     </div>
+    <!-- keep lookig link -->
     <div id="d_closeViewKeepLooking" class="d_alignCenterVertHori">
         <a id="a_keepLooking" class="a_closeView" onclick="history.back()">Keep looking</a>
     </div>
@@ -81,20 +101,27 @@
     <!-- Footer -->
     <footer>
         <div id="d_footerGrid">
+
+            <!-- quick links -->
             <div class="d_footerLinkGrid"> <a class="a_footer" href="index.html">Home</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="order.html">Order</a></div>
+            
+            <!-- contact seciton -->
             <div class="d_contactUsGrid">
 
                 <div id="d_contactUsBackground">
+                    <!-- contact header -->
                     <div id="d_contactUs">
                         <h4 id="h4_contactUs">Contact us</h4>
                     </div>
+                    <!-- email contact -->
                     <div id="d_contactEmail" class="d_alignCenterVertHori">
                         <img class="i_contactIcon" alt="email icon" src="images/emailIcon.png">
                         <a id="a_contactEmail" class="a_contact" target="_blank"
                             href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a>
                     </div>
+                    <!-- phone contact -->
                     <div id="d_contactPhone" class="d_alignCenterVertHori">
                         <img id="a_contactPhone" class="i_contactIcon" alt="phone icon" src="images/phoneIcon.png">
                         <a class="a_contact" target="_blank" href="tel:+640272546046">
@@ -102,6 +129,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- back to top -->
             <div id="d_backToTopGrid">
                 <img id="i_backToTop" alt="Back to top button" src="images/backToTopImage.png"
                     onclick='window.scrollTo({top: 0, behavior: "smooth"});'>

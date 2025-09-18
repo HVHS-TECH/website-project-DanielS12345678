@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- head -->
 <head>
     <title>Daniel's swan plants - Home</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -10,7 +11,7 @@
     <script src="scripts/fbP_manager.js"></script>
 </head>
 
-<body onload="fbP_dropDownLinksDisplay()">
+<body>
 
     <!-- first view is what the user first sees when load up the website -->
     <div id="d_firstView">
@@ -64,26 +65,32 @@
         </header>
         <!-- Main css grid user first sees this -->
         <div id="d_homeGridMain">
+            <!-- Main image -->
             <div id="d_homeMainImage">
                 <img id="i_homeMain" alt="A big image of swan plant with monarch butterfly on it"
                     src="images/home/mainImage.png">
 
             </div>
+
+            <!-- Main header -->
             <div id="d_homeHeader">
-
                 <h1 id="h1_homeMainHeader">Your garden, their lifeline</h1>
-
             </div>
+
+            <!-- Sub header-->
             <div id="d_homeSubHeader" class="d_alignCenterVertHori">
                 <h3 id="h3_subHeader"> Create a home for butterflies and bring life to your backyard, With these swan
                     plants.</h3>
             </div>
+            
+            <!-- Button -->
             <div id="d_homeTakeLookButton" class="d_alignCenterVertHori">
                 <button id="b_takeLook" onclick="window.location='view.html'">Take a look</button>
             </div>
         </div>
     </div>
 
+    <!-- Our story header -->
     <div id="d_homeStoryHeader">
         <h2 id="h2_Story">Our story</h2>
     </div>
@@ -91,10 +98,13 @@
     <!-- Story main flex -->
     <div id="d_homeStoryMainFlex">
 
+        <!-- Owner Image -->
         <div id="d_homeStoryImage">
             <img id="i_ownerImage" alt="Image of Daniel Saunders, owner of Daniel's swan plants"
                 src="images/home/ownerImage.jpg">
         </div>
+        
+        <!-- About us text -->
         <div id="d_homeStoryAboutUs">
             <p id="p_aboutUs">
                 Daniel’s swan plants was founded in September 2022, by Daniel Saunders with a vision to provide
@@ -133,38 +143,43 @@
     <!-- Footer -->
     <footer>
         <div id="d_footerGrid">
+            
+            <!-- Quick links -->
             <div class="d_footerLinkGrid"> <a class="a_footer" href="view.html">View</a> </div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="care.html">Care</a></div>
             <div class="d_footerLinkGrid"> <a class="a_footer" href="order.html">Order</a></div>
+           
+            <!-- Contact section -->
             <div class="d_contactUsGrid">
 
+                
                 <div id="d_contactUsBackground">
+                    <!-- Contact header -->
                         <div id="d_contactUs">
                             <h4 id="h4_contactUs">Contact us</h4>
                         </div>
+
+                        <!-- Email contact-->
                         <div id="d_contactEmail" class="d_alignCenterVertHori">
                             <img class="i_contactIcon" alt="email icon" src="images/emailIcon.png">
                              <a id="a_contactEmail" class="a_contact" target="_blank"
                                     href="mailto:daniel25.saunders@gmail.com"> daniel25.saunders@gmail.com</a>
                         </div>
+
+                        <!-- Phone contact -->
                         <div id="d_contactPhone" class="d_alignCenterVertHori">
                                 <img id="a_contactPhone" class="i_contactIcon" alt="phone icon" src="images/phoneIcon.png">
                                  <a class="a_contact" target="_blank"
                                         href="tel:+640272546046">
                                         +64 027 254 6046</a>
                         </div>
-                   
-
                 </div>
             </div>
+
+            <!-- Back to top -->
             <div id="d_backToTopGrid">
                 <img id="i_backToTop" alt="Back to top button" src="images/backToTopImage.png"
                     onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
-
-                <!-- <button class="b_backToTop"
-                    onclick='window.scrollTo({top: 0, behavior: "smooth"});' > <img class="i_backToTop"
-                        alt="Back to top Arrow" src="images/backToTopImage.png" ></button></div>
-      -->
             </div>
         </div>
     </footer>
@@ -172,51 +187,3 @@
 </body>
 
 </html>
-
-
-<!--
-    <div class="d_backgroundImage">
-         Css grid
-        <div id="d_homeGridMain">
-            <div id="d_homeHeader">
-                <header><h2>Daniel's swan plants</h2></header>
-            </div>
-             nav bar 
-            <div class="d_homeNavEdge"></div>
-            <div id="d_homeNav1" class="d_itemsCentre"><button class="b_current">Home</button></div>
-            <div id="d_homeNav2" class="d_itemsCentre"><button class="b_change">View</button></div>
-            <div id="d_homeNav3" class="d_itemsCentre"><button class="b_change">Care</button></div>
-            <div id="d_homeNav4" class="d_itemsCentre"><button class="b_change">Order</button></div>
-            <div class="d_homeNavEdge"></div>
-
-            <div id="d_gradSideLeft"></div>
-            <div id="d_grad"></div>
-            <div id="d_gradSideRight"></div>
-
-            <div id="d_aboutUs">
-                <div id="d_aboutUsTextCover">
-                    <h3>About us</h3>
-                    <p id="p_aboutUs">
-                        Daniel’s swan plants was founded in September 2022, by Daniel Saunders, with a vision to provide
-                        people with swan plants to feed their hungry caterpillars. What first started with 15 plants has
-                        expanded to over 500 swan plants and spread across 3 greenhouses. We have helped many people
-                        feed their hungry caterpillars and provide plants to attract monarch butterflies to their
-                        garden.
-                    </p>
-
-                </div>
-
-
-            </div>
-            <div id="d_map">
-              <img id="i_map" src="images/map.png"> 
-            </div>
-            <div class="d_homeExploreEdge"></div>
-            <div id="d_homeView"><button id="b_exploreView" class="b_explore">View the plants</button></div>
-            <div id="d_homeGet"> <button id="b_exploreGet" class="b_explore">Get yours here</button></div>
-            <div class="d_homeExploreEdge"></div>
-        </div>
-    </div>
-  
-
--->

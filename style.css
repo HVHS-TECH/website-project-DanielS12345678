@@ -19,7 +19,6 @@ GENERAL STYLES BELOW
 /********************************************************************************
 *********************************************************************************/
 
-
 body {
   margin: 0px;
   background-color: #dfeef4;
@@ -203,6 +202,8 @@ LINK STYLES BELOW
 HEADER STYLES BELOW 
 /*********************/
 /***********************************************************/
+
+/* header grid */
 .d_headerGrid {
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
@@ -212,18 +213,21 @@ HEADER STYLES BELOW
 
 }
 
+/* company */
 .d_headerCompany {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* link */
 .d_headerLink {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* grid items */
 #d_headerLinkHome {
   grid-area: 1/2/2/3;
 }
@@ -234,6 +238,14 @@ HEADER STYLES BELOW
   display: inline-block;
   text-align: center;
   align-self: center;
+}
+
+#d_headerLinkCare {
+  grid-area: 1/4/2/5;
+}
+
+#d_headerLinkOrder {
+  grid-area: 1/5/2/6;
 }
 
 /** drop down links **/
@@ -262,20 +274,13 @@ HEADER STYLES BELOW
   display: block;
 }
 
-#d_headerLinkCare {
-  grid-area: 1/4/2/5;
-}
-
-#d_headerLinkOrder {
-  grid-area: 1/5/2/6;
-}
-
-
 /***********************************************************/
 /*********************
 FOOTER STYLES BELOW 
 /*********************/
 /***********************************************************/
+
+/* footer grid */
 #d_footerGrid {
   display: grid;
   height: 100%;
@@ -284,12 +289,14 @@ FOOTER STYLES BELOW
 
 }
 
+/* quick links */
 .d_footerLinkGrid {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* contact us */
 .d_contactUsGrid {
   grid-area: 1/4/2/8;
   display: flex;
@@ -298,12 +305,13 @@ FOOTER STYLES BELOW
   padding: 2% 0% 2% 0%;
 }
 
+/* contact us background grid */
 #d_contactUsBackground {
   background-color: #EFFBF2;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.75fr 1fr;
-  height: 90%;
+  height: 100%;
   width: 85%;
   padding-bottom: 1.25%;
 }
@@ -312,6 +320,7 @@ FOOTER STYLES BELOW
   grid-area: 1/1/2/2;
 }
 
+/* contact header */
 #h4_contactUs {
   margin: 0%;
   margin-top: 1%;
@@ -326,6 +335,7 @@ FOOTER STYLES BELOW
   margin-bottom: 1.25%;
 }
 
+/* back to top */
 #d_backToTopGrid {
   grid-area: 1/8/2/10;
   display: flex;
@@ -336,24 +346,6 @@ FOOTER STYLES BELOW
 #i_backToTop:hover {
   cursor: pointer;
 }
-
-/****************************/
-#b_closeViewOrder {
-  font-size: 2.5vw;
-}
-
-#b_closeViewBack {
-  font-size: 1.5vw;
-}
-
-
-#b_closeViewOrder:hover,
-#b_closeViewBack:hover {
-  opacity: 80%;
-}
-
-
-
 
 /********************************************************************************
 *********************************************************************************
@@ -387,7 +379,6 @@ HOME PAGE STYLES BELOW
   border-width: 1px;
   border-color: #1B2019;
   height: 86.5vh;
-
 }
 
 #h1_homeMainHeader {
@@ -459,6 +450,7 @@ HOME PAGE STYLES BELOW
   grid-template-rows: 1fr 2.5fr;
 }
 
+/* top seller divs */
 #d_topSellerHead {
   grid-area: 1/1/2/9;
 }
@@ -514,16 +506,6 @@ HOME PAGE STYLES BELOW
 
 }
 
-/*** old grid
-#d_topSellerHead {
-  grid-area: 1/1/2/9;
-}
-
-#d_topSellerImg {
-  grid-area: 2/1/3/7;
-}
-**/
-
 /********************************************************************************
 *********************************************************************************
 /*********************
@@ -547,10 +529,19 @@ CARE PAGE STYLES BELOW
   text-decoration: underline;
 }
 
+.h3_effectOfPlants {
+  font-weight: normal;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* images on care page */
 .i_care {
   border: 1.25px solid black;
 }
 
+
+/* divs */
 .d_bugsImage {
   width: 50%;
 }
@@ -567,9 +558,6 @@ CARE PAGE STYLES BELOW
   width: 60%;
 }
 
-#p_toxicPlantExplain {
-  margin: 0 5% 0 5%;
-}
 
 #d_effectOfPlantsGrid {
   display: grid;
@@ -601,8 +589,6 @@ CARE PAGE STYLES BELOW
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-
 }
 
 #d_effectOfPlantsHumanList,
@@ -614,15 +600,6 @@ CARE PAGE STYLES BELOW
   grid-area: 3/2/4/3;
 }
 
-.h3_effectOfPlants {
-  font-weight: normal;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.li_effectOfPlants {
-  list-style-type: square;
-}
 
 .d_effectsOfSapFlex {
   display: flex;
@@ -633,7 +610,6 @@ CARE PAGE STYLES BELOW
   margin-top: 2%;
 }
 
-
 .d_effectsOfSapHeader {
   width: 30%;
 }
@@ -642,11 +618,17 @@ CARE PAGE STYLES BELOW
   width: 70%;
 }
 
+.li_effectOfPlants {
+  list-style-type: square;
+}
+
+#p_toxicPlantExplain {
+  margin: 0 5% 0 5%;
+}
+
 .h3_effetsOfSap {
   text-align: center;
 }
-
-
 
 /********************************************************************************
 *********************************************************************************
@@ -655,13 +637,14 @@ VIEW PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-
+/* view plant grid */
 #d_viewPlantsGrid {
   display: grid;
   margin-top: 1%;
   margin-bottom: 5%;
 }
 
+/* divs */
 .d_viewSwanPlants {
   margin: 7.5% 20% 5% 20%;
   border: 2px solid black;
@@ -676,20 +659,21 @@ VIEW PAGE STYLES BELOW
   height: 6.25%;
 }
 
+.d_viewSwanPlants:hover {
+  border: none;
+  cursor: pointer;
+}
+
+/* images */
 .i_swanPlant {
   height: 95%;
   width: 95%;
   margin: 2.5% 2.5% 1% 2.5%;
 }
 
+/* headers */
 .h3_swanPlant {
   text-align: center;
-
-}
-
-.d_viewSwanPlants:hover {
-  border: none;
-  cursor: pointer;
 }
 
 
@@ -700,30 +684,23 @@ CLOSE VIEW PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
-
+/* close view grid */
 #d_closeViewGrid {
   display: grid;
   grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr;
   margin: 5% 0% 2% 0%;
 }
 
-
+/* divs */
 #d_closeViewImage {
   grid-area: 1/1/5/2;
   border: 2px solid black;
   overflow: auto;
   white-space: nowrap;
-
   display: flex;
   justify-content: center;
-
 }
 
-#i_closeViewSwanPlant {
-  width: 100%;
-  height: 100%;
-  transform-origin: top left;
-}
 
 #d_closeViewHeader {
   grid-area: 1/2/2/3;
@@ -742,6 +719,19 @@ CLOSE VIEW PAGE STYLES BELOW
   grid-area: 4/2/5/3;
 }
 
+#d_closeViewKeepLooking {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+/* close view image */
+#i_closeViewSwanPlant {
+  width: 100%;
+  height: 100%;
+  transform-origin: top left;
+}
+
+/* links */
 .a_closeView {
   text-align: center;
 }
@@ -759,44 +749,10 @@ CLOSE VIEW PAGE STYLES BELOW
   transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
-#d_closeViewKeepLooking {
-  margin-top: 5%;
-  margin-bottom: 10%;
-}
 
 #a_keepLooking:hover {
   border-color: black;
   color: black;
-}
-
-/*
-b90e0a
-6E6868
-
-C9E1EB
-4F4B4B
-*/
-
-#b_closeViewOrder {
-  color: white;
-  /*   26530C*/
-  background-color: #16324F;
-  border-radius: 50px;
-  padding: 3%;
-}
-
-#b_closeViewOrder:hover,
-#b_closeViewBack:hover {
-  padding: 17.5px 17.5px;
-}
-
-
-
-#b_closeViewBack {
-  color: white;
-  background-color: #4F171B;
-  border-radius: 60px;
-  padding: 1.5%;
 }
 
 /********************************************************************************
@@ -806,38 +762,29 @@ ORDER PAGE STYLES BELOW
 /*********************/
 /********************************************************************************
 *********************************************************************************/
+
+/* Form is hidden due to checking for account */
+
 #d_formElements {
   display: none;
 }
 
-#d_checkingAcount,
-#d_orderComplete {
+/* check acocunt div */
+#d_checkingAcount {
   height: 100vh;
 }
 
-#d_orderComplete {
-  display: none;
-}
-
-
-#d_orderCompleteMainHeader {
-  margin-top: 10%;
-}
-
-.d_orderCompleteItems {
-  height: 20%;
-}
-
-
-#h3_conatctSoon {
-  text-align: center;
-}
-
-
+/* headers */
 #h1_orderFormHeader {
   text-decoration: underline;
 }
 
+#h4_orderPaymentNote {
+  text-align: center;
+}
+
+
+/* form divs */
 #d_orderForm {
   display: grid;
   border: 3px solid black;
@@ -848,6 +795,32 @@ ORDER PAGE STYLES BELOW
   margin-top: 2%;
 }
 
+.d_orderFormInputItem {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 70%;
+  height: 100%;
+}
+
+.d_orderFormLabelItem {
+  width: 30%;
+  height: 100%;
+}
+
+#d_orderFormButtons {
+  display: flex;
+}
+
+.d_orderButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  width: 50%;
+
+}
+
+/* form inputs */
 .in_orderForm {
   width: 80%;
   height: 50%;
@@ -870,35 +843,7 @@ ORDER PAGE STYLES BELOW
   box-shadow: 0 0 5px 2px #000000;
 }
 
-.d_orderFormInputItem {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  width: 70%;
-  height: 100%;
-}
-
-.d_orderFormLabelItem {
-  width: 30%;
-  height: 100%;
-}
-
-#h4_orderPaymentNote {
-  text-align: center;
-}
-
-#d_orderFormButtons {
-  display: flex;
-}
-
-.d_orderButton {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
-  width: 50%;
-
-}
-
+/* form buttons */
 #b_resetForm {
   background-color: #4F171B;
 }
@@ -913,19 +858,10 @@ ORDER PAGE STYLES BELOW
   width: 40%;
 }
 
-
-
 #b_resetForm:hover,
 #b_submitOrderForm:hover {
   opacity: 60%;
 }
-
-#b_homeAfterOrder {
-  width: 20%;
-  background-color: black;
-}
-
-
 
 /********** LARGE SCREEN SIZE CSS GRID BELOW **********/
 /****************************************************************************************************/
@@ -933,28 +869,13 @@ ORDER PAGE STYLES BELOW
 /********** Large screen size **********/
 @media (min-width:850px) {
 
-  .i_navIcon {
-    width: 40%;
-    height: 75%;
-  }
-
-  #i_backToTop {
-    height: 80%;
-    width: 50%
-  }
-
-  .a_dropDown {
-    font-size: 1.5vw;
-  }
-
   /***********************************************************/
   /*********************
-HOME PAGE STYLES BELOW 
+MULTIPLE PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
-  /*** header ***/
-
+  /* nav bar */
   #h3_navHeader {
     font-size: 3vw;
   }
@@ -964,101 +885,11 @@ HOME PAGE STYLES BELOW
     font-size: 2.5vw;
   }
 
-  /********** Main Css grid ********/
-  #d_homeGridMain {
-    grid-template-columns: 2fr repeat(3, 1fr);
-    grid-template-rows: 2fr 1fr 1.25fr;
+  .a_dropDown {
+    font-size: 1.5vw;
   }
 
-  #d_homeMainImage {
-    grid-area: 1/1/4/2;
-  }
-
-  #d_homeHeader {
-    grid-area: 1/2/2/6;
-  }
-
-  #h1_homeMainHeader {
-    font-size: 7.5vw;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-    padding-bottom: 1%;
-  }
-
-
-  #d_homeSubHeader {
-    grid-area: 2/2/3/6;
-  }
-
-  #h3_subHeader {
-    font-size: 5vh;
-  }
-
-
-  #d_homeTakeLookButton {
-    grid-area: 3/2/4/6;
-  }
-
-  #b_takeLook {
-    font-size: 3.5vw;
-    /*margin-top: 4%; */
-  }
-
-  /********************************/
-
-  /********** Story flex boxes ********/
-
-  #d_homeStoryHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #h2_Story {
-    font-size: 9vw;
-    margin-top: 2%;
-    margin-bottom: 1.5%;
-  }
-
-  /*** Main ***/
-
-  #d_homeStoryImage {
-    width: 35%;
-  }
-
-  #d_homeStoryAboutUs {
-    width: 65%;
-  }
-
-
-  #p_aboutUs {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 1.75vw;
-  }
-
-
-  /********************************/
-
-  /********** Top seller Css grid ********/
-  /* og grid **
-  #d_homeGridTopSeller {
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-    grid-template-rows: 1fr 3fr;
-    border-bottom: black;
-  }
-*/
-
-  #h1_topSeller {
-    font-size: 9vw;
-    margin-top: 3%;
-    margin-bottom: 1.5%;
-  }
-
-
-  /**** footer ****/
+  /* footer */
   .a_footer {
     font-size: 3vw;
   }
@@ -1068,8 +899,8 @@ HOME PAGE STYLES BELOW
   }
 
   .i_contactIcon {
-    width: 2.75vw;
-    height: 4.25vh;
+    width: 2.5vw;
+    height: 4vh;
     margin-right: 2%;
   }
 
@@ -1081,6 +912,102 @@ HOME PAGE STYLES BELOW
     margin-top: 0.5%;
   }
 
+  #i_backToTop {
+    height: 80%;
+    width: 50%
+  }
+
+
+
+  /***********************************************************/
+  /*********************
+HOME PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+
+  /********** Main Css grid ********/
+  #d_homeGridMain {
+    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr 1.25fr;
+  }
+
+  /* grid divs */
+  #d_homeMainImage {
+    grid-area: 1/1/4/2;
+  }
+
+  #d_homeHeader {
+    grid-area: 1/2/2/6;
+  }
+
+  #d_homeSubHeader {
+    grid-area: 2/2/3/6;
+  }
+
+  #d_homeTakeLookButton {
+    grid-area: 3/2/4/6;
+  }
+
+
+  /* headers */
+  #h1_homeMainHeader {
+    font-size: 7.5vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    padding-bottom: 1%;
+  }
+
+  #h3_subHeader {
+    font-size: 5vh;
+  }
+
+  /* take a look button */
+  #b_takeLook {
+    font-size: 3.5vw;
+  }
+
+  /********************************/
+  /********** Story flex boxes ********/
+
+  /* story header div */
+  #d_homeStoryHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* story header */
+  #h2_Story {
+    font-size: 9vw;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+  }
+
+  /* divs */
+  #d_homeStoryImage {
+    width: 35%;
+  }
+
+  #d_homeStoryAboutUs {
+    width: 65%;
+  }
+
+  /* about us paragraph */
+  #p_aboutUs {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.75vw;
+  }
+
+  /* top seller header */
+  #h1_topSeller {
+    font-size: 9vw;
+    margin-top: 3%;
+    margin-bottom: 1.5%;
+  }
+
 
   /***********************************************************/
   /*********************
@@ -1088,6 +1015,7 @@ Care PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* care headers */
   .h1_care {
     font-size: 5vw;
   }
@@ -1096,15 +1024,46 @@ Care PAGE STYLES BELOW
     margin-top: 4%;
   }
 
-
   .h2_careDes {
     font-size: 3.5vw;
     text-underline-offset: 20px;
   }
 
+  #h2_toxicPlant {
+    margin-top: 0%;
+  }
+
+  .h3_effectOfPlants {
+    font-size: 2.25vw;
+  }
+
+  .h3_effetsOfSap {
+    font-size: 2.25vw;
+    float: right;
+    margin-right: 5%;
+  }
+
+  /* care paragraphs */
   .p_careDes {
     font-size: 1.5vw;
     margin: 5% 5% 0 5%;
+  }
+
+  #p_effectOfPlant {
+    margin-top: 1.5%;
+  }
+
+  .p_effectOfSap {
+    font-size: 1.6vw;
+  }
+
+  #p_effectOfSapTopCut {
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+
+  #p_effectOfSapToxicPlant {
+    margin-left: 10%;
   }
 
   /** care for grid **/
@@ -1114,6 +1073,7 @@ Care PAGE STYLES BELOW
     grid-template-rows: repeat(3, 1fr);
   }
 
+  /* care divs take care */
   #d_greenhouseImage {
     grid-area: 1/1/2/5;
   }
@@ -1138,6 +1098,7 @@ Care PAGE STYLES BELOW
     grid-area: 3/5/4/11;
   }
 
+  /* care images */
   #i_greenhouseMade {
     width: 80%;
     height: 70%;
@@ -1159,7 +1120,6 @@ Care PAGE STYLES BELOW
 
   }
 
-
   /** problem grid **/
   #d_carePlantsProblemGrid {
     display: grid;
@@ -1168,6 +1128,7 @@ Care PAGE STYLES BELOW
     margin-bottom: 5%;
   }
 
+  /* care divs problems */
   #d_bugsDes {
     grid-area: 1/1/2/2;
   }
@@ -1176,7 +1137,6 @@ Care PAGE STYLES BELOW
     display: flex;
     grid-area: 1/2/2/3;
   }
-
 
   .d_bugsImage {
     padding-top: 10%;
@@ -1202,44 +1162,13 @@ Care PAGE STYLES BELOW
     grid-area: 2/1/3/3;
   }
 
-  #p_effectOfPlant {
-    margin-top: 1.5%;
-  }
-
-  #h2_toxicPlant {
-    margin-top: 0%;
-  }
-
-  .h3_effectOfPlants {
-    font-size: 2.25vw;
-  }
-
-  .li_effectOfPlants {
-    font-size: 1.5vw;
-  }
-
   .d_effectsOfSapFlex {
     margin-top: 0%;
   }
 
-  .h3_effetsOfSap {
-    font-size: 2.25vw;
-    float: right;
-    margin-right: 5%;
-  }
-
-
-  .p_effectOfSap {
-    font-size: 1.6vw;
-  }
-
-  #p_effectOfSapTopCut {
-    margin-right: 5%;
-    margin-left: 2%;
-  }
-
-  #p_effectOfSapToxicPlant {
-    margin-left: 10%;
+  /* effects list */
+  .li_effectOfPlants {
+    font-size: 1.5vw;
   }
 
   /***********************************************************/
@@ -1247,16 +1176,24 @@ Care PAGE STYLES BELOW
 View PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+  /* view headers */
   #h1_ourProducts {
     margin-top: 2%;
     font-size: 6vw;
   }
 
+  .h3_swanPlant {
+    font-size: 1.5vw;
+  }
+
+
+  /* view grid */
   #d_viewPlantsGrid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 
+  /* view grid divs */
   #d_smallSwanPlant {
     grid-area: 1/1/2/2;
   }
@@ -1273,9 +1210,6 @@ View PAGE STYLES BELOW
     grid-area: 2/2/3/3;
   }
 
-  .h3_swanPlant {
-    font-size: 1.5vw;
-  }
 
   /***********************************************************/
   /*********************
@@ -1283,16 +1217,7 @@ CLOSE VIEW PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
-  #d_closeViewGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #d_closeViewImage {
-    width: 70%;
-    height: 90%;
-    margin-left: 15%;
-  }
-
+  /* headers */
   #h1_closeViewHeader {
     font-size: 4.75vw;
   }
@@ -1301,11 +1226,25 @@ CLOSE VIEW PAGE STYLES BELOW
     font-size: 2.75vw;
   }
 
+  /* clsoe view grid */
+  #d_closeViewGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* close view image grid */
+  #d_closeViewImage {
+    width: 70%;
+    height: 90%;
+    margin-left: 15%;
+  }
+
+  /* paragraphs */
   #p_closeViewDes,
   #p_closeViewDesHeight {
     font-size: 1.9vw;
   }
 
+  /* links */
   #a_orderForm {
     font-size: 3.75vw;
     font-weight: bolder;
@@ -1320,43 +1259,34 @@ CLOSE VIEW PAGE STYLES BELOW
 ORDER VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+
+  /* order headers */
   #h1_orderFormHeader {
     margin: 5% 0% 4% 0%;
     font-size: 6vw;
     text-underline-offset: 17.5px;
-
   }
 
-  .h2_statusUpdate {
-    font-size: 5vw;
+  #h4_orderPaymentNote {
+    font-size: 1.75vw;
+    margin: 3% 0% 4% 0%;
   }
 
 
-  #h3_conatctSoon {
-    font-size: 3vw;
-  }
-
+  /* order form grid */
   #d_orderForm {
-    margin-top: 2%;
-    margin-bottom: 15%;
-    margin-left: 15%;
-
+    margin: 2% 0% 15% 15%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr repeat(6, 0.75fr) 0.25fr;
+    grid-template-rows: 1fr repeat(6, 0.75fr);
     padding-top: 1%;
     width: 70%;
   }
 
+  /* order from divs */
   .d_orderFormInputItem {
     justify-content: center;
   }
 
-  /*
-#d_orderHeader{
-  grid-area:1/1/2/3;
-}
-
-*/
   #d_orderFormNameItem {
     grid-area: 1/1/2/2;
   }
@@ -1392,8 +1322,11 @@ ORDER VIEW PAGE STYLES BELOW
     grid-area: 7/1/8/3;
   }
 
+  #d_orderFormButtons {
+    margin-bottom: 3%;
+  }
 
-
+  /* order form labels and inputs */
   .l_orderForm {
     font-size: 3vw;
   }
@@ -1402,22 +1335,11 @@ ORDER VIEW PAGE STYLES BELOW
     font-size: 1.5vw;
   }
 
-  #h4_orderPaymentNote {
-    font-size: 1.75vw;
-    margin: 3% 0% 4% 0%;
-  }
-
+  /* order form buttons */
   .b_order {
     font-size: 4vw;
     padding: 0% 1.25% 0% 1.25%;
   }
-
-  #d_orderFormButtons {
-    margin-bottom: 3%;
-  }
-
-
-
 }
 
 
@@ -1427,16 +1349,13 @@ ORDER VIEW PAGE STYLES BELOW
 /****************************************************************************************************/
 @media (max-width:950px) {
 
-
+  /* order from grid */
   #d_orderForm {
-    margin-top: 2%;
-    margin-bottom: 15%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
     width: 75%;
     margin-left: 12.5%;
   }
-
 }
 
 
@@ -1447,17 +1366,20 @@ ORDER VIEW PAGE STYLES BELOW
 /********** Medium screen size **********/
 @media (max-width:850px) {
 
+    /***********************************************************/
+  /*********************
+MULTIPLE PAGE STYLES BELOW 
+/*********************/
+  /***********************************************************/
+
+  /* general header */
   h2 {
     margin: 0px;
     margin-bottom: 1%;
     text-align: center;
   }
 
-  /***********************************************************/
-  /*********************
-HEADER STYLES BELOW 
-/*********************/
-  /***********************************************************/
+  /* header */
   #h3_navHeader {
     font-size: 3.5vw;
   }
@@ -1477,21 +1399,13 @@ HEADER STYLES BELOW
     font-size: 2.5vw;
   }
 
-  #i_backToTop {
-    height: 80%;
-    width: 75%
-  }
-
-
-  /***********************************************************/
-  /*********************
-FOOTER STYLES BELOW 
-/*********************/
-  /***********************************************************/
+  /* footer */
   .d_footerLinkGrid {
     display: none;
   }
 
+
+  /* contact divs */
   .d_contactUsGrid {
     grid-area: 1/1/2/8;
   }
@@ -1499,18 +1413,11 @@ FOOTER STYLES BELOW
   #d_contactUsBackground {
     grid-template-columns: 1fr;
     grid-template-rows: 0.75fr 1fr 1fr;
-    height: 85%;
     width: 95%;
   }
 
   #d_contactUs {
     grid-area: 1/1/2/3;
-  }
-
-  .i_contactIcon {
-    width: 3vw;
-    height: 4vh;
-    margin-right: 4%;
   }
 
   #d_contactEmail {
@@ -1524,12 +1431,28 @@ FOOTER STYLES BELOW
     grid-area: 3/1/4/3;
   }
 
+  /* contact header */
   #h4_contactUs {
     font-size: 3.5vw;
   }
 
+  /* contact icon */
+  .i_contactIcon {
+    width: 3vw;
+    height: 4vh;
+    margin-right: 4%;
+  }
+
+  /* contact link */
   .a_contact {
     font-size: 2.25vw;
+    margin-bottom: 0%;
+  }
+
+  /* drop down */
+  #i_backToTop {
+    height: 80%;
+    width: 75%
   }
 
 
@@ -1545,6 +1468,7 @@ HOME PAGE STYLES BELOW
     grid-template-rows: 3fr 2fr 1fr;
   }
 
+  /* main divs */
   #d_homeMainImage {
     grid-area: 1/1/6/2;
   }
@@ -1553,16 +1477,21 @@ HOME PAGE STYLES BELOW
     grid-area: 1/2/2/6;
   }
 
+
+  #d_homeSubHeader {
+    grid-area: 2/2/3/6;
+  }
+
+  #d_homeTakeLookButton {
+    grid-area: 3/2/4/6;
+  }
+
+
+  /* main header */
   #h1_homeMainHeader {
     font-size: 8.25vw;
     margin-left: 2%;
     margin-right: 2%;
-    padding-bottom: 7.5%;
-  }
-
-
-  #d_homeSubHeader {
-    grid-area: 2/2/3/6;
   }
 
   #h3_subHeader {
@@ -1570,10 +1499,7 @@ HOME PAGE STYLES BELOW
     margin: 0% 5% 5% 5%;
   }
 
-  #d_homeTakeLookButton {
-    grid-area: 3/2/4/6;
-  }
-
+  /* take a look button */
   #b_takeLook {
     font-size: 5vw;
     padding: 2.5%;
@@ -1582,16 +1508,13 @@ HOME PAGE STYLES BELOW
   /********************************/
   /********** Story Css grid ********/
 
+
+  /* story divs */
   #d_homeStoryHeader {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  #h2_Story {
-    font-size: 12vw;
-  }
-
 
   #d_homeStoryImage {
     width: 40%;
@@ -1601,36 +1524,39 @@ HOME PAGE STYLES BELOW
     width: 60%;
   }
 
+  /* story header */
+  #h2_Story {
+    font-size: 12vw;
+  }
+
+  /* story paragraph */
   #p_aboutUs {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 2.25vw;
   }
 
-
-
   /********************************/
-
   /********** Top seller Css grid ********/
 
+  /* top seller headers */
   #h1_topSeller {
     font-size: 12vw;
     margin-top: 2%;
   }
 
-  #i_topSeller {
-    width: 75%;
-  }
-
-  /* header */
   #h3_topSeller {
     margin-top: 10%;
   }
 
-  /* price */
   #h4_topSeller {
     margin-top: 15%;
     margin-bottom: 10%;
+  }
+
+  /* top seller image */
+  #i_topSeller {
+    width: 75%;
   }
 
 
@@ -1640,6 +1566,7 @@ HOME PAGE STYLES BELOW
   /*********************/
   /***********************************************************/
 
+  /* care headers */
   .h1_care {
     font-size: 7vw;
   }
@@ -1663,6 +1590,20 @@ HOME PAGE STYLES BELOW
   }
 
 
+  #h2_toxicPlant {
+    margin-top: 5%;
+  }
+
+
+  .h3_effectOfPlants {
+    font-size: 3.5vw;
+  }
+
+  .h3_effetsOfSap {
+    font-size: 3vw;
+  }
+
+  /* care paragraphs */
   .p_careDes {
     font-size: 2.75vw;
     margin: 7.5% 5% 0 5%;
@@ -1676,6 +1617,12 @@ HOME PAGE STYLES BELOW
     margin-bottom: 5%;
   }
 
+
+  .p_effectOfSap {
+    margin-right: 5%;
+  }
+
+  /* care divs */
   #d_carePlantsGrowGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1707,21 +1654,6 @@ HOME PAGE STYLES BELOW
     grid-area: 6/1/7/2;
   }
 
-  #i_greenhouseMade {
-    width: 75%;
-    height: 80%;
-  }
-
-  #i_soil {
-    width: 60%;
-    height: 85%;
-  }
-
-  #i_topCut {
-    width: 60%;
-    height: 80%;
-  }
-
   #d_carePlantsProblemGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1740,7 +1672,26 @@ HOME PAGE STYLES BELOW
 
   #d_toxicPlantDes {
     grid-area: 3/1/4/2;
+  }
 
+  .d_effectsOfSapFlex {
+    margin-top: 0%;
+  }
+
+  /* story images */
+  #i_greenhouseMade {
+    width: 75%;
+    height: 80%;
+  }
+
+  #i_soil {
+    width: 60%;
+    height: 85%;
+  }
+
+  #i_topCut {
+    width: 60%;
+    height: 80%;
   }
 
   .i_bugs {
@@ -1748,29 +1699,9 @@ HOME PAGE STYLES BELOW
     height: 75%;
   }
 
-  #h2_toxicPlant {
-    margin-top: 5%;
-  }
-
-
-  .h3_effectOfPlants {
-    font-size: 3.5vw;
-  }
-
+  /* care list */
   .li_effectOfPlants {
     font-size: 2.5vw;
-  }
-
-  .d_effectsOfSapFlex {
-    margin-top: 0%;
-  }
-
-  .h3_effetsOfSap {
-    font-size: 3vw;
-  }
-
-  .p_effectOfSap {
-    margin-right: 5%;
   }
 
   /***********************************************************/
@@ -1778,21 +1709,25 @@ HOME PAGE STYLES BELOW
   VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
+
+  /* headers */
   #h1_ourProducts {
     margin-top: 2.5%;
     font-size: 8vw;
   }
 
+  .h3_swanPlant {
+    font-size: 2.25vw;
+  }
+
+  /* view plant grid */
   #d_viewPlantsGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     margin-bottom: 13.5%;
   }
 
-  .d_viewSwanPlants {
-    margin-top: 10%;
-  }
-
+  /* grid divs */
   #d_smallSwanPlant {
     grid-area: 1/1/2/2;
   }
@@ -1809,27 +1744,18 @@ HOME PAGE STYLES BELOW
     grid-area: 2/2/3/3;
   }
 
-  .h3_swanPlant {
-    font-size: 2.25vw;
+  /* view swan plant div */
+  .d_viewSwanPlants {
+    margin-top: 10%;
   }
-
-
 
   /***********************************************************/
   /*********************
   CLOSE VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
-  #d_closeViewGrid {
-    grid-template-columns: 0.75fr 1fr;
-  }
 
-  #d_closeViewImage {
-    width: 80%;
-    height: 65%;
-    margin: 20% 0% 0% 7.5%;
-  }
-
+  /* headers */
   #h1_closeViewHeader {
     font-size: 5.5vw;
   }
@@ -1838,11 +1764,25 @@ HOME PAGE STYLES BELOW
     font-size: 3.5vw;
   }
 
+  /* close view grid */
+  #d_closeViewGrid {
+    grid-template-columns: 0.75fr 1fr;
+  }
+
+  /* image div */
+  #d_closeViewImage {
+    width: 80%;
+    height: 65%;
+    margin: 20% 0% 0% 7.5%;
+  }
+
+  /* paragraph */
   #p_closeViewDes,
   #p_closeViewDesHeight {
     font-size: 2.5vw;
   }
 
+  /* links */
   #a_orderForm {
     font-size: 4.25vw;
   }
@@ -1857,21 +1797,19 @@ ORDER VIEW PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* headers */
   #h1_orderFormHeader {
     margin: 5.5% 0% 4.5% 0%;
     font-size: 8vw;
     text-underline-offset: 12.5px;
   }
 
-
-  .h2_statusUpdate {
-    font-size: 8vw;
+  #h4_orderPaymentNote {
+    font-size: 2.5vw;
+    margin: 5% 0% 6% 0%;
   }
 
-  #h3_conatctSoon {
-    font-size: 6vw;
-  }
-
+  /* order grid */
   #d_orderForm {
     grid-template-rows: repeat(6, 1fr) 0.25fr 1fr;
     margin-top: 4%;
@@ -1881,7 +1819,7 @@ ORDER VIEW PAGE STYLES BELOW
     width: 80%;
   }
 
-
+  /* from label and input */
   .l_orderForm {
     font-size: 4vw;
   }
@@ -1891,18 +1829,16 @@ ORDER VIEW PAGE STYLES BELOW
     padding: 1%;
   }
 
-  #h4_orderPaymentNote {
-    font-size: 2.5vw;
-    margin: 5% 0% 6% 0%;
+
+  /* order form buttons */
+  #d_orderFormButtons {
+    margin-bottom: 2%;
   }
 
+  /* form buttons */
   .b_order {
     font-size: 4vw;
     padding: 1% 1.25% 1% 1.25%;
-  }
-
-  #d_orderFormButtons {
-    margin-bottom: 2%;
   }
 }
 
@@ -1913,31 +1849,43 @@ ORDER VIEW PAGE STYLES BELOW
 /****************************************************************************************************/
 @media (max-width:705px) {
 
-
   /***********************************************************/
   /*********************
-FOOTER STYLES BELOW 
+MULTIPLE PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
+/** footer **/
+
+  /* contact header */
   #h4_contactUs {
     font-size: 3.5vw;
+    margin-top: 0%;
+    margin-bottom: 1%;
   }
 
+  /* contact divs */
   #d_contactEmail {
     margin-bottom: 0.5%;
   }
 
+  #d_contactPhone {
+    padding: 0.5%;
+  }
+
+  /* contact icon */
   .i_contactIcon {
     width: 4vw;
     height: 2vh;
     margin-right: 4%;
   }
 
+  /* contact link */
   .a_contact {
     font-size: 2.5vw;
   }
 
+  /* back to top */
   #i_backToTop {
     height: 80%;
     width: 80%
@@ -1949,6 +1897,50 @@ HOME PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+
+  /* headers */
+  #h1_homeMainHeader {
+    font-size: 15vw;
+    margin: 0% 2.5% 2.5% 2.5%;
+  }
+
+  #h1_topSeller {
+    font-size: 16vw;
+    margin: 0%;
+  }
+
+  #h3_subHeader {
+    font-size: 5.5vw;
+    margin: 0% 12% 0% 12%;
+
+  }
+
+  #h3_topSeller {
+    font-size: 9vw;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #h4_topSeller {
+    font-size: 6vw;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+  }
+
+  /* owner image */
+  #i_ownerImage {
+    width: 75%;
+  }
+
+  /* our story paragraph */
+  #p_aboutUs {
+    font-size: 2.5vw;
+  }
+
+
+
   /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
@@ -1956,7 +1948,8 @@ HOME PAGE STYLES BELOW
     height: 90vh;
   }
 
-  /** image is hiden on a phone like screen **/
+  /** divs **/
+  /* image is hiden on a phone like screen */
   #d_homeMainImage {
     display: none;
   }
@@ -1969,22 +1962,16 @@ HOME PAGE STYLES BELOW
 
   #d_homeSubHeader {
     grid-area: 2/1/3/6;
+    align-items: flex-start;
   }
 
   #d_homeTakeLookButton {
     grid-area: 3/1/4/6;
+    align-items: flex-start;
+    padding-top: 4%;
   }
 
-  #h1_homeMainHeader {
-    font-size: 15vw;
-    margin: 0% 2.5% 2.5% 2.5%;
-  }
-
-  #h3_subHeader {
-    font-size: 6vw;
-    margin: 0% 12% 5% 12%;
-  }
-
+  /* top seller */
   #d_homeGridTopSeller {
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
@@ -2005,32 +1992,13 @@ HOME PAGE STYLES BELOW
     margin-bottom: 15%;
   }
 
-  #h1_topSeller {
-    font-size: 15vw;
-    margin: 0%;
-  }
-
+  /* top sller image */
   #i_topSeller {
     height: 80%;
     width: 75%;
     margin-top: 7.5%;
   }
 
-  /* header */
-  #h3_topSeller {
-    font-size: 9vw;
-    text-align: center;
-    margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  /* price */
-  #h4_topSeller {
-    font-size: 6vw;
-    margin-top: 7.5%;
-    margin-bottom: 7.5%;
-  }
 
   /***********************************************************/
   /*********************
@@ -2038,10 +2006,12 @@ CARE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* header */
   .h2_careDes {
     text-underline-offset: 15px;
   }
 
+  /* effct of sap div */
   .d_effectsOfSapFlex {
     margin-top: 3%;
   }
@@ -2051,7 +2021,7 @@ CARE PAGE STYLES BELOW
 VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
-
+  /* view plants div */
   .d_viewSwanPlants {
     margin-top: 15%;
   }
@@ -2062,11 +2032,22 @@ CLOSE VIEW PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* headers */
+  #h1_closeViewHeader {
+    font-size: 8vw;
+  }
+
+  #h2_closeViewPrice {
+    font-size: 6vw;
+  }
+
+  /* close view grid */
   #d_closeViewGrid {
     grid-template-rows: 2.5fr 0.5fr 0.25fr 0.75fr 0.25fr;
     grid-template-columns: 1fr;
   }
 
+  /* close view gird divs */
   #d_closeViewImage {
     width: 70%;
     height: 90%;
@@ -2091,24 +2072,19 @@ CLOSE VIEW PAGE STYLES BELOW
     grid-area: 5/1/6/2;
   }
 
+  /* keep looking div */
   #d_closeViewKeepLooking {
     margin-top: 7.5%;
     margin-bottom: 15%;
   }
 
-  #h1_closeViewHeader {
-    font-size: 8vw;
-  }
-
-  #h2_closeViewPrice {
-    font-size: 6vw;
-  }
-
+  /* paragraphs */
   #p_closeViewDes,
   #p_closeViewDesHeight {
     font-size: 3vw;
   }
 
+  /* order link */
   #a_orderForm {
     font-size: 7vw;
   }
@@ -2120,6 +2096,7 @@ ORDER PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* header */
   #h1_orderFormHeader {
     text-underline-offset: 10px;
   }
@@ -2140,15 +2117,22 @@ MULTIPLE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
-  /*********************
-HEADER STYLES BELOW 
-/*********************/
+/** header **/
 
-header{
-  border-radius:25px;
-   height: 10vh;
-}
+  header {
+    border-radius: 25px;
+    height: 10vh;
+  }
 
+  /*** heading ***/
+  h2 {
+    margin: 0px;
+    margin-bottom: 1.5%;
+    text-align: center;
+  }
+
+
+  /* nav divs */
   .d_headerCompany {
     display: none;
   }
@@ -2165,6 +2149,11 @@ header{
     grid-area: 1/2/2/3;
   }
 
+  #d_dropDownLinks {
+    padding: 0% 7.5% 20% 7.5%;
+    width: auto;
+  }
+
   #d_headerLinkCare {
     grid-area: 1/3/2/4;
   }
@@ -2173,32 +2162,20 @@ header{
     grid-area: 1/4/2/5;
   }
 
+  /* nav links */
   .a_change,
   .a_current {
     font-size: 5vw;
   }
 
-
-  #d_dropDownLinks {
-    padding: 0% 7.5% 20% 7.5%;
-    width: auto;
-  }
-
+  /* drop down list */
   .li_dropDownLinks {
     margin-top: 20%;
   }
 
-
+  /* drop donw links */
   .a_dropDown {
     font-size: 4.75vw;
-  }
-
-
-  /*** headings ***/
-  h2 {
-    margin: 0px;
-    margin-bottom: 1.5%;
-    text-align: center;
   }
 
   /***********************************************************/
@@ -2207,10 +2184,27 @@ HOME PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* headers */
+  #h1_homeMainHeader {
+    font-size: 16vw;
+    padding-bottom: 7.5%;
+    margin: 0% 2.5% 2.5% 2.5%;
+  }
+
+  #h2_Story,
+  #h1_topSeller {
+    font-size: 17vw;
+  }
+
+  #h3_subHeader {
+    font-size: 7vw;
+    margin: 0% 10% 1% 10%;
+  }
+
   /********** Main Css grid ********/
   #d_homeGridMain {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 1.5fr 1fr;
+    grid-template-rows: 2fr 1.25fr 1fr;
     height: 90vh;
   }
 
@@ -2219,16 +2213,11 @@ HOME PAGE STYLES BELOW
     display: none;
   }
 
-/* main header **/
+  /* main header **/
   #d_homeHeader {
     grid-area: 1/1/2/6;
     display: flex;
     align-items: center;
-  }
-/** Main heading **/
-  #h1_homeMainHeader {
-    font-size: 16vw;
-    margin: 0% 2.5% 2.5% 2.5%;
   }
 
   /** sub header **/
@@ -2236,25 +2225,16 @@ HOME PAGE STYLES BELOW
     grid-area: 2/1/3/6;
   }
 
-  /** sub heading **/
-  #h3_subHeader {
-    font-size: 7vw;
-    margin: 0% 10% 5% 10%;
-  }
-
   /** div for take a close look button **/
   #d_homeTakeLookButton {
     grid-area: 3/1/4/6;
-    align-items:start;
+    align-items: start;
   }
 
-    #b_takeLook {
+  /* take a look button */
+  #b_takeLook {
     font-size: 7vw;
-    
   }
-
-  /********************************/
-  /********** Story Css grid ********/
 
   /** d_homeStoryMainFlex was a flex on the 2 large screen sizes but is now a grid on the small screen size **/
   #d_homeStoryMainFlex {
@@ -2265,7 +2245,6 @@ HOME PAGE STYLES BELOW
   }
 
   /** d_homeStoryImage held the image of the owner and now is on top  **/
-
   #d_homeStoryImage {
     grid-area: 1/1/2/2;
   }
@@ -2275,23 +2254,16 @@ HOME PAGE STYLES BELOW
     grid-area: 2/1/3/2;
   }
 
-  #h2_Story {
-    font-size: 14vw;
-  }
-
+  /* story image and about us divs */
   #d_homeStoryImage {
     width: 100%;
-  }
-
-  #i_ownerImage {
-    width: 75%;
   }
 
   #d_homeStoryAboutUs {
     width: 100%;
   }
 
-
+/* about us paragraph */
   #p_aboutUs {
     margin-left: 10%;
     margin-right: 10%;
@@ -2300,20 +2272,20 @@ HOME PAGE STYLES BELOW
     font-size: 4.75vw;
   }
 
-  /********************************/
-
-  /********** Top seller Css grid ********/
-
+  /* owner and top seller images */
+  #i_ownerImage {
+    width: 75%;
+  }
 
   #i_topSeller {
     height: 80%;
     margin-top: 7.5%;
   }
 
-  
-#b_topSeller {
-  font-size: 5vw;
-}
+  /* top seller button */
+  #b_topSeller {
+    font-size: 5vw;
+  }
 
   /***********************************************************/
   /*********************
@@ -2321,32 +2293,37 @@ CARE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
+  /* headers */
   #h1_careGrow {
     margin-top: 15%;
     font-size: 7vw;
-
   }
 
   #h2_greenHouse {
     margin-top: 2.5%;
   }
 
+   .h2_careDes {
+    text-underline-offset: 10px;
+    font-size: 6.5vw;
+  }
+
+  .h3_effectOfPlants {
+    font-size: 5.75vw;
+  }
+
+   .h3_effetsOfSap {
+    font-size: 5vw;
+  }
+
+  /* plant grow grid */
   #d_carePlantsGrowGrid {
     margin-top: 10%;
     grid-template-rows: 0.85fr 0.75fr 1fr 0.75fr 0.9fr 0.75fr;
   }
 
-  .h2_careDes {
-    text-underline-offset: 10px;
-    font-size: 6.5vw;
-  }
-
-  .p_careDes {
-    font-size: 4.75vw;
-    margin: 10% 7.5% 0% 7.5%;
-  }
-
-  .d_effectsOfSapHeader {
+  /* divs */
+ .d_effectsOfSapHeader {
     width: 40%;
   }
 
@@ -2354,10 +2331,23 @@ CARE PAGE STYLES BELOW
     width: 60%;
   }
 
+   .d_effectOfPlantsList {
+    margin-right: 5%;
+  }
+ 
+   .d_effectsOfSapDes {
+    margin-right: 5%;
+  }
+
+/* paragraphs */
+  .p_careDes {
+    font-size: 4.75vw;
+    margin: 10% 7.5% 0% 7.5%;
+  }
+
   #p_effectOfPlant {
     margin-top: 8.5%;
     margin-bottom: 4%;
-
   }
 
   .p_effectOfSap {
@@ -2368,24 +2358,16 @@ CARE PAGE STYLES BELOW
     margin-top: 5%;
   }
 
-  .h3_effectOfPlants {
-    font-size: 5.75vw;
+  #p_toxicPlantExplain {
+    margin: 5% 7.5% 0% 7.5%;
   }
 
+ /* list */
   .li_effectOfPlants {
     font-size: 3.75vw;
   }
 
-  .d_effectOfPlantsList {
-    margin-right: 5%;
-  }
-
-
-
-  .h3_effetsOfSap {
-    font-size: 5vw;
-  }
-
+/* images */
   #i_greenhouseMade {
     width: 85%;
     height: 70%;
@@ -2401,6 +2383,13 @@ CARE PAGE STYLES BELOW
     height: 70%;
   }
 
+  .i_bugs {
+    width: 70%;
+    height: 85%;
+  }
+
+
+  /* plant problem grid */
   #d_carePlantsProblemGrid {
     grid-template-rows: 0.5fr 1fr;
   }
@@ -2435,36 +2424,30 @@ CARE PAGE STYLES BELOW
     width: 100%;
   }
 
-  .i_bugs {
-    width: 70%;
-    height: 85%;
-  }
-
-  #p_toxicPlantExplain {
-    margin: 5% 7.5% 0% 7.5%;
-  }
-
-  .d_effectsOfSapDes {
-    margin-right: 5%;
-  }
-
   /***********************************************************/
   /*********************
 VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+
+  /* headers */
   #h1_ourProducts {
     margin-top: 5%;
     font-size: 10vw;
   }
 
+   .h3_swanPlant {
+    font-size: 4.5vw;
+  }
 
+  /* view plant grid */
   #d_viewPlantsGrid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     margin-top: 0%;
   }
 
+  /* view plant grid divs */
   #d_smallSwanPlant {
     grid-area: 1/1/2/2;
   }
@@ -2481,21 +2464,28 @@ VIEW PAGE STYLES BELOW
     grid-area: 4/1/5/2;
   }
 
-  .h3_swanPlant {
-    font-size: 4.5vw;
-  }
-
-
   /***********************************************************/
   /*********************
   CLOSE VIEW PAGE STYLES BELOW 
   /*********************/
   /***********************************************************/
+
+/* headers */
+  #h1_closeViewHeader {
+    font-size: 9vw;
+  }
+
+  #h2_closeViewPrice {
+    font-size: 7vw;
+  }
+
+  /* close view grid */
   #d_closeViewGrid {
     grid-template-rows: 2.5fr 0.5fr 0.25fr 1fr 0.25fr;
     grid-template-columns: 1fr;
   }
 
+  /* view grid divs */
   #d_closeViewImage {
     width: 70%;
     height: 90%;
@@ -2521,55 +2511,42 @@ VIEW PAGE STYLES BELOW
     margin-top: 2.5%;
   }
 
-  #d_closeViewKeepLooking {
-    margin-top: 10%;
-  }
-
-  #h1_closeViewHeader {
-    font-size: 9vw;
-  }
-
-  #h2_closeViewPrice {
-    font-size: 7vw;
-  }
-
+  /* paragrpahs */
   #p_closeViewDes,
   #p_closeViewDesHeight {
     font-size: 3.75vw;
   }
 
+  /* keep looking div */
+  #d_closeViewKeepLooking {
+    margin-top: 10%;
+  }
 
-
+    /* keep looking link */
   #a_keepLooking {
     font-size: 5vw;
   }
-
-  #b_closeViewOrder {
-    font-size: 6.5vw;
-  }
-
-  #b_closeViewBack {
-    font-size: 5.5vw;
-  }
-
 
   /***********************************************************/
   /*********************
 ORDER VIEW PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
+
+  /* headers */
+
   #h1_orderFormHeader {
     margin-top: 5%;
     font-size: 12vw;
     text-underline-offset: 8px;
-
   }
 
-  .h2_statusUpdate {
-    font-size: 9vw;
+   #h4_orderPaymentNote {
+    font-size: 3vw;
+    margin-bottom:7%;
   }
 
-
+  /* divs */
   #d_orderForm {
     border: 2px solid black;
     margin-top: 10%;
@@ -2578,6 +2555,11 @@ ORDER VIEW PAGE STYLES BELOW
     width: 90%;
   }
 
+   #d_orderFormButtons {
+    margin-bottom: 3%;
+  }
+
+  /* from labels and inputs */
   .l_orderForm {
     font-size: 4.5vw;
   }
@@ -2586,25 +2568,12 @@ ORDER VIEW PAGE STYLES BELOW
     font-size: 2.5vw;
   }
 
-  #h4_orderPaymentNote {
-    font-size: 3vw;
-    margin: 5% 0% 7% 0%;
-    /** only 7 change **/
-  }
-
+  /* order buttons */
   .b_order {
     font-size: 6vw;
     padding: 3% 2% 3% 2%;
   }
-
-  #d_orderFormButtons {
-    margin-bottom: 3%;
-  }
-
-
 }
-
-
 
 
 /*************************************************
