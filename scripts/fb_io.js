@@ -162,7 +162,7 @@ function fb_writeRec(_path, _key, _data, _procFunc) {
   firebase.database().ref(_path + '/' + _key)
     .set(_data, fb_writeVerify);
 
-    // verifing 
+  // verifing 
   function fb_writeVerify(_error) {
     if (_error != null) {
       _procFunc(_path, _key, _data, _error);
@@ -192,7 +192,7 @@ function fb_writeQuantitySold(_path, _data, _procFunc) {
   firebase.database().ref(_path)
     .set(_data, fb_writeVerify);
 
-    // verifing 
+  // verifing 
   function fb_writeVerify(_error) {
     if (_error != null) {
       _procFunc(_path, _data, _error);

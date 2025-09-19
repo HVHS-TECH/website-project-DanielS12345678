@@ -237,83 +237,83 @@ function fbP_orderMade() {
   console.log("orderMade(): start");
 
   if (document.getElementById("f_orderForm").checkValidity()) {
-  // input vars 
-  var name = document.getElementById("in_name").value;
-  var email = document.getElementById("in_email").value;
-  var small = document.getElementById("in_smallSwanPlants").value;
-  var medium = document.getElementById("in_mediumSwanPlants").value;
-  var large = document.getElementById("in_largeSwanPlants").value;
-  var extraLarge = document.getElementById("in_extraLargeSwanPlants").value;
+    // input vars 
+    var name = document.getElementById("in_name").value;
+    var email = document.getElementById("in_email").value;
+    var small = document.getElementById("in_smallSwanPlants").value;
+    var medium = document.getElementById("in_mediumSwanPlants").value;
+    var large = document.getElementById("in_largeSwanPlants").value;
+    var extraLarge = document.getElementById("in_extraLargeSwanPlants").value;
 
-  // customer hasn't changed pre filled form data
-  if (name == '' && email == '') {
-    console.log("Customer has not changed name or email");
+    // customer hasn't changed pre filled form data
+    if (name == '' && email == '') {
+      console.log("Customer has not changed name or email");
 
-    fbP_order = {
-      name: fbP_userDetails.name,
-      email: fbP_userDetails.email,
-      uid: fbP_userDetails.uid,
-      sSP: small,
-      mSP: medium,
-      lSP: large,
-      elSP: extraLarge,
+      fbP_order = {
+        name: fbP_userDetails.name,
+        email: fbP_userDetails.email,
+        uid: fbP_userDetails.uid,
+        sSP: small,
+        mSP: medium,
+        lSP: large,
+        elSP: extraLarge,
+      }
+
+      // customer chnaged order name 
+    } else if (name != '' && email == '') {
+      console.log("customer changed name for order");
+
+      fbP_order = {
+        name: name,
+        email: fbP_userDetails.email,
+        uid: fbP_userDetails.uid,
+        sSP: small,
+        mSP: medium,
+        lSP: large,
+        elSP: extraLarge,
+      }
+
+      // cutomer chnaged order email
+    } else if (name == '' && email != '') {
+      console.log("customer changed email for order");
+
+      _user.dispalyName = sessionStorage.getItem('displayName');
+      cosole.log(_user.dispalyName);
+
+      fbP_order = {
+        name: fbP_userDetails.name,
+        email: email,
+        uid: fbP_userDetails.uid,
+        sSP: small,
+        mSP: medium,
+        lSP: large,
+        elSP: extraLarge,
+      }
+
+      // customer chnaged both name and email
+    } else {
+      console.log("customer changed name and email for order");
+
+      fbP_order = {
+        name: name,
+        email: email,
+        uid: fbP_userDetails.uid,
+        sSP: small,
+        mSP: medium,
+        lSP: large,
+        elSP: extraLarge,
+      }
+
     }
 
-    // customer chnaged order name 
-  } else if (name != '' && email == '') {
-    console.log("customer changed name for order");
+    // writing order
+    fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder);
 
-    fbP_order = {
-      name: name,
-      email: fbP_userDetails.email,
-      uid: fbP_userDetails.uid,
-      sSP: small,
-      mSP: medium,
-      lSP: large,
-      elSP: extraLarge,
-    }
-
-    // cutomer chnaged order email
-  } else if (name == '' && email != '') {
-    console.log("customer changed email for order");
-
-    _user.dispalyName = sessionStorage.getItem('displayName');
-    cosole.log(_user.dispalyName);
-
-    fbP_order = {
-      name: fbP_userDetails.name,
-      email: email,
-      uid: fbP_userDetails.uid,
-      sSP: small,
-      mSP: medium,
-      lSP: large,
-      elSP: extraLarge,
-    }
-
-    // customer chnaged both name and email
   } else {
-    console.log("customer changed name and email for order");
 
-    fbP_order = {
-      name: name,
-      email: email,
-      uid: fbP_userDetails.uid,
-      sSP: small,
-      mSP: medium,
-      lSP: large,
-      elSP: extraLarge,
-    }
-
+    console.log("fbP_orderMade() Customer has entered incorrect details");
+    alert("You have made an error in the form")
   }
-
-  // writing order
-  fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder);
-
-}else{
-
-  console.log("fbP_orderMade() Customer has entered incorrect details");
-  alert("You have made an error in the form")
-}
 }
 
 
@@ -334,7 +334,7 @@ function fbP_orderMade() {
 function fbP_procWriteOrder(_path, _key, _data, _error) {
   console.log("path is " + _path + " key is " + _key);
 
-// stock
+  // stock
   fbP_stock = {
     sSP: _data.sSP,
     mSP: _data.mSP,
@@ -373,7 +373,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
   console.log(Number(_save.sSP));
   console.log(Number(dbData.sSP));
 
-// adding new stock sold to old stock old 
+  // adding new stock sold to old stock old 
   if (readStatus == "ok") {
     var qsSP = Number(_save.sSP) + Number(dbData.sSP)
     console.log(qsSP);
@@ -384,7 +384,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
     var qelSP = Number(_save.elSP) + Number(dbData.elSP)
     console.log(qelSP);
 
-// stock sold
+    // stock sold
     fbP_stock = {
       sSP: qsSP,
       mSP: qmSP,
@@ -395,7 +395,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
     console.table(fbP_stock);
 
     // writing stock sold
-     fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
 
     // if no stock has been sold 
   } else if (readStatus == 'no record') {
@@ -417,7 +417,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
       elSP: qelSP,
     }
     // writng stock sold 
-     fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
   } else {
     console.log("There is an error in fbP_procReadStockSold() for path = " + _path);
     console.error("This is the error " + _error);
@@ -445,20 +445,20 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
 function fbP_procWriteQuantitySold(_path, _data, _error) {
   console.log("fbP_procWriteQuantitySold(): start for path " + _path);
 
-  
-  if(_error != null){
+
+  if (_error != null) {
     // error
-        console.log("There is an error in fbP_procWriteQuantitySold(): for path = " + _path);
+    console.log("There is an error in fbP_procWriteQuantitySold(): for path = " + _path);
     console.error("This is the error " + _error);
 
     /** A message telling them about the error **/
     alert("An error has occured see console for details");
 
-  } else{
+  } else {
     //no error
     console.log("fbP_procWriteQuantitySold(): no error in making write");
-    document.getElementById("d_formElements").style.display = "none"; 
-    document.getElementById("d_footerGrid").style.display = "none";       
+    document.getElementById("d_formElements").style.display = "none";
+    document.getElementById("d_footerGrid").style.display = "none";
   }
 
 }

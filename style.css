@@ -1267,8 +1267,8 @@ ORDER PAGE STYLES BELOW
     text-underline-offset: 17.5px;
   }
 
-  #h2_statusUpdate{
-    font-size:5vw;
+  #h2_statusUpdate {
+    font-size: 5vw;
   }
 
   #h4_orderPaymentNote {
@@ -1370,7 +1370,7 @@ ORDER PAGE STYLES BELOW
 /********** Medium screen size **********/
 @media (max-width:850px) {
 
-    /***********************************************************/
+  /***********************************************************/
   /*********************
 MULTIPLE PAGE STYLES BELOW 
 /*********************/
@@ -1807,8 +1807,8 @@ ORDER PAGE STYLES BELOW
     text-underline-offset: 12.5px;
   }
 
-   #h2_statusUpdate{
-    font-size:7.5vw;
+  #h2_statusUpdate {
+    font-size: 7.5vw;
   }
 
 
@@ -1864,7 +1864,7 @@ MULTIPLE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
-/** footer **/
+  /** footer **/
 
   /* contact header */
   #h4_contactUs {
@@ -2126,7 +2126,7 @@ MULTIPLE PAGE STYLES BELOW
 /*********************/
   /***********************************************************/
 
-/** header **/
+  /** header **/
 
   header {
     border-radius: 25px;
@@ -2272,7 +2272,7 @@ HOME PAGE STYLES BELOW
     width: 100%;
   }
 
-/* about us paragraph */
+  /* about us paragraph */
   #p_aboutUs {
     margin-left: 10%;
     margin-right: 10%;
@@ -2312,7 +2312,7 @@ CARE PAGE STYLES BELOW
     margin-top: 2.5%;
   }
 
-   .h2_careDes {
+  .h2_careDes {
     text-underline-offset: 10px;
     font-size: 6.5vw;
   }
@@ -2321,7 +2321,7 @@ CARE PAGE STYLES BELOW
     font-size: 5.75vw;
   }
 
-   .h3_effetsOfSap {
+  .h3_effetsOfSap {
     font-size: 5vw;
   }
 
@@ -2332,7 +2332,7 @@ CARE PAGE STYLES BELOW
   }
 
   /* divs */
- .d_effectsOfSapHeader {
+  .d_effectsOfSapHeader {
     width: 40%;
   }
 
@@ -2340,15 +2340,15 @@ CARE PAGE STYLES BELOW
     width: 60%;
   }
 
-   .d_effectOfPlantsList {
-    margin-right: 5%;
-  }
- 
-   .d_effectsOfSapDes {
+  .d_effectOfPlantsList {
     margin-right: 5%;
   }
 
-/* paragraphs */
+  .d_effectsOfSapDes {
+    margin-right: 5%;
+  }
+
+  /* paragraphs */
   .p_careDes {
     font-size: 4.75vw;
     margin: 10% 7.5% 0% 7.5%;
@@ -2371,12 +2371,12 @@ CARE PAGE STYLES BELOW
     margin: 5% 7.5% 0% 7.5%;
   }
 
- /* list */
+  /* list */
   .li_effectOfPlants {
     font-size: 3.75vw;
   }
 
-/* images */
+  /* images */
   #i_greenhouseMade {
     width: 85%;
     height: 70%;
@@ -2445,7 +2445,7 @@ VIEW PAGE STYLES BELOW
     font-size: 10vw;
   }
 
-   .h3_swanPlant {
+  .h3_swanPlant {
     font-size: 4.5vw;
   }
 
@@ -2479,7 +2479,7 @@ VIEW PAGE STYLES BELOW
   /*********************/
   /***********************************************************/
 
-/* headers */
+  /* headers */
   #h1_closeViewHeader {
     font-size: 9vw;
   }
@@ -2531,7 +2531,7 @@ VIEW PAGE STYLES BELOW
     margin-top: 10%;
   }
 
-    /* keep looking link */
+  /* keep looking link */
   #a_keepLooking {
     font-size: 5vw;
   }
@@ -2550,14 +2550,14 @@ ORDER PAGE STYLES BELOW
     text-underline-offset: 8px;
   }
 
-   #h2_statusUpdate{
-    font-size:10vw;
+  #h2_statusUpdate {
+    font-size: 10vw;
   }
 
 
-   #h4_orderPaymentNote {
+  #h4_orderPaymentNote {
     font-size: 3vw;
-    margin-bottom:7%;
+    margin-bottom: 7%;
   }
 
   /* divs */
@@ -2569,7 +2569,7 @@ ORDER PAGE STYLES BELOW
     width: 90%;
   }
 
-   #d_orderFormButtons {
+  #d_orderFormButtons {
     margin-bottom: 3%;
   }
 
