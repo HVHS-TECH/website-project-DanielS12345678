@@ -270,6 +270,7 @@ function fbP_procWriteLoginData(_path, _key, _data, _error) {
 function fbP_orderMade() {
   console.log("orderMade(): start");
 
+  if (document.getElementById("f_orderForm").checkValidity()) {
   // input vars 
   var name = document.getElementById("in_name").value;
   var email = document.getElementById("in_email").value;
@@ -340,7 +341,13 @@ function fbP_orderMade() {
   }
 
   // writing order
-  fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder)
+  fb_writeRec("orders", fbP_userDetails.uid, fbP_order, fbP_procWriteOrder);
+
+}else{
+
+  console.log("fbP_orderMade() Customer has entered incorrect details");
+  alert("Max order is 10")
+}
 }
 
 
@@ -483,7 +490,8 @@ function fbP_procWriteQuantitySold(_path, _data, _error) {
   } else{
     //no error
     console.log("fbP_procWriteQuantitySold(): no error in making write");
-    document.getElementById("d_formElements").style.display = "none";    
+    document.getElementById("d_formElements").style.display = "none"; 
+    document.getElementById("d_footerGrid").style.display = "none";       
   }
 
 }
