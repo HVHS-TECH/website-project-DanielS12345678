@@ -479,6 +479,7 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
 function fbP_procWriteQuantitySold(_path, _data, _error) {
   console.log("fbP_procWriteQuantitySold(): start for path " + _path);
 
+  
   if(_error != null){
     // error
         console.log("There is an error in fbP_procWriteQuantitySold(): for path = " + _path);
