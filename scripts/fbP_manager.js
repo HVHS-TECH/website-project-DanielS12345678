@@ -47,40 +47,6 @@ function fbP_initialise() {
 
 }
 
-
-/*********************************************/
-// fbP_dropDownLinksDisplay()
-// Called: When the user loads on any page
-// Does: senors if the user has lcikced of the drop down link 
-// Used on a touchscreen device 
-// Calls: n/a
-/*********************************************
-function fbP_dropDownLinksDisplay() {
-
-  // constants 
-  const CLICKAREA = document.getElementById('d_homeGridMain');
-  const DROPDOWNLINKSDIV = document.getElementById('d_dropDownLinks');
-  const VIEWLINK = document.getElementById('d_headerLinkView');
-
-  // Checks to see if the user has clicked off the drop down link
-  CLICKAREA.addEventListener('touchstart', () => {
-
-    DROPDOWNLINKSDIV.style.display = 'none';
-
-  });
-
-  // Checking if the user has clicked on the view link so drop down links appear 
-  // used for when drop down links have already been hided 
-  VIEWLINK.addEventListener('touchstart', () => {
-
-    DROPDOWNLINKSDIV.style.display = 'block';
-
-  });
-
-}
-
-**/
-
 /*********************************************/
 // fbP_zoomOnPlant()
 // Called: When the user loads on to a close view page
@@ -346,7 +312,7 @@ function fbP_orderMade() {
 }else{
 
   console.log("fbP_orderMade() Customer has entered incorrect details");
-  alert("Max order is 10")
+  alert("You have made an error in the form")
 }
 }
 
