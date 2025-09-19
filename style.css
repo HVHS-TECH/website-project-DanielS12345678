@@ -1256,7 +1256,7 @@ CLOSE VIEW PAGE STYLES BELOW
 
   /***********************************************************/
   /*********************
-ORDER VIEW PAGE STYLES BELOW 
+ORDER PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
@@ -1265,6 +1265,10 @@ ORDER VIEW PAGE STYLES BELOW
     margin: 5% 0% 4% 0%;
     font-size: 6vw;
     text-underline-offset: 17.5px;
+  }
+
+  #h2_statusUpdate{
+    font-size:5vw;
   }
 
   #h4_orderPaymentNote {
@@ -1793,7 +1797,7 @@ HOME PAGE STYLES BELOW
 
   /***********************************************************/
   /*********************
-ORDER VIEW PAGE STYLES BELOW 
+ORDER PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
@@ -1803,6 +1807,12 @@ ORDER VIEW PAGE STYLES BELOW
     font-size: 8vw;
     text-underline-offset: 12.5px;
   }
+
+   #h2_statusUpdate{
+    font-size:7.5vw;
+  }
+
+
 
   #h4_orderPaymentNote {
     font-size: 2.5vw;
@@ -2529,7 +2539,7 @@ VIEW PAGE STYLES BELOW
 
   /***********************************************************/
   /*********************
-ORDER VIEW PAGE STYLES BELOW 
+ORDER PAGE STYLES BELOW 
 /*********************/
   /***********************************************************/
 
@@ -2540,6 +2550,11 @@ ORDER VIEW PAGE STYLES BELOW
     font-size: 12vw;
     text-underline-offset: 8px;
   }
+
+   #h2_statusUpdate{
+    font-size:10vw;
+  }
+
 
    #h4_orderPaymentNote {
     font-size: 3vw;
