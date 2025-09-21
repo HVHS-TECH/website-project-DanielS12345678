@@ -9,7 +9,7 @@ var fbP_userDetails = {
   name: '',
   email: '',
   uid: '',
-}
+};
 
 // calling initalise 
 fbP_initialise();
@@ -143,7 +143,7 @@ function fbP_procReadForAccount(readStatus, _path, _key, dbData, _save, _error) 
   if (dbData == null) {
     readStatus = "no record";
   } else {
-    readStatus = "ok"
+    readStatus = "ok";
   }
 
   if (readStatus == "ok") {
@@ -257,7 +257,7 @@ function fbP_orderMade() {
         mSP: medium,
         lSP: large,
         elSP: extraLarge,
-      }
+      };
 
       // customer chnaged order name 
     } else if (name != '' && email == '') {
@@ -271,7 +271,7 @@ function fbP_orderMade() {
         mSP: medium,
         lSP: large,
         elSP: extraLarge,
-      }
+      };
 
       // cutomer chnaged order email
     } else if (name == '' && email != '') {
@@ -288,7 +288,7 @@ function fbP_orderMade() {
         mSP: medium,
         lSP: large,
         elSP: extraLarge,
-      }
+      };
 
       // customer chnaged both name and email
     } else {
@@ -302,7 +302,7 @@ function fbP_orderMade() {
         mSP: medium,
         lSP: large,
         elSP: extraLarge,
-      }
+      };
 
     }
 
@@ -312,7 +312,7 @@ function fbP_orderMade() {
   } else {
 
     console.log("fbP_orderMade() Customer has entered incorrect details");
-    alert("You have made an error in the form")
+    alert("You have made an error in the form");
   }
 }
 
@@ -340,12 +340,12 @@ function fbP_procWriteOrder(_path, _key, _data, _error) {
     mSP: _data.mSP,
     lSP: _data.lSP,
     elSP: _data.elSP,
-  }
+  };
 
   console.table(fbP_stock);
 
   // reading for quantity 
-  fb_readStockSold("quantitySold", fbP_stock, fbP_procReadStockSold)
+  fb_readStockSold("quantitySold", fbP_stock, fbP_procReadStockSold);
 
 }
 
@@ -375,13 +375,13 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
 
   // adding new stock sold to old stock old 
   if (readStatus == "ok") {
-    var qsSP = Number(_save.sSP) + Number(dbData.sSP)
+    var qsSP = Number(_save.sSP) + Number(dbData.sSP);
     console.log(qsSP);
-    var qmSP = Number(_save.mSP) + Number(dbData.mSP)
+    var qmSP = Number(_save.mSP) + Number(dbData.mSP);
     console.log(qmSP);
-    var qlSP = Number(_save.lSP) + Number(dbData.lSP)
+    var qlSP = Number(_save.lSP) + Number(dbData.lSP);
     console.log(qlSP);
-    var qelSP = Number(_save.elSP) + Number(dbData.elSP)
+    var qelSP = Number(_save.elSP) + Number(dbData.elSP);
     console.log(qelSP);
 
     // stock sold
@@ -390,34 +390,34 @@ function fbP_procReadStockSold(readStatus, _path, dbData, _save, _error) {
       mSP: qmSP,
       lSP: qlSP,
       elSP: qelSP,
-    }
+    };
 
     console.table(fbP_stock);
 
     // writing stock sold
-    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold);
 
     // if no stock has been sold 
   } else if (readStatus == 'no record') {
     // no quantity sold in database 
-    var qsSP = Number(_save.sSP)
+    var qsSP = Number(_save.sSP);
     console.log(qsSP);
-    var qmSP = Number(_save.mSP)
+    var qmSP = Number(_save.mSP);
     console.log(qmSP);
-    var qlSP = Number(_save.lSP)
+    var qlSP = Number(_save.lSP);
     console.log(qlSP);
-    var qelSP = Number(_save.elSP)
+    var qelSP = Number(_save.elSP);
     console.log(qelSP);
-
 
     fbP_stock = {
       sSP: qsSP,
       mSP: qmSP,
       lSP: qlSP,
       elSP: qelSP,
-    }
+    };
+
     // writng stock sold 
-    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold)
+    fb_writeQuantitySold("quantitySold", fbP_stock, fbP_procWriteQuantitySold);
   } else {
     console.log("There is an error in fbP_procReadStockSold() for path = " + _path);
     console.error("This is the error " + _error);
